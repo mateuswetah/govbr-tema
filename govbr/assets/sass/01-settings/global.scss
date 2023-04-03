@@ -1,0 +1,165 @@
+/* Variables */
+:root {
+
+	/* Font Size */
+	--global--font-size-base: 1rem; // 20px / 16px
+	--global--font-size-page-title: var(--wp--preset--font-size--huge, 64px);
+
+	/* Headings */
+	--wp--custom--font-weight--page-title: 300;
+	--wp--custom--font-weight--strong: 600;
+
+	/* Block: Latest posts */
+	--latest-posts--title-font-size: var(--wp--preset--font-size--large, 24px);
+	--latest-posts--description-font-size: var(--wp--preset--font-size--small, 18px);
+
+	/* Colors */
+	--global--color-black: #000;
+	--global--color-dark-gray: #28303d;
+	--global--color-gray: #39414d;
+	--global--color-light-gray: #f0f0f0;
+	--global--color-green: #ffffff;
+	--global--color-blue: #d1dfe4;
+	--global--color-purple: #d1d1e4;
+	--global--color-red: #e4d1d1;
+	--global--color-orange: #e4dad1;
+	--global--color-yellow: #eeeadd;
+	--global--color-white: #fff;
+	--global--color-white-50: rgba(255, 255, 255, 0.5); // Used for disabled buttons
+	--global--color-white-90: rgba(255, 255, 255, 0.9); // Used in form fields.
+
+	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
+	--global--color-secondary: var(--global--color-gray); /* Headings */
+	--global--color-primary-hover: var(--global--color-primary);
+	--global--color-background: var(--global--color-green); /* Mint, default body background */
+	--global--color-border: var(--global--color-primary); /* Used for borders (separators) */
+
+	/* Spacing */
+	--global--spacing--unit: 20px; // 20px
+	--global--spacing--horizontal: 25px; // 25px
+	--global--spacing--vertical: 30px; // 30px.
+
+	/* Elevation */
+	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
+
+	/* Forms */
+	--form--color-text: var(--global--color-dark-gray); // Text color in input fields is always dark over light background.
+	--form--color-ranged: var(--global--color-secondary);
+	--form--label-weight: 500;
+	--form--border-color: var(--global--color-secondary);
+	--form--border-width: 3px;
+	--form--border-radius: 0;
+	--form--spacing-unit: calc(0.5 * var(--global--spacing--unit));
+
+	/* Buttons */
+	// Colors
+	--button--color-text: var(--global--color-background);
+	--button--color-text-hover: var(--global--color-secondary);
+	--button--color-text-active: var(--global--color-secondary);
+	--button--color-background: var(--global--color-secondary);
+	--button--color-background-active: var(--global--color-background);
+	// Fonts
+	--button--font-size: var(--global--font-size-base);
+	--button--font-weight: 500;
+	--button--line-height: 1.5;
+	// Borders
+	--button--border-width: 3px;
+	--button--border-radius: 0;
+	// Spacing
+	--button--padding-vertical: 15px;
+	--button--padding-horizontal: calc(2 * var(--button--padding-vertical));
+
+	/* entry */
+	--entry-header--color: var(--global--color-primary);
+	--entry-header--color-link: currentColor;
+	--entry-header--color-hover: var(--global--color-primary-hover);
+	--entry-header--color-focus: var(--global--color-secondary);
+	--entry-header--font-size: var(--wp--preset--font-size--large, 36px);
+	--entry-author-bio--font-size: var(--wp--preset--font-size--large, 24px);
+
+	/* Header */
+	--branding--color-text: var(--global--color-primary);
+	--branding--color-link: var(--global--color-primary);
+	--branding--color-link-hover: var(--global--color-secondary);
+	--branding--title--font-weight: normal;
+	--branding--title--text-transform: uppercase;
+	--branding--description--font-size: var(--wp--preset--font-size--small, 18px);
+
+	--branding--logo--max-width: 140px;
+	--branding--logo--max-height: 111px;
+	--branding--logo--max-width-mobile: 72px;
+	--branding--logo--max-height-mobile: 26px;
+
+	/* Main navigation */
+	--primary-nav--font-size: var(--wp--preset--font-size--medium, 20px);
+	--primary-nav--font-size-sub-menu: var(--wp--preset--font-size--extra-small, 16px);
+	--primary-nav--font-size-mobile: var(--wp--preset--font-size--small, 18px);
+	--primary-nav--font-size-sub-menu-mobile: var(--wp--preset--font-size--small, 18px);
+	--primary-nav--font-size-button: var(--wp--preset--font-size--extra-small, 16px);
+	--primary-nav--font-style: normal;
+	--primary-nav--font-style-sub-menu-mobile: normal;
+	--primary-nav--font-weight: normal;
+	--primary-nav--font-weight-button: 500;
+	--primary-nav--color-link: var(--global--color-primary);
+	--primary-nav--color-link-hover: var(--global--color-primary-hover);
+	--primary-nav--color-text: var(--global--color-primary);
+	--primary-nav--padding: calc(0.66 * var(--global--spacing--unit));
+	--primary-nav--border-color: var(--global--color-primary);
+
+	/* Pagination */
+	--pagination--color-text: var(--global--color-primary);
+	--pagination--color-link-hover: var(--global--color-primary-hover);
+	--pagination--font-size: var(--wp--preset--font-size--large, 24px);
+	--pagination--font-weight: normal;
+	--pagination--font-weight-strong: 600;
+
+	/* Footer */
+	--footer--color-text: var(--global--color-primary);
+	--footer--color-link: var(--global--color-primary);
+	--footer--color-link-hover: var(--global--color-primary-hover);
+	--footer--font-size: var(--wp--preset--font-size--small, 18px);
+
+	/* Block: Pull quote */
+	--pullquote--font-size: var(--wp--preset--font-size--large, 24px);
+	--pullquote--font-style: normal;
+	--pullquote--line-height: var(--wp--custom--line-height--heading, 1.3);
+	--pullquote--border-width: 3px;
+	--pullquote--border-color: var(--global--color-primary);
+	--pullquote--color-foreground: var(--global--color-primary);
+	--pullquote--color-background: var(--global--color-background);
+
+	--quote--font-size: var(--wp--preset--font-size--medium, 20px);
+	--quote--font-size-large: var(--wp--preset--font-size--large, 36px);
+	--quote--font-style: normal;
+	--quote--font-weight: 700;
+	--quote--font-weight-strong: bolder;
+	--quote--font-style-large: normal;
+	--quote--font-style-cite: normal;
+	--quote--line-height: var(--wp--custom--line-height--body, 1.7);
+	--quote--line-height-large: 1.35;
+
+	--separator--border-color: var(--global--color-border);
+	--separator--height: 1px;
+
+	/* Block: Table */
+	--table--stripes-border-color: var(--global--color-light-gray);
+	--table--stripes-background-color: var(--global--color-light-gray);
+	--table--has-background-text-color: var(--global--color-dark-gray);
+
+	/* Widgets */
+	--widget--line-height-list: 1.9;
+	--widget--line-height-title: 1.4;
+	--widget--font-weight-title: 700;
+	--widget--spacing-menu: calc(0.66 * var(--global--spacing--unit));
+
+	/* Admin-bar height */
+	--global--admin-bar--height: 0px;
+}
+
+.admin-bar {
+	--global--admin-bar--height: 32px;
+
+	@media only screen and (max-width: 782px) {
+		--global--admin-bar--height: 46px;
+	}
+}

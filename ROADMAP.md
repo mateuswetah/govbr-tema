@@ -1,0 +1,49 @@
+# Roadmap
+
+Passos para a criação do tema. Este documento rastreia as atividades de desenvolvimento do tema e deve ser usado para referênciar algumas issues e discussões sobre o mesmo.
+
+- [ ] Configurar theme.json para usar cores, tamanhos e dimensões das variáveis CSS do GovBR para garantir wysiwyg no editor de blocos (gutenberg)
+- [ ] Limpar o máximo possível de CSS próprio do tema ou herdado do TwentyTwentyOne
+- [ ] Remover funções restantes do TwentyTwentyOne não utilizadas (menu, cabeçalho, ícones SVGs, fontes não latinas)
+- [ ] Infra no código para verificação de quais plugins estão ativados e avisos caso não estejam.
+- [ ] Traduzir comentários, documentação e algumas funções existentes para Português
+- [ ] Criar opção no Personalizar para usar layout padrão ou largo
+- [ ] Criar função para o Cabeçalho no header.php
+  - [ ] Criar Menu Walker para os dois Menus
+  - [ ] Criar opção de mostrar ícone de contraste e VLibras (implementar estes dois)
+  - [ ] Criar opção de mostrar ícone de cookies
+  - [ ] Criar opção de mostrar botão de "Entrar"
+    - [ ] SSO do Gov.br
+    - [ ] Login no WordPress
+  - [ ] Criar opção de linguagem integrando com algum plugin (ver alternativas mais comuns e estilizar)
+- [ ] Criar funções para o Breadcrumb
+- [ ] Criar [padrões de blocos](https://wordpress.org/patterns/about/):
+  - [ ] Cartão com Ícone da FontAwesome
+  - [ ] Banner com números
+  - [ ] Banner com cards claros
+  - [ ] Banner com cards escuros
+  - [ ] Cards e Lista de Posts, Grade com background-image... (customizar o bloco de loop) que serão usadas em Notícias Recentes. Talvez possa ser criado com uma [Variation do bloco](https://developer.wordpress.org/news/2022/12/building-a-book-review-grid-with-a-query-loop-block-variation/).
+- [ ] Função ou plugin de botão de compartilhar - estilizar e criar opções... Isto é diferente de um botão com ícones de redes sociais, já que o de compartilhar abre nas redes ou faz uma função de enviar o link para a área de transferência.
+- [ ] Plugin de blocos para inserir Ícones do FontAwesome
+- [ ] Plugin de blocos de Carrossel
+- [ ] Plugin de blocos de Banner com slide
+- [ ] Plugin de bloco de Abas
+- [ ] Plugin de bloco de Collapses
+- [ ] Archive de resultado da busca com abas separadas por post type
+- [ ] Criar post type Serviços e a Taxonomia associada a ele
+- [ ] Templates diferentes de Página:
+  - [ ] Página sem título (para home)
+  - [ ] Criar Single diferente para Notícias (Posts) e Serviços. Este último tem uma barra lateral de widgets, além de um cabeçalho com ícone e a hierarquia de uma taxonomia ([Ver este exemplo](https://www.gov.br/pt-br/servicos/participar-de-atividades-educativas-e-obter-emprestimo-de-materiais-pedagogicos)).
+- [ ] Criar estilos de blocos:
+  - [ ] Botão Terciário (e modificar o Outline para virar o Secundário)
+  - [ ] Botão Super chamativo verde (algumas páginas do gov.br tem isso para linkar para outros serviços)
+- [ ] Estilizar paginação
+- [ ] Scroll to Top
+- [ ] Estilizar rodapé e widgets dele. Planejar se vamos usar as tradicionais Widgets ou [Templates de Bloco](https://learn.wordpress.org/tutorial/using-block-template-parts-in-classic-themes/) para essa área.
+- [ ] Integração [Tainacan](https://tainacan.org) (provalemnte um plugin)
+  - [ ] Lista de Coleções
+  - [ ] Lista de Itens da Coleção (pensar cabeçalho)
+  - [ ] Lista de Itens do Termo (pensar cabeçalho)
+  - [ ] Lista de Itens do Repositório
+  - [ ] Página do Item
+  - [ ] Opções de customizar no menu personalizar (copiar as existentes do Tainacan Interface)

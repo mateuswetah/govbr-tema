@@ -1,0 +1,30 @@
+ul,
+ol {
+	margin: var(--global--spacing--vertical) 0;
+	padding-left: calc(2 * var(--global--spacing--horizontal));
+
+	// Utility classes
+	&.aligncenter {
+		list-style-position: inside;
+		padding: 0;
+		text-align: center;
+	}
+
+	&.alignright {
+		list-style-position: inside;
+		padding: 0;
+		text-align: right;
+	}
+}
+
+li {
+
+	> ul,
+	> ol {
+		margin: 0;
+	}
+}
+
+dt {
+	font-weight: bold;
+}

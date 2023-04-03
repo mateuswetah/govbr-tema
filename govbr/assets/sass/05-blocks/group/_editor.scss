@@ -1,0 +1,32 @@
+.wp-block-group {
+
+	&.has-background {
+
+		[data-align="full"] & {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	// Clear the top margin for the first-child.
+ 	& > *:first-child {
+		margin-top: 0;
+	}
+
+	// Last child that is not the appender.
+	& > *:last-child:not(.block-list-appender) {
+		margin-bottom: 0;
+	}
+
+	// When selected, the last item becomes the second last because of the appender.
+	&.has-child-selected > *:nth-last-child(2),
+	&.is-selected > *:nth-last-child(2) {
+		margin-bottom: 0;
+	}
+}
+
+
+.wp-block-group .wp-block-group.has-background > .block-editor-block-list__layout > [data-align="full"] {
+	margin: 0;
+	width: 100%;
+}

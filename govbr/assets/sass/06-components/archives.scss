@@ -1,0 +1,64 @@
+.page-title {
+	font-size: var(--global--font-size-page-title);
+}
+
+h1.page-title,
+h2.page-title {
+	font-weight: var(--wp--custom--font-weight--page-title);
+}
+
+.page-header {
+	border-bottom: 3px solid var(--global--color-border);
+	padding-bottom: calc(2 * var(--global--spacing--vertical));
+}
+
+.archive,
+.search,
+.blog {
+
+	.content-area {
+
+		.format-aside,
+		.format-status,
+		.format-link {
+
+			.entry-content {
+				font-size: var(--wp--preset--font-size--large, 24px);
+			}
+		}
+
+	}
+
+	.format-image,
+	.format-gallery,
+	.format-video {
+
+		.entry-content {
+			margin-top: calc(2 * var(--global--spacing--vertical));
+		}
+	}
+
+	.entry-footer {
+
+		.cat-links,
+		.tags-links {
+			display: block;
+		}
+	}
+
+	&.logged-in {
+
+		.entry-footer {
+
+			.posted-on {
+				margin-right: calc(0.5 * var(--global--spacing--unit));
+			}
+		}
+	}
+}
+
+.archive-description {
+	margin-top: var(--global--spacing--vertical);
+	font-size: var(--wp--preset--font-size--large, 36px);
+	line-height: var(--wp--custom--line-height--heading, 1.3);
+}

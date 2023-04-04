@@ -2,6 +2,7 @@
 
 Passos para a criação do tema. Este documento rastreia as atividades de desenvolvimento do tema e deve ser usado para referênciar algumas issues e discussões sobre o mesmo.
 
+```[tasklist]
 - [ ] Configurar theme.json para usar cores, tamanhos e dimensões das variáveis CSS do GovBR para garantir wysiwyg no editor de blocos (gutenberg)
 - [ ] Limpar o máximo possível de CSS próprio do tema ou herdado do TwentyTwentyOne
 - [ ] Remover funções restantes do TwentyTwentyOne não utilizadas (menu, cabeçalho, ícones SVGs, fontes não latinas)
@@ -47,3 +48,4 @@ Passos para a criação do tema. Este documento rastreia as atividades de desenv
   - [ ] Lista de Itens do Repositório
   - [ ] Página do Item
   - [ ] Opções de customizar no menu personalizar (copiar as existentes do Tainacan Interface)
+```

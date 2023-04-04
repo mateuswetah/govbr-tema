@@ -12,7 +12,7 @@ Durante o planejamento deste projeto, algumas decisões de projeto foram tomadas
 
 Tentaremos seguir [as exigências do WordPress.org para temas](https://make.wordpress.org/themes/handbook/review/required/) serem submetidos no repositório deles. Há um objetivo final de que isso permita que a submissão ocorra, mas não temos certeza se dado o foco institucional do projeto ele será aceito. De qualquer forma, isso implica, por exemplo, que todas as strings devem ser [traduzíveis](https://developer.wordpress.org/apis/internationalization/).
 
-O esqueleto deste projeto vem do tema TwentyTwentyOne, de onde aproveitamos algumas boas práticas incluindo organização de pastas, scripts de compilação e linters (veja mais adiante os passos para build).
+O esqueleto deste projeto vem do tema TwentyTwentyOne, de onde aproveitamos algumas boas práticas incluindo organização de pastas, scripts de compilação e _linters_ (veja mais adiante os passos para build).
 
 ### Compatibilidade com o Editor de Blocos.
 
@@ -38,22 +38,18 @@ Acompanhe as features planejadas e o ritmo do desenvolvimento [aqui](ROADMAP).
 
 ## Compilando o projeto
 
-Se você como desenvolvedor pretende contribuir para o desenvolvimento deste tema, precisa ter instalados o **node** (usamos a versã 19.1.0, _stable_) e o **npm** (versão 8.19.3) para executar alguns passos. Na primeira vez que abrir o código, ou sempre que atualizações nas dependências listadas no package.json forem feitas:
+Se você como desenvolvedor pretende contribuir para o desenvolvimento deste tema, precisa ter instalados o **node** (usamos a versã 19.1.0, _stable_) e o **npm** (versão 8.19.3).
+
+Para compilar o tema basta rodar:
 
 ```
-npm install
+./build.sh
 ```
 
-Para escutar mudanças no código com reload e compilar o CSS:
+Isto chama os scripts necessários que estão configurados no [package.json](/govbr/package.json), covnertendo o .scss em .css, dentre outras otimizações. Se você quiser copiar para sua pasta de temas somente os arquivos necessários para o tema em si:
 
 ```
-npm run watch
+./build.sh /<CAMINHO-PARA-SEU-WORDPRESS>/wp-content/themes
 ```
 
-Para simplesmente compilar uma vez o código:
-
-```
-npm run build
-```
-
-Em breve implementaremos um script que gere uma versão de bundle do código, já que nem todo o conteúdo do código fonte é de fato necessário para se instalar o tema no WordPress (`node_modules` e `assets/sass`, por exemplo).
+Neste script são removidas pastas como `node_modules` e `assets/sass` que são úteis apenas para desenvolvimento.

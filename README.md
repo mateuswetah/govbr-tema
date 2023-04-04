@@ -34,7 +34,7 @@ Embora hajam scripts que podem ajudar a aumentar a compatibilidade do CSS gerado
 
 ## Roadmap
 
-Acompanhe as features planejadas e o ritmo do desenvolvimento [aqui](ROADMAP).
+Acompanhe as features planejadas e o ritmo do desenvolvimento [aqui](ROADMAP.md).
 
 ## Compilando o projeto
 

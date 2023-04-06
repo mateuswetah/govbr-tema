@@ -95,9 +95,5 @@
 			border: 2px solid var(--button--color-text-active);
 			background-color: var(--button--color-text-active);
 		}
-
-		.is-IE & {
-			display: none;
-		}
 	}
 }

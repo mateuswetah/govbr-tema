@@ -108,13 +108,6 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 
 		$editor_stylesheet_path = './assets/css/style-editor.css';
 
-		// Note, the is_IE global variable is defined by WordPress and is used
-		// to detect if the current browser is internet explorer.
-		global $is_IE;
-		if ( $is_IE ) {
-			$editor_stylesheet_path = './assets/css/ie-editor.css';
-		}
-
 		// Enqueue editor styles.
 		add_editor_style( $editor_stylesheet_path );
 
@@ -192,16 +185,11 @@ add_action( 'after_setup_theme', 'gov_br_content_width', 0 );
  * @return void
  */
 function gov_br_scripts() {
-	// Note, the is_IE global variable is defined by WordPress and is used
-	// to detect if the current browser is internet explorer.
-	global $is_IE, $wp_scripts;
-	if ( $is_IE ) {
-		// If IE 11 or below, use a flattened stylesheet with static values replacing CSS Variables.
-		wp_enqueue_style( 'gov-br-style', get_template_directory_uri() . '/assets/css/ie.css', array(), wp_get_theme()->get( 'Version' ) );
-	} else {
-		// If not IE, use the standard stylesheet.
-		wp_enqueue_style( 'gov-br-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
-	}
+
+	global $wp_scripts;
+
+	// Standard stylesheet.
+	wp_enqueue_style( 'gov-br-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// RTL styles.
 	wp_style_add_data( 'gov-br-style', 'rtl', 'replace' );
@@ -214,39 +202,12 @@ function gov_br_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// Register the IE11 polyfill file.
-	wp_register_script(
-		'gov-br-ie11-polyfills-asset',
-		get_template_directory_uri() . '/assets/js/polyfills.js',
-		array(),
-		wp_get_theme()->get( 'Version' ),
-		true
-	);
-
-	// Register the IE11 polyfill loader.
-	wp_register_script(
-		'gov-br-ie11-polyfills',
-		null,
-		array(),
-		wp_get_theme()->get( 'Version' ),
-		true
-	);
-	wp_add_inline_script(
-		'gov-br-ie11-polyfills',
-		wp_get_script_polyfill(
-			$wp_scripts,
-			array(
-				'Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'gov-br-ie11-polyfills-asset',
-			)
-		)
-	);
-
 	// Main navigation scripts.
 	if ( has_nav_menu( 'primary' ) ) {
 		wp_enqueue_script(
 			'gov-br-primary-navigation-script',
 			get_template_directory_uri() . '/assets/js/primary-navigation.js',
-			array( 'gov-br-ie11-polyfills' ),
+			array(),
 			wp_get_theme()->get( 'Version' ),
 			true
 		);
@@ -256,7 +217,7 @@ function gov_br_scripts() {
 	wp_enqueue_script(
 		'gov-br-responsive-embeds-script',
 		get_template_directory_uri() . '/assets/js/responsive-embeds.js',
-		array( 'gov-br-ie11-polyfills' ),
+		array(),
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
@@ -276,34 +237,6 @@ function govbr_block_editor_script() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'govbr_block_editor_script' );
-
-/**
- * Fix skip link focus in IE11.
- *
- * This does not enqueue the script because it is tiny and because it is only for IE11,
- * thus it does not warrant having an entire dedicated blocking script being loaded.
- *
- * @since Gov BR 1.0
- *
- * @link https://git.io/vWdr2
- */
-function gov_br_skip_link_focus_fix() {
-
-	// If SCRIPT_DEBUG is defined and true, print the unminified file.
-	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-		echo '<script>';
-		include get_template_directory() . '/assets/js/skip-link-focus-fix.js';
-		echo '</script>';
-	} else {
-		// The following is minified via `npx terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
-		?>
-		<script>
-		/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
-		</script>
-		<?php
-	}
-}
-add_action( 'wp_print_footer_scripts', 'gov_br_skip_link_focus_fix' );
 
 /**
  * Enqueue non-latin language styles.
@@ -368,24 +301,6 @@ function govbr_the_html_classes() {
 	}
 	echo 'class="' . esc_attr( $classes ) . '"';
 }
-
-/**
- * Add "is-IE" class to body if the user is on Internet Explorer.
- *
- * @since Gov BR 1.0
- *
- * @return void
- */
-function govbr_add_ie_class() {
-	?>
-	<script>
-	if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/' ) ) {
-		document.body.classList.add( 'is-IE' );
-	}
-	</script>
-	<?php
-}
-add_action( 'wp_footer', 'govbr_add_ie_class' );
 
 if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
 	/**

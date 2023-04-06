@@ -107,9 +107,3 @@
 		background-color: var(--button--color-text-active);
 	}
 }
-@media only screen {
-
-	.is-IE #dark-mode-toggler {
-		display: none;
-	}
-}

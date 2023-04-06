@@ -31,8 +31,8 @@
 			.wp-block-column {
 
 				&:nth-child(2n) {
-					margin-left: calc(-2 * var(--global--spacing--horizontal));
-					margin-top: calc(2.5 * var(--global--spacing--horizontal));
+					margin-left: calc(-2 * var(--wp--preset--spacing--scale-up-2, 16px));
+					margin-top: calc(2.5 * var(--wp--preset--spacing--scale-up-2, 16px));
 					z-index: 2;
 
 					// Provide text-based child blocks with a default background color to ensure they're readable.
@@ -49,14 +49,14 @@
 
 						&:not(.has-background) {
 							background-color: var(--global--color-background);
-							padding: var(--global--spacing--unit);
+							padding: var(--wp--style--block-gap, 20px);
 						}
 					}
 
 					// Lists should still have their usual left padding.
 					> ul:not(.has-background),
 					> ol:not(.has-background) {
-						padding-left: calc(2 * var(--global--spacing--horizontal));
+						padding-left: calc(2 * var(--wp--preset--spacing--scale-up-2, 16px));
 					}
 
 					&.is-vertically-aligned-center {
@@ -78,8 +78,8 @@
 			h4:not(.has-background),
 			h5:not(.has-background),
 			h6:not(.has-background) {
-				padding-left: var(--global--spacing--unit);
-				padding-right: var(--global--spacing--unit);
+				padding-left: var(--wp--style--block-gap, 20px);
+				padding-right: var(--wp--style--block-gap, 20px);
 			}
 		}
 	}

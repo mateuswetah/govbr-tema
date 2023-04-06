@@ -1,6 +1,7 @@
 .wp-block-navigation {
 
 	.wp-block-navigation-link {
+
 		.wp-block-navigation-link__label {
 			font-size: var(--primary-nav--font-size);
 			font-weight: var(--primary-nav--font-weight);
@@ -52,7 +53,7 @@
 					position: absolute;
 					width: 0;
 					top: -10px;
-					left: var(--global--spacing--horizontal);
+					left: var(--wp--preset--spacing--scale-up-2, 16px);
 					border-style: solid;
 					border-color: var(--primary-nav--border-color) transparent;
 					border-width: 0 7px 10px 7px;

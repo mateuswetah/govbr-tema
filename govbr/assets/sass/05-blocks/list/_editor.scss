@@ -1,7 +1,6 @@
 ul,
 ol {
-	margin: var(--global--spacing--vertical) 0;
-	padding-left: calc(2 * var(--global--spacing--horizontal));
+	padding-left: var(--wp--preset--spacing--scale-up-5, 40px);
 
 	// Utility classes
 	&.aligncenter {

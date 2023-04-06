@@ -8,6 +8,6 @@
 	@include innerblock-margin-clear(".wp-block-media-text__content");
 
 	.wp-block-media-text__content {
-		padding: var(--global--spacing--horizontal);
+		padding: var(--wp--preset--spacing--scale-up-2, 16px);
 	}
 }

@@ -1,8 +1,7 @@
 body {
-	--wp--typography--line-height: var(--wp--custom--line-height--body, 1.7);
+	--wp--typography--line-height: var(--wp--custom--line-height--medium, 1.45);
 	color: var(--global--color-primary);
 	background-color: var(--global--color-background);
-	font-size: var(--global--font-size-base);
 	font-weight: normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;

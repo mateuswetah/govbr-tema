@@ -1,7 +1,7 @@
 .wp-block-tag-cloud {
 
 	&.alignfull {
-		padding-left: var(--global--spacing--unit);
-		padding-right: var(--global--spacing--unit);
+		padding-left: var(--wp--style--block-gap, 20px);
+		padding-right: var(--wp--style--block-gap, 20px);
 	}
 }

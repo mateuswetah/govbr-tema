@@ -7,8 +7,8 @@
 	justify-content: space-between;
 	position: absolute;
 	right: 0;
-	padding-top: calc(0.5 * var(--global--spacing--vertical));
-	padding-bottom: calc(0.25 * var(--global--spacing--vertical));
+	padding-top: calc(0.5 * var(--wp--style--block-gap, 20px));
+	padding-bottom: calc(0.25 * var(--wp--style--block-gap, 20px));
 
 	@include media(mobile-only) {
 		display: flex;
@@ -18,7 +18,7 @@
 	#primary-mobile-menu {
 		display: flex;
 		margin-left: auto;
-		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing--unit))) calc(0.5 * var(--button--padding-horizontal));
+		padding: calc(var(--button--padding-vertical) - (0.25 * var(--wp--style--block-gap, 20px))) calc(0.5 * var(--button--padding-horizontal));
 		font-size: var(--primary-nav--font-size-button);
 		font-weight: var(--primary-nav--font-weight-button);
 		background-color: transparent;
@@ -30,7 +30,7 @@
 			align-items: center;
 
 			.svg-icon {
-				margin-left: calc(0.25 * var(--global--spacing--unit));
+				margin-left: calc(0.25 * var(--wp--style--block-gap, 20px));
 			}
 
 			// Menu icon is off-center vertically to prevent blurry pixels.
@@ -97,11 +97,11 @@
 		left: 0;
 		// Height of the menu-button-container using font size, line height, and total padding, plus 5px so the focus of the first item is visible.
 		padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 42px + 5px);
-		padding-left: var(--global--spacing--unit);
-		padding-right: var(--global--spacing--unit);
-		padding-bottom: var(--global--spacing--horizontal);
+		padding-left: var(--wp--style--block-gap, 20px);
+		padding-right: var(--wp--style--block-gap, 20px);
+		padding-bottom: var(--wp--preset--spacing--scale-up-2, 16px);
 		background-color: var(--global--color-background);
-		transform: translateY(var(--global--spacing--vertical));
+		transform: translateY(var(--wp--style--block-gap, 20px));
 
 		@media (prefers-reduced-motion: no-preference) {
 			transition: all .15s ease-in-out;
@@ -303,7 +303,7 @@
 					position: absolute;
 					width: 0;
 					top: -10px;
-					left: var(--global--spacing--horizontal);
+					left: var(--wp--preset--spacing--scale-up-2, 16px);
 					border-style: solid;
 					border-color: var(--primary-nav--border-color) transparent;
 					border-width: 0 7px 10px 7px;
@@ -330,7 +330,7 @@
 					&:after {
 
 						/* rtl:ignore */
-						left: var(--global--spacing--horizontal);
+						left: var(--wp--preset--spacing--scale-up-2, 16px);
 
 						/* rtl:ignore */
 						right: auto;
@@ -352,7 +352,7 @@
 						left: auto;
 
 						/* rtl:ignore */
-						right: var(--global--spacing--horizontal);
+						right: var(--wp--preset--spacing--scale-up-2, 16px);
 					}
 				}
 			}
@@ -503,7 +503,7 @@
 	.menu-item-description {
 		display: block;
 		clear: both;
-		font-size: var(--wp--preset--font-size--extra-small, 16px);
+		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 		text-transform: none;
 		line-height: 1.7;
 

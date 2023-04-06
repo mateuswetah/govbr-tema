@@ -3,7 +3,7 @@
 	border-radius: 0;
 	border-style: solid;
 	border-width: 0.1rem;
-	padding: var(--global--spacing--unit);
+	padding: var(--wp--style--block-gap, 20px);
 
 	code {
 		color: var(--global--color-primary);

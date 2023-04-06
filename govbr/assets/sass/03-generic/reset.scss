@@ -19,13 +19,7 @@ legend,
 textarea,
 pre,
 iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+hr {
 	padding: 0;
 	margin: 0;
 	-moz-osx-font-smoothing: grayscale;
@@ -44,7 +38,7 @@ html {
 	box-sizing: border-box;
 
 	// HTML resets
-	line-height: var(--wp--custom--line-height--body, 1.7);
+	line-height: var(--wp--custom--line-height--medium, 1.45);
 }
 
 /**
@@ -61,7 +55,6 @@ html {
 
 // body resets
 body {
-	font-size: var(--global--font-size-base);
 	font-weight: normal;
 	color: var(--global--color-primary);
 	text-align: left;

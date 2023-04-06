@@ -1,4 +1,4 @@
 .error404 main p {
-	font-size: var(--wp--preset--font-size--large, 24px);
-	margin-bottom: calc(var(--global--spacing--vertical) * 1.6666666667);
+	font-size: var(--wp--preset--font-size--scale-up-03, 1.728em);
+	margin-bottom: calc(var(--wp--style--block-gap, 20px) * 1.6666666667);
 }

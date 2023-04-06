@@ -54,7 +54,7 @@
 	&.has-right-content {
 		justify-content: center;
 	}
-	
+
 	/* The background color class is used just for the overlay, and does not need to be applied to the inner container. */
 	&[class*="-background-color"][class] .wp-block-cover__inner-container {
 		background-color: unset;

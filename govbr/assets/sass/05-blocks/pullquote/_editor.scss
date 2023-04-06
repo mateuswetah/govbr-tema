@@ -1,5 +1,5 @@
 .wp-block-pullquote {
-	padding: calc(2 * var(--global--spacing--unit)) 0;
+	padding: calc(2 * var(--wp--style--block-gap, 20px)) 0;
 	text-align: center;
 	border-width: var(--pullquote--border-width);
 	border-bottom-style: solid;
@@ -34,7 +34,7 @@
 	.wp-block-pullquote__citation,
 	cite,
 	footer {
-		font-size: var(--wp--preset--font-size--extra-small, 16px);
+		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 		font-style: var(--pullquote--font-style);
 		text-transform: none;
 	}
@@ -47,13 +47,13 @@
 	&.is-style-solid-color {
 		margin-left: auto;
 		margin-right: auto;
-		padding: calc(2.5 * var(--global--spacing--unit));
+		padding: calc(2.5 * var(--wp--style--block-gap, 20px));
 		border-width: var(--pullquote--border-width);
 		border-style: solid;
 		border-color: var(--pullquote--border-color);
 
 		@media ( min-width: 600px ) {
-			padding: calc(5 * var(--global--spacing--unit));
+			padding: calc(5 * var(--wp--style--block-gap, 20px));
 		}
 
 		blockquote::before {
@@ -62,8 +62,8 @@
 
 		&.alignleft blockquote,
 		&.alignright blockquote {
-			padding-left: var(--global--spacing--unit);
-			padding-right: var(--global--spacing--unit);
+			padding-left: var(--wp--style--block-gap, 20px);
+			padding-right: var(--wp--style--block-gap, 20px);
 			max-width: inherit;
 		}
 
@@ -90,7 +90,7 @@
 	.wp-block-pullquote:not(.is-style-solid-color) {
 
 		blockquote {
-			padding: 0 calc(2 * var(--global--spacing--unit));
+			padding: 0 calc(2 * var(--wp--style--block-gap, 20px));
 		}
 	}
 }
@@ -99,6 +99,6 @@
 .wp-block[data-align="right"] {
 
 	.wp-block-pullquote.is-style-solid-color {
-		padding: var(--global--spacing--unit);
+		padding: var(--wp--style--block-gap, 20px);
 	}
 }

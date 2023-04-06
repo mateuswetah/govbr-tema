@@ -1,5 +1,5 @@
 .wp-block-pullquote {
-	padding: calc(2 * var(--global--spacing--unit)) 0;
+	padding: calc(2 * var(--wp--style--block-gap, 20px)) 0;
 	text-align: center;
 	border-width: var(--pullquote--border-width);
 	border-bottom-style: solid;
@@ -36,7 +36,7 @@
 	footer {
 		color: currentColor;
 		display: block;
-		font-size: var(--wp--preset--font-size--extra-small, 16px);
+		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 		font-style: var(--pullquote--font-style);
 		text-transform: none;
 	}
@@ -56,25 +56,20 @@
 		}
 	}
 
-	&.alignwide > p,
-	&.alignwide blockquote {
-		max-width: var(--responsive--alignwide-width);
-	}
-
 	&.alignfull:not(.is-style-solid-color) > p,
 	&.alignfull:not(.is-style-solid-color) blockquote {
-		padding: 0 calc(2 * var(--global--spacing--unit));
+		padding: 0 calc(2 * var(--wp--style--block-gap, 20px));
 	}
 
 	&.is-style-solid-color {
 		color: var(--pullquote--color-foreground);
-		padding: calc(2.5 * var(--global--spacing--unit));
+		padding: calc(2.5 * var(--wp--style--block-gap, 20px));
 		border-width: var(--pullquote--border-width);
 		border-style: solid;
 		border-color: var(--pullquote--border-color);
 
 		@media (min-width: 600px) {
-			padding: calc(5 * var(--global--spacing--unit));
+			padding: calc(5 * var(--wp--style--block-gap, 20px));
 		}
 
 		blockquote::before {
@@ -98,7 +93,7 @@
 
 		&.alignleft,
 		&.alignright {
-			padding: var(--global--spacing--unit);
+			padding: var(--wp--style--block-gap, 20px);
 
 			blockquote {
 				max-width: initial;

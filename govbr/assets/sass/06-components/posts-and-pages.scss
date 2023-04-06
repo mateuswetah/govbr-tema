@@ -2,8 +2,12 @@
 	// This class is required to pass ThemeCheck.
 }
 
+.page-header {
+	@extend %responsive-aligndefault-width;
+}
+
 .no-results.not-found > *:first-child {
-	margin-bottom: calc(3 * var(--global--spacing--vertical));
+	margin-bottom: calc(3 * var(--wp--style--block-gap, 20px));
 }
 
 // Styling for wp_link_pages.
@@ -12,8 +16,8 @@
 
 	.post-page-numbers {
 		display: inline-block;
-		margin-left: calc(0.66 * var(--global--spacing--unit));
-		margin-right: calc(0.66 * var(--global--spacing--unit));
+		margin-left: calc(0.66 * var(--wp--style--block-gap, 20px));
+		margin-right: calc(0.66 * var(--wp--style--block-gap, 20px));
 		min-width: 44px;
 		min-height: 44px;
 

@@ -9,12 +9,12 @@
 	}
 
 	// Clear the top margin for the first-child.
- 	& > *:first-child {
+	> *:first-child {
 		margin-top: 0;
 	}
 
 	// Last child that is not the appender.
-	& > *:last-child:not(.block-list-appender) {
+	> *:last-child:not(.block-list-appender) {
 		margin-bottom: 0;
 	}
 

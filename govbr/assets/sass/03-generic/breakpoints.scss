@@ -82,19 +82,17 @@ $breakpoint_xxl: 1024px;
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing--horizontal) * 0.6);
+	--responsive--spacing-horizontal: calc(2 * var(--wp--preset--spacing--scale-up-2, 16px) * 0.6);
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
-	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
-	--responsive--alignright-margin: var(--global--spacing--horizontal);
-	--responsive--alignleft-margin: var(--global--spacing--horizontal);
+	--responsive--alignright-margin: var(--wp--preset--spacing--scale-up-2, 16px);
+	--responsive--alignleft-margin: var(--wp--preset--spacing--scale-up-2, 16px);
 }
 
 @include media(mobile) {
 
 	:root {
-		--responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing--horizontal)), #{$default_width});
-		--responsive--alignwide-width: calc(100vw - 4 * var(--global--spacing--horizontal));
+		--responsive--aligndefault-width: min(calc(100vw - 4 * var(--wp--preset--spacing--scale-up-2, 16px)), #{$default_width});
 		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -103,8 +101,7 @@ $breakpoint_xxl: 1024px;
 @include media(desktop) {
 
 	:root {
-		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing--horizontal)), #{$default_width});
-		--responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing--horizontal)), #{$max_content_width});
+		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--wp--preset--spacing--scale-up-2, 16px)), #{$default_width});
 	}
 }
 
@@ -113,12 +110,6 @@ $breakpoint_xxl: 1024px;
  */
 %responsive-aligndefault-width {
 	max-width: var(--responsive--aligndefault-width);
-	margin-left: auto;
-	margin-right: auto;
-}
-
-%responsive-alignwide-width {
-	max-width: var(--responsive--alignwide-width);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -138,14 +129,6 @@ $breakpoint_xxl: 1024px;
 		margin-right: auto;
 	}
 }
-
-%responsive-alignwide-width-nested {
-	margin-left: auto;
-	margin-right: auto;
-	width: var(--responsive--alignwide-width);
-	max-width: var(--responsive--alignfull-width);
-}
-
 %responsive-alignfull-width-nested {
 	margin-left: auto;
 	margin-right: auto;
@@ -179,7 +162,7 @@ $breakpoint_xxl: 1024px;
 		margin-left: var(--responsive--alignleft-margin);
 
 		/*rtl:ignore*/
-		margin-right: var(--global--spacing--horizontal);
+		margin-right: var(--wp--preset--spacing--scale-up-2, 16px);
 	}
 }
 
@@ -196,7 +179,7 @@ $breakpoint_xxl: 1024px;
 	%responsive-alignright {
 
 		/*rtl:ignore*/
-		margin-left: var(--global--spacing--horizontal);
+		margin-left: var(--wp--preset--spacing--scale-up-2, 16px);
 
 		/*rtl:ignore*/
 		margin-right: var(--responsive--alignright-margin);
@@ -206,10 +189,6 @@ $breakpoint_xxl: 1024px;
 // Output
 .default-max-width {
 	@extend %responsive-aligndefault-width;
-}
-
-.wide-max-width {
-	@extend %responsive-alignwide-width;
 }
 
 .full-max-width {

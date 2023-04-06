@@ -1,9 +1,9 @@
 
 .footer-navigation {
-	margin-top: calc(2 * var(--global--spacing--vertical));
-	margin-bottom: var(--global--spacing--vertical);
+	margin-top: calc(2 * var(--wp--style--block-gap, 20px));
+	margin-bottom: var(--wp--style--block-gap, 20px);
 	color: var(--footer--color-text);
-	font-size: var(--wp--preset--font-size--extra-small, 16px);
+	font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 }
 
 .footer-navigation-wrapper {

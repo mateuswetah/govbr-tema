@@ -1,7 +1,7 @@
 ul,
 ol {
 	margin: 0;
-	padding-left: calc(2 * var(--global--spacing--horizontal));
+	padding-left: calc(2 * var(--wp--preset--spacing--scale-up-2, 16px));
 
 	// Utility classes
 	&.aligncenter {
@@ -38,5 +38,5 @@ dt {
 
 dd {
 	margin: 0;
-	padding-left: calc(2 * var(--global--spacing--horizontal));
+	padding-left: calc(2 * var(--wp--preset--spacing--scale-up-2, 16px));
 }

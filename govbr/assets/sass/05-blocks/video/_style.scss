@@ -2,9 +2,9 @@
 
 	figcaption {
 		color: var(--global--color-primary);
-		font-size: var(--wp--preset--font-size--extra-small, 16px);
-		margin-top: calc(0.5 * var(--global--spacing--unit));
-		margin-bottom: var(--global--spacing--unit);
+		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
+		margin-top: calc(0.5 * var(--wp--style--block-gap, 20px));
+		margin-bottom: var(--wp--style--block-gap, 20px);
 		text-align: center;
 	}
 }

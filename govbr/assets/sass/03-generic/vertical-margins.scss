@@ -15,19 +15,10 @@
 .site-main,
 .widget-area,
 .site-footer {
-	padding-top: var(--global--spacing--vertical);
-	padding-bottom: var(--global--spacing--vertical);
+	padding-top: var(--wp--style--block-gap, 20px);
+	padding-bottom: var(--wp--style--block-gap, 20px);
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.site-header {
-	padding-top: calc(0.75 * var(--global--spacing--vertical));
-	padding-bottom: calc(2 * var(--global--spacing--vertical));
-
-	@include media(mobile) {
-		padding-bottom: calc(3 * var(--global--spacing--vertical));
-	}
 }
 
 /**
@@ -35,8 +26,8 @@
  * - Add double vertical margins here for clearer hierarchy
  */
 .site-main > * {
-	margin-top: calc(3 * var(--global--spacing--vertical));
-	margin-bottom: calc(3 * var(--global--spacing--vertical));
+	margin-top: calc(3 * var(--wp--style--block-gap, 20px));
+	margin-bottom: calc(3 * var(--wp--style--block-gap, 20px));
 
 	&:first-child {
 		margin-top: 0;
@@ -58,7 +49,7 @@
  * Set the wide maximum responsive content-width
  */
 .wide-max-width {
-	@extend %responsive-alignwide-width;
+	@extend %responsive-aligndefault-width;
 }
 
 /**
@@ -78,9 +69,9 @@
 .entry-content,
 .entry-footer,
 .author-bio {
-	margin-top: var(--global--spacing--vertical);
+	margin-top: var(--wp--style--block-gap, 20px);
 	margin-right: auto;
-	margin-bottom: var(--global--spacing--vertical);
+	margin-bottom: var(--wp--style--block-gap, 20px);
 	margin-left: auto;
 }
 
@@ -91,17 +82,11 @@
 .site-main > article > *, // apply vertical margins to article level
 .site-main > .not-found > *, // apply vertical margins to article level
 .entry-content > *,
-[class*="inner-container"] > *,
 .wp-block-template-part > *,
 .wp-block-post-template :where(li > *) { // using :where keeps specificity low.
 
-	margin-top: calc(0.666 * var(--global--spacing--vertical));
-	margin-bottom: calc(0.666 * var(--global--spacing--vertical));
-
-	@include media(mobile) {
-		margin-top: var(--global--spacing--vertical);
-		margin-bottom: var(--global--spacing--vertical);
-	}
+	margin-top: var(--wp--style--block-gap, 20px);
+	margin-bottom: var(--wp--style--block-gap, 20px);
 
 	&:first-child {
 		margin-top: 0;
@@ -114,13 +99,8 @@
 
 .site-footer > *,
 .widget-area > * {
-	margin-top: calc(0.666 * var(--global--spacing--vertical));
-	margin-bottom: calc(0.666 * var(--global--spacing--vertical));
-
-	@include media(mobile) {
-		margin-top: var(--global--spacing--vertical);
-		margin-bottom: var(--global--spacing--vertical);
-	}
+	margin-top: calc(0.666 * var(--wp--style--block-gap, 20px));
+	margin-bottom: calc(0.666 * var(--wp--style--block-gap, 20px));
 }
 
 /*
@@ -133,8 +113,8 @@
 .page-content > *,
 .comment-content > *,
 .widget > * {
-	margin-top: var(--global--spacing--unit);
-	margin-bottom: var(--global--spacing--unit);
+	margin-top: var(--wp--style--block-gap, 20px);
+	margin-bottom: var(--wp--style--block-gap, 20px);
 
 	&:first-child {
 		margin-top: 0;
@@ -168,6 +148,6 @@
 	/* Reset alignleft and alignright margins after alignfull */
 	&.alignfull + .alignleft,
 	&.alignfull + .alignright {
-		margin-top: var(--global--spacing--vertical);
+		margin-top: var(--wp--style--block-gap, 20px);
 	}
 }

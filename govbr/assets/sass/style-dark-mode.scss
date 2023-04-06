@@ -52,23 +52,26 @@
 			&.hide:not(:focus) {
 				bottom: -80px;
 			}
+			@media (prefers-reduced-motion: no-preference) {
+				transition: bottom 0.5s;
+			}
 		}
 
 		&.relative {
 			position: absolute;
 			height: 44px;
-			top: calc(2.4 * var(--global--spacing--vertical) - 44px);
-			right: calc(50vw - var(--responsive--alignwide-width) / 2 - 0.5em);
+			top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px);
+			right: calc(50vw - var(--responsive--aligndefault-width) / 2 - 0.5em);
 
 			.admin-bar & {
-				top: calc(2.4 * var(--global--spacing--vertical) - 44px + 32px);
+				top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 32px);
 
 				@media only screen and (max-width: 782px) {
-					top: calc(2.4 * var(--global--spacing--vertical) - 44px + 46px);
+					top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 46px);
 				}
 
 				@media only screen and (max-width: 481px) {
-					top: calc(2.4 * var(--global--spacing--vertical) - 44px + 26px);
+					top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 26px);
 				}
 			}
 
@@ -95,12 +98,6 @@
 
 		.is-IE & {
 			display: none;
-		}
-
-		&.fixed-bottom {
-			@media (prefers-reduced-motion: no-preference) {
-				transition: bottom 0.5s;
-			}
 		}
 	}
 }

@@ -1,8 +1,8 @@
 .entry-title {
-
+	@extend %responsive-aligndefault-width;
 	color: var(--entry-header--color);
 	font-size: var(--entry-header--font-size);
-	line-height: var(--wp--custom--line-height--heading, 1.3);
+	line-height: var(--wp--custom--line-height--low, 1.15);
 	overflow-wrap: break-word;
 
 	a {
@@ -36,6 +36,7 @@ h1.entry-title {
  */
 
 .entry-content {
+	font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 
 	p {
 		word-wrap: break-word;
@@ -44,7 +45,7 @@ h1.entry-title {
 	// Overwrite iframe embeds that have inline styles.
 	> iframe[style] {
 
-		margin: var(--global--spacing--vertical) 0 !important;
+		margin: var(--wp--style--block-gap, 20px) 0 !important;
 		max-width: 100% !important;
 	}
 
@@ -59,7 +60,7 @@ h1.entry-title {
 	color: var(--global--color-primary);
 	clear: both;
 	float: none;
-	font-size: var(--wp--preset--font-size--extra-small, 16px);
+	font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 	display: block;
 
 	> span {
@@ -82,9 +83,9 @@ h1.entry-title {
 
 // Extra specificity to override rules in _vertical-margins.scss
 .site-main > article > .entry-footer {
-	margin-top: var(--global--spacing--vertical);
-	padding-top: var(--global--spacing--unit);
-	padding-bottom: calc(1 * var(--global--spacing--vertical));
+	margin-top: var(--wp--style--block-gap, 20px);
+	padding-top: var(--wp--style--block-gap, 20px);
+	padding-bottom: calc(1 * var(--wp--style--block-gap, 20px));
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 }
 
@@ -93,15 +94,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .single .site-main > article > .entry-footer {
-	margin-top: calc(3.4 * var(--global--spacing--vertical));
-	margin-bottom: calc(3.4 * var(--global--spacing--vertical));
+	margin-top: calc(3.4 * var(--wp--style--block-gap, 20px));
+	margin-bottom: calc(3.4 * var(--wp--style--block-gap, 20px));
 	padding-bottom: 0;
-	padding-top: calc(0.8 * var(--global--spacing--vertical));
+	padding-top: calc(0.8 * var(--wp--style--block-gap, 20px));
 	border-top: 3px solid var(--separator--border-color);
 	border-bottom: var(--separator--height) solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	column-gap: calc(2 * var(--global--spacing--horizontal));
+	column-gap: calc(2 * var(--wp--preset--spacing--scale-up-2, 16px));
 
 	.post-taxonomies,
 	.full-size-link {
@@ -142,18 +143,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	@extend %responsive-aligndefault-width;
 	text-align: center;
 
-	.entry-header &,
-	.singular & {
-		@extend %responsive-alignwide-width-nested;
-	}
-
 	.wp-post-image {
 		display: block;
 		width: auto;
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: calc(2 * var(--global--spacing--vertical));
+		margin-top: calc(2 * var(--wp--style--block-gap, 20px));
 	}
 }
 
@@ -163,11 +159,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .author-bio {
 	position: relative;
-	font-size: var(--wp--preset--font-size--extra-small, 16px);
+	font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 	max-width: var(--responsive--aligndefault-width);
 
 	.site-main > article > & {
-		margin-top: calc(2 * var(--global--spacing--vertical));
+		margin-top: calc(2 * var(--wp--style--block-gap, 20px));
 	}
 
 	// Avatars are optional and can be turned off.
@@ -181,7 +177,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 		.author-bio-content {
 			display: inline-block;
-			padding-left: var(--global--spacing--horizontal);
+			padding-left: var(--wp--preset--spacing--scale-up-2, 16px);
 			max-width: calc(var(--responsive--aligndefault-width) - 90px);
 		}
 	}
@@ -194,9 +190,9 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		}
 
 		.author-description {
-			font-size: var(--wp--preset--font-size--extra-small, 16px);
-			margin-top: calc(0.5 * var(--global--spacing--vertical));
-			margin-bottom: calc(0.5 * var(--global--spacing--vertical));
+			font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
+			margin-top: calc(0.5 * var(--wp--style--block-gap, 20px));
+			margin-bottom: calc(0.5 * var(--wp--style--block-gap, 20px));
 		}
 	}
 }

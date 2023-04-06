@@ -5,22 +5,19 @@
 
 // Post title style
 .wp-block.editor-post-title__block {
-	border-bottom: 3px solid var(--global--color-border);
-	padding-bottom: calc(2 * var(--global--spacing--vertical));
-	margin-bottom: calc(3 * var(--global--spacing--vertical));
-	max-width: var(--responsive--alignwide-width);
+	padding-bottom: calc(2 * var(--wp--style--block-gap, 20px));
+	margin-bottom: calc(3 * var(--wp--style--block-gap, 20px));
 
 	.editor-post-title__input {
 		color: var(--global--color-secondary);
 		font-size: var(--global--font-size-page-title);
 		font-weight: var(--wp--custom--font-weight--page-title);
-		line-height: var(--wp--custom--line-height--page-title, 1.1);
 	}
 }
 
 // Editor UI font styles
 .wp-block.block-editor-default-block-appender > textarea {
-	font-size: var(--wp--preset--font-size--medium, 20px);
+	font-size: var(--wp--preset--font-size--scale-up-02, 1.2em);
 }
 
 // Gutenberg text color options
@@ -69,18 +66,18 @@
 
 // Spacing Overrides
 [data-block] {
-	margin-top: var(--global--spacing--vertical);
-	margin-bottom: var(--global--spacing--vertical);
+	margin-top: var(--wp--style--block-gap, 20px);
+	margin-bottom: var(--wp--style--block-gap, 20px);
 }
 
 .alignleft {
 	margin: 0;
-	margin-right: var(--global--spacing--horizontal);
+	margin-right: var(--wp--preset--spacing--scale-up-2, 16px);
 }
 
 .alignright {
 	margin: 0;
-	margin-left: var(--global--spacing--horizontal);
+	margin-left: var(--wp--preset--spacing--scale-up-2, 16px);
 }
 
 // Drop cap
@@ -91,19 +88,19 @@
 	font-style: normal;
 	float: left;
 	margin: 0.1em 0.1em 0 0;
-	font-size: calc(1.2 * var(--wp--preset--font-size--huge, 64px));
+	font-size: calc(1.2 * var(--wp--preset--font-size--scale-up-06, 2.986em));
 }
 
 @media only screen and (min-width: 482px) {
 
 	.wp-block[data-align="left"] > * {
 		max-width: 290px;
-		margin-right: var(--global--spacing--horizontal);
+		margin-right: var(--wp--preset--spacing--scale-up-2, 16px);
 	}
 
 	.wp-block[data-align="right"] > * {
 		max-width: 290px;
-		margin-left: var(--global--spacing--horizontal);
+		margin-left: var(--wp--preset--spacing--scale-up-2, 16px);
 	}
 }
 

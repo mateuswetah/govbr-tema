@@ -1,7 +1,7 @@
 .wp-block-quote {
 	position: relative;
 	border-left: none;
-	margin: var(--global--spacing--vertical) auto var(--global--spacing--vertical) var(--global--spacing--horizontal);
+	margin: var(--wp--style--block-gap, 20px) auto var(--wp--style--block-gap, 20px) var(--wp--preset--spacing--scale-up-2, 16px);
 
 	p {
 		font-size: var(--quote--font-size);
@@ -18,12 +18,12 @@
 		content: "\201C";
 		font-size: var(--quote--font-size);
 		line-height: var(--quote--line-height);
-		left: calc(-0.5 * var(--global--spacing--horizontal));
+		left: calc(-0.5 * var(--wp--preset--spacing--scale-up-2, 16px));
 	}
 
 	.wp-block-quote__citation {
 		color: currentColor;
-		font-size: var(--wp--preset--font-size--extra-small, 16px);
+		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 		font-style: var(--quote--font-style-cite);
 
 		.has-background &,
@@ -35,7 +35,7 @@
 	}
 
 	&.has-text-align-right {
-		margin: var(--global--spacing--vertical) var(--global--spacing--horizontal) var(--global--spacing--vertical) auto;
+		margin: var(--wp--style--block-gap, 20px) var(--wp--preset--spacing--scale-up-2, 16px) var(--wp--style--block-gap, 20px) auto;
 		padding-right: 0;
 		border-right: none;
 
@@ -55,7 +55,7 @@
 	}
 
 	&.has-text-align-center {
-		margin: var(--global--spacing--vertical) auto;
+		margin: var(--wp--style--block-gap, 20px) auto;
 
 		&:before {
 			display: none;
@@ -67,8 +67,8 @@
 		padding-left: 0;
 
 		/* Resetting margins to match _block-container.scss */
-		margin-top: var(--global--spacing--vertical);
-		margin-bottom: var(--global--spacing--vertical);
+		margin-top: var(--wp--style--block-gap, 20px);
+		margin-bottom: var(--wp--style--block-gap, 20px);
 
 		p {
 			font-size: var(--quote--font-size-large, 36px);
@@ -79,7 +79,7 @@
 		&:before {
 			font-size: var(--quote--font-size-large, 36px);
 			line-height: var(--quote--line-height-large);
-			left: calc(-1 * var(--global--spacing--horizontal));
+			left: calc(-1 * var(--wp--preset--spacing--scale-up-2, 16px));
 		}
 
 		&.has-text-align-right {
@@ -100,7 +100,7 @@
 		}
 
 		@include media(mobile-only) {
-			padding-left: var(--global--spacing--horizontal);
+			padding-left: var(--wp--preset--spacing--scale-up-2, 16px);
 
 			&:before {
 				left: 0;
@@ -108,7 +108,7 @@
 
 			&.has-text-align-right {
 				padding-left: 0;
-				padding-right: var(--global--spacing--horizontal);
+				padding-right: var(--wp--preset--spacing--scale-up-2, 16px);
 
 				&:before {
 					right: 0;
@@ -118,7 +118,7 @@
 	}
 
 	@include media(mobile-only) {
-		padding-left: calc(0.5 * var(--global--spacing--horizontal));
+		padding-left: calc(0.5 * var(--wp--preset--spacing--scale-up-2, 16px));
 
 		&:before {
 			left: 0;
@@ -126,7 +126,7 @@
 
 		&.has-text-align-right {
 			padding-left: 0;
-			padding-right: calc(0.5 * var(--global--spacing--horizontal));
+			padding-right: calc(0.5 * var(--wp--preset--spacing--scale-up-2, 16px));
 
 			&:before {
 				right: 0;

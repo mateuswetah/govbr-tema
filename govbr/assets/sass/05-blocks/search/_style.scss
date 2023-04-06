@@ -8,9 +8,9 @@
 	}
 
 	.wp-block-search__label {
-		font-size: var(--wp--preset--font-size--small, 18px);
+		font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
 		font-weight: var(--form--label-weight);
-		margin-bottom: calc(var(--global--spacing--vertical) / 3);
+		margin-bottom: calc(var(--wp--style--block-gap, 20px) / 3);
 		display: block;
 	}
 
@@ -18,7 +18,7 @@
 		border: var(--form--border-width) solid var(--form--border-color);
 		border-radius: var(--form--border-radius);
 		color: var(--form--color-text);
-		line-height: var(--wp--custom--line-height--body, 1.7);
+		line-height: var(--wp--custom--line-height--medium, 1.45);
 		max-width: inherit;
 		margin-right: calc(-1 * var(--button--border-width));
 		padding: var(--form--spacing-unit);

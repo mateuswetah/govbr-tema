@@ -16,7 +16,7 @@ input[type="color"],
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
-	line-height: var(--wp--custom--line-height--body, 1.7);
+	line-height: var(--wp--custom--line-height--medium, 1.45);
 	padding: var(--form--spacing-unit);
 	// Gives a little more space for the outline offset.
 	margin: 0 2px;
@@ -67,7 +67,7 @@ select {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
-	line-height: var(--wp--custom--line-height--body, 1.7);
+	line-height: var(--wp--custom--line-height--medium, 1.45);
 	padding: var(--form--spacing-unit) calc(3 * var(--form--spacing-unit)) var(--form--spacing-unit) var(--form--spacing-unit);
 	background: var(--global--color-white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat; // stylelint-disable-line function-url-quotes
 	background-position: right var(--form--spacing-unit) top 60%;
@@ -88,9 +88,9 @@ textarea {
 }
 
 label {
-	font-size: var(--wp--preset--font-size--small, 18px);
+	font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
 	font-weight: var(--form--label-weight);
-	margin-bottom: calc(var(--global--spacing--vertical) / 3);
+	margin-bottom: calc(var(--wp--style--block-gap, 20px) / 3);
 }
 
 /**
@@ -191,7 +191,7 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
 	display: inline-block;
 	padding-left: 10px;
-	font-size: var(--wp--preset--font-size--extra-small, 16px);
+	font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 	vertical-align: top;
 }
 
@@ -267,10 +267,10 @@ input[type="range"]::-ms-thumb {
 fieldset {
 	display: grid;
 	border-color: var(--global--color-secondary);
-	padding: var(--global--spacing--horizontal);
+	padding: var(--wp--preset--spacing--scale-up-2, 16px);
 
 	legend {
-		font-size: var(--wp--preset--font-size--large, 24px);
+		font-size: var(--wp--preset--font-size--scale-up-03, 1.728em);
 	}
 
 	input {
@@ -280,7 +280,7 @@ fieldset {
 		}
 
 		&:not([type="submit"]) {
-			margin-bottom: var(--global--spacing--unit);
+			margin-bottom: var(--wp--style--block-gap, 20px);
 		}
 
 		&[type="radio"],
@@ -290,9 +290,9 @@ fieldset {
 
 		&[type="radio"] + label,
 		&[type="checkbox"] + label {
-			font-size: var(--wp--preset--font-size--small, 18px);
+			font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
 			padding-left: 0;
-			margin-bottom: var(--global--spacing--unit);
+			margin-bottom: var(--wp--style--block-gap, 20px);
 		}
 	}
 }
@@ -302,7 +302,7 @@ fieldset {
 }
 
 .post-password-message {
-	font-size: var(--wp--preset--font-size--large, 24px);
+	font-size: var(--wp--preset--font-size--scale-up-03, 1.728em);
 }
 
 .post-password-form {
@@ -316,14 +316,14 @@ fieldset {
 
 	input[type="password"] {
 		flex-grow: 1;
-		margin-top: calc(var(--global--spacing--vertical) / 3);
-		margin-right: calc(0.66 * var(--global--spacing--horizontal));
+		margin-top: calc(var(--wp--style--block-gap, 20px) / 3);
+		margin-right: calc(0.66 * var(--wp--preset--spacing--scale-up-2, 16px));
 	}
 
 	&__submit {
-		margin-top: calc(var(--global--spacing--vertical) / 3);
+		margin-top: calc(var(--wp--style--block-gap, 20px) / 3);
 		@include media(tablet) {
-			margin-left: calc(0.4 * var(--global--spacing--horizontal));
+			margin-left: calc(0.4 * var(--wp--preset--spacing--scale-up-2, 16px));
 		}
 	}
 }

@@ -1,10 +1,10 @@
 .wp-block-query {
 
 	&.has-background {
-		padding: calc(0.666 * var(--global--spacing--vertical));
+		padding: calc(0.666 * var(--wp--style--block-gap, 20px));
 
 		@include media(mobile) {
-			padding: var(--global--spacing--vertical);
+			padding: var(--wp--style--block-gap, 20px);
 		}
 	}
 }

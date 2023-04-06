@@ -1,10 +1,10 @@
 p {
 
-	line-height: var(--wp--typography--line-height, var(--wp--custom--line-height--body, 1.7));
+	line-height: var(--wp--typography--line-height, var(--wp--custom--line-height--medium, 1.45));
 
 	// inherits general font style set at <body>
 	&.has-background {
-		padding: var(--global--spacing--unit);
+		padding: var(--wp--style--block-gap, 20px);
 	}
 
 	// Override `color: inherit` from Core styles.

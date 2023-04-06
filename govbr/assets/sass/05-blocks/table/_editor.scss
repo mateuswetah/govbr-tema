@@ -8,7 +8,7 @@ table,
 
 	td,
 	th {
-		padding: calc(0.5 * var(--global--spacing--unit));
+		padding: calc(0.5 * var(--wp--style--block-gap, 20px));
 	}
 
 	&.is-style-regular .has-background,
@@ -61,14 +61,14 @@ table.wp-calendar-table {
 	caption {
 		font-weight: bold;
 		text-align: left;
-		margin-bottom: var(--global--spacing--unit);
+		margin-bottom: var(--wp--style--block-gap, 20px);
 		color: currentColor;
 	}
 }
 
 .wp-calendar-nav {
 	text-align: left;
-	margin-top: calc(var(--global--spacing--unit) / 2);
+	margin-top: calc(var(--wp--style--block-gap, 20px) / 2);
 
 	svg {
 		height: 1em;

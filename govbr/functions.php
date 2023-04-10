@@ -221,6 +221,10 @@ function gov_br_scripts() {
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
+
+	// Fontawesome icons.
+	wp_enqueue_style( 'gov-br-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css', array(), wp_get_theme()->get( 'Version' ) );
+
 }
 add_action( 'wp_enqueue_scripts', 'gov_br_scripts' );
 

@@ -56,7 +56,7 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 		register_nav_menus(
 			array(
 				'primary' => esc_html__( 'Primary menu', 'govbr' ),
-				'footer'  => esc_html__( 'Secondary menu', 'govbr' ),
+				'institutional' => esc_html__( 'Institutional menu', 'govbr' ),
 			)
 		);
 
@@ -124,39 +124,15 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
-		// Add support for experimental link color control.
-		add_theme_support( 'experimental-link-color' );
+
+		// Allows creating custom template parts
+		add_theme_support( 'block-template-parts' );
 
 		// Remove feed icon link from legacy RSS widget.
 		add_filter( 'rss_widget_feed_link', '__return_empty_string' );
 	}
 }
 add_action( 'after_setup_theme', 'gov_br_setup' );
-
-/**
- * Register widget area.
- *
- * @since Gov BR 1.0
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- *
- * @return void
- */
-function gov_br_widgets_init() {
-
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer', 'govbr' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'govbr' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'gov_br_widgets_init' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

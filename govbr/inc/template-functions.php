@@ -28,11 +28,6 @@ function gov_br_body_classes( $classes ) {
 		$classes[] = 'has-main-navigation';
 	}
 
-	// Add a body class if there are no footer widgets.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-widgets';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'gov_br_body_classes' );

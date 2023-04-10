@@ -158,18 +158,7 @@ function gov_br_get_starter_content() {
 					'page_blog',
 					'page_contact',
 				),
-			),
-
-			// Assign a menu to the "footer" location.
-			'footer'  => array(
-				'name'  => esc_html__( 'Secondary menu', 'govbr' ),
-				'items' => array(
-					'link_facebook',
-					'link_twitter',
-					'link_instagram',
-					'link_email',
-				),
-			),
+			)
 		),
 	);
 

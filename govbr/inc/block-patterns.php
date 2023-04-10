@@ -137,6 +137,11 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			)
 		);
 
+		register_block_pattern(
+			'govbr/footer-links',
+			require get_theme_file_path( '/inc/patterns/footer-links.php' )
+		);
+
 	}
 	add_action( 'init', 'gov_br_register_block_pattern' );
 }

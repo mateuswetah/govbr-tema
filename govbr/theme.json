@@ -719,5 +719,12 @@
 				}
 			}
 		}
-	}
+	},
+	"templateParts": [
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	]
 }

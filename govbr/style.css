@@ -12,7 +12,7 @@ Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: govbr
-Tags: one-column, accessibility-ready, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: one-column, accessibility-ready, custom-menu, custom-logo, editor-style, featured-images, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 Gov BR WordPress Theme, (C) 2020 WordPress.org
 Gov BR is distributed under the terms of the GNU GPL.
@@ -73,7 +73,6 @@ Gov BR is distributed under the terms of the GNU GPL.
  * 404..................404 styles.
  * Search...............Search styles.
  * Navigation...........Navigation styles.
- * Footer Navigation....Footer Navigation styles.
  * Pagination...........Pagination styles.
  * Single...............Single page and post styles.
  * Posts and pages......Misc, sticky post styles.
@@ -34172,46 +34171,6 @@ table.wp-calendar-table caption {
   padding-top: 0;
   padding-bottom: calc(1.7 * var(--wp--style--block-gap, 20px));
 }
-.no-widgets .site-footer {
-  margin-top: calc(6 * var(--wp--style--block-gap, 20px));
-}
-@media only screen and (max-width: 481px) {
-  .no-widgets .site-footer {
-    margin-top: calc(3 * var(--wp--style--block-gap, 20px));
-  }
-}
-
-.site-footer > .site-info {
-  padding-top: var(--wp--style--block-gap, 20px);
-  color: var(--wp--preset--color--reading-light, #333);
-  font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
-  line-height: var(--font-line-height-medium, 1.45);
-  border-top: 3px solid var(--wp--preset--color--border-dark, #888);
-}
-.site-footer > .site-info .site-name {
-  font-size: var(--wp--preset--font-size--scale-up-03, 1.728em);
-}
-.site-footer > .site-info .privacy-policy,
-.site-footer > .site-info .powered-by {
-  margin-top: calc(0.5 * var(--wp--style--block-gap, 20px));
-}
-@media only screen and (min-width: 822px) {
-  .site-footer > .site-info {
-    display: flex;
-    align-items: center;
-  }
-  .site-footer > .site-info .site-name {
-    margin-right: calc(0.5 * var(--wp--style--block-gap, 20px));
-  }
-  .site-footer > .site-info .privacy-policy,
-  .site-footer > .site-info .powered-by {
-    margin-top: initial;
-    margin-left: auto;
-  }
-  .site-footer > .site-info .privacy-policy + .powered-by {
-    margin-left: calc(0.5 * var(--wp--style--block-gap, 20px));
-  }
-}
 
 .singular .entry-header {
   margin-bottom: var(--wp--style--block-gap, 20px);
@@ -35090,54 +35049,6 @@ h2.page-title {
     opacity: 1;
   }
 }
-.footer-navigation {
-  margin-top: calc(2 * var(--wp--style--block-gap, 20px));
-  margin-bottom: var(--wp--style--block-gap, 20px);
-  color: var(--wp--preset--color--reading-light, #333);
-  font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
-}
-
-.footer-navigation-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
-  padding-left: 0;
-}
-.footer-navigation-wrapper li {
-  display: inline;
-  line-height: 3;
-}
-.footer-navigation-wrapper li a {
-  padding: calc(1.25 * var(--wp--preset--spacing--scale-base, 8px)) var(--wp--preset--spacing--scale-base, 8px);
-}
-.footer-navigation-wrapper li a:hover {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-}
-.is-dark-theme .footer-navigation-wrapper li a:focus .svg-icon {
-  fill: var(--wp--style--color--link, var(--background, #fff));
-}
-.has-background-white .footer-navigation-wrapper li a:focus .svg-icon {
-  fill: var(--wp--style--color--link, var(--background, #fff));
-}
-.footer-navigation-wrapper li .svg-icon {
-  vertical-align: middle;
-  fill: currentColor;
-}
-.footer-navigation-wrapper li .svg-icon:hover {
-  transform: scale(1.1);
-}
-@media (prefers-reduced-motion: no-preference) {
-  .footer-navigation-wrapper li .svg-icon {
-    transition: transform 0.1s ease;
-  }
-}
-.footer-navigation-wrapper .sub-menu-toggle,
-.footer-navigation-wrapper .menu-item-description {
-  display: none;
-}
-
 /* Next/Previous navigation */
 .navigation {
   color: var(--wp--preset--color--reading-light, #333);

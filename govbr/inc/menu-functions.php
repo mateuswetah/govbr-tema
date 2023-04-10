@@ -53,31 +53,6 @@ function gov_br_get_social_link_svg( $uri, $size = 24 ) {
 }
 
 /**
- * Displays SVG icons in the footer navigation.
- *
- * @since Gov BR 1.0
- *
- * @param string   $item_output The menu item's starting HTML output.
- * @param WP_Post  $item        Menu item data object.
- * @param int      $depth       Depth of the menu. Used for padding.
- * @param stdClass $args        An object of wp_nav_menu() arguments.
- * @return string The menu item output with social icon.
- */
-function gov_br_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
-	// Change SVG icon inside social links menu if there is supported URL.
-	if ( 'footer' === $args->theme_location ) {
-		$svg = gov_br_get_social_link_svg( $item->url, 24 );
-		if ( ! empty( $svg ) ) {
-			$item_output = str_replace( $args->link_before, $svg, $item_output );
-		}
-	}
-
-	return $item_output;
-}
-
-add_filter( 'walker_nav_menu_start_el', 'gov_br_nav_menu_social_icons', 10, 4 );
-
-/**
  * Filters the arguments for a single nav menu item.
  *
  * @since Gov BR 1.0

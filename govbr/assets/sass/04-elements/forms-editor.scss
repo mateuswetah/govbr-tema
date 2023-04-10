@@ -1,13 +1,13 @@
 select,
 select:focus {
-	border: var(--form--border-width) solid var(--form--border-color);
-	border-radius: var(--form--border-radius);
-	color: var(--form--color-text);
+	border: var(--border-width, 1px) solid var(--border-color-alternative, #888);
+	border-radius: var(--surface-rounder-sm, 4px);
+	color: var(--color-light, #333);
 	font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
-	padding: var(--form--spacing-unit) calc(3 * var(--form--spacing-unit)) var(--form--spacing-unit) var(--form--spacing-unit);
-	background: var(--global--color-white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat; // stylelint-disable-line function-url-quotes
-	background-position: right var(--form--spacing-unit) top 60%;
+	padding: 0 calc(2 * var(--spacing-scale-2x)) 0 var(--spacing-scale-2x);
+	background: var(--background, #fff) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat; // stylelint-disable-line function-url-quotes
+	background-position: right var(--spacing-scale-2x) top 60%;
 }

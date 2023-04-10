@@ -3,7 +3,7 @@
 
 	.wp-block-latest-comments__comment {
 		font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
-		line-height: var(--wp--custom--line-height--medium, 1.45);
+		line-height: var(--font-line-height-medium, 1.45);
 
 		/* Vertical margins logic */
 		margin-top: var(--wp--style--block-gap, 20px);
@@ -19,13 +19,13 @@
 	}
 
 	.wp-block-latest-comments__comment-date {
-		color: var(--global--color-primary);
+		color: var(--wp--preset--color--reading-light, #333);
 		font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
 	}
 
 	.wp-block-latest-comments__comment-excerpt p {
 		font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
-		line-height: var(--wp--custom--line-height--medium, 1.45);
+		line-height: var(--font-line-height-medium, 1.45);
 		margin: 0;
 	}
 }

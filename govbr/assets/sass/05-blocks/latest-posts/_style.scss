@@ -63,9 +63,9 @@
 	// Post title
 	> li > a {
 		display: inline-block;
-		font-size: var(--latest-posts--title-font-size);
-		font-weight: var(--wp--custom--font-weight--regular, 400);
-		line-height: var(--wp--custom--line-height--low, 1.15);
+		font-size: var(--wp--preset--font-size--scale-up-03, 1.728em);
+		font-weight: var(--font-weight-regular, 400);
+		line-height: var(--font-line-height-low, 1.15);
 		margin-bottom: calc(0.333 * var(--wp--style--block-gap, 20px));
 	}
 
@@ -76,16 +76,16 @@
 
 	// Post author
 	.wp-block-latest-posts__post-author {
-		color: var(--global--color-primary);
+		color: var(--wp--preset--color--reading-light, #333);
 		font-size: var(--wp--preset--font-size--scale-up-02, 1.2em);
-		line-height: var(--wp--custom--line-height--medium, 1.45);
+		line-height: var(--font-line-height-medium, 1.45);
 	}
 
 	// Post date
 	.wp-block-latest-posts__post-date {
-		color: var(--global--color-primary);
+		color: var(--wp--preset--color--reading-light, #333);
 		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
-		line-height: var(--wp--custom--line-height--medium, 1.45);
+		line-height: var(--font-line-height-medium, 1.45);
 
 		[class*="inner-container"] &,
 		.has-background & {
@@ -96,8 +96,8 @@
 	// Post content
 	.wp-block-latest-posts__post-excerpt,
 	.wp-block-latest-posts__post-full-content {
-		font-size: var(--latest-posts--description-font-size);
-		line-height: var(--wp--custom--line-height--medium, 1.45);
+		font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
+		line-height: var(--font-line-height-medium, 1.45);
 		margin-top: calc(0.666 * var(--wp--style--block-gap, 20px));
 	}
 

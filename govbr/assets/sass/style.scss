@@ -18,7 +18,6 @@
  * Clearings............Clearings for the main components.
  *
  * ELEMENTS
- * Blockquote...........Default blockquote.
  * Forms................Element-level form styling.
  * Headings.............H1–H6
  * Links................Default links.
@@ -43,8 +42,6 @@
  * Media text...........Specific styles for the media and text block.
  * Navigation...........Specific styles for the navigation block.
  * Paragraph............Specific styles for the paragraph block.
- * Pullquote............Specific styles for the pullquote block.
- * Quote................Specific styles for the quote block.
  * Search...............Specific styles for the search block.
  * Separator............Specific styles for the separator block.
  * Table................Specific styles for the table block.
@@ -89,7 +86,6 @@
 @import "03-generic/clearings";
 
 /* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
-@import "04-elements/blockquote";
 @import "04-elements/forms";
 @import "04-elements/media";
 @import "04-elements/misc";
@@ -115,5 +111,4 @@
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
 @import "07-utilities/a11y";
-@import "07-utilities/color-palette";
 @import "07-utilities/measure";

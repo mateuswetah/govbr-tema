@@ -2,9 +2,9 @@
 	text-align: center;
 
 	figcaption {
-		color: var(--global--color-primary);
+		color: var(--wp--preset--color--reading-light, #333);
 		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
-		line-height: var(--wp--custom--line-height--medium, 1.45);
+		line-height: var(--font-line-height-medium, 1.45);
 		margin-top: calc(0.5 * var(--wp--style--block-gap, 20px));
 		margin-bottom: var(--wp--style--block-gap, 20px);
 		text-align: center;

@@ -22,7 +22,7 @@
 	.is-large-text,
 	.has-large-font-size {
 		font-size: var(--wp--preset--font-size--scale-up-03, 1.728em);
-		line-height: var(--wp--custom--line-height--low, 1.15);
+		line-height: var(--font-line-height-low, 1.15);
 	}
 
 	.is-larger-text,
@@ -30,24 +30,24 @@
 	.is-extra-large-text,
 	.has-extra-large-font-size {
 		font-size: var(--wp--preset--font-size--scale-up-05, 2.488em);
-		line-height: var(--wp--custom--line-height--low, 1.15);
+		line-height: var(--font-line-height-low, 1.15);
 	}
 
 	.is-huge-text,
 	.has-huge-font-size {
 		font-size: var(--wp--preset--font-size--scale-up-06, 2.986em);
-		line-height: var(--wp--custom--line-height--low, 1.15);
+		line-height: var(--font-line-height-low, 1.15);
 
 		// This size is meant to mimic the page titles, so the font weight is reduced to match.
-		font-weight: var(--wp--custom--font-weight--page-title);
+		font-weight: var(--font-weight-light);
 	}
 
 	.is-gigantic-text,
 	.has-gigantic-font-size {
 		font-size: var(--wp--preset--font-size--gigantic, 80px);
-		line-height: var(--wp--custom--line-height--low, 1.15);
+		line-height: var(--font-line-height-low, 1.15);
 
 		// This size is meant to mimic the page titles, so the font weight is reduced to match.
-		font-weight: var(--wp--custom--font-weight--page-title);
+		font-weight: var(--font-weight-light);
 	}
 }

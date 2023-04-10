@@ -10,16 +10,12 @@
 
 		figcaption {
 			margin: 0;
-			// Text color is always white to account for default gradient background
-			color: var(--global--color-white);
 			font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 
 			a {
-				color: var(--global--color-white);
-
 				&:focus {
 					background-color: transparent;
-					outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+					outline: 2px solid var(--interactive);
 					text-decoration: none;
 				}
 			}

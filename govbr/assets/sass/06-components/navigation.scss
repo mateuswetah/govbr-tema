@@ -18,12 +18,12 @@
 	#primary-mobile-menu {
 		display: flex;
 		margin-left: auto;
-		padding: calc(var(--button--padding-vertical) - (0.25 * var(--wp--style--block-gap, 20px))) calc(0.5 * var(--button--padding-horizontal));
-		font-size: var(--primary-nav--font-size-button);
-		font-weight: var(--primary-nav--font-weight-button);
+		padding: calc(var(--wp--preset--spacing--scale-up-2, 16px) - (0.25 * var(--wp--style--block-gap, 20px))) calc(0.5 * var(--wp--preset--spacing--scale-up-4, 36px));
+		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
+		font-weight: 500;
 		background-color: transparent;
 		border: none;
-		color: var(--primary-nav--color-link);
+		color: var(--interactive);
 
 		.dropdown-icon {
 			display: flex;
@@ -68,7 +68,7 @@
 	.primary-navigation-open & {
 		width: 100%;
 		z-index: 500;
-		background-color: var(--global--color-background);
+		background-color: var(--background, #fff);
 
 		#primary-mobile-menu {
 			position: static;
@@ -80,8 +80,7 @@
 	position: absolute;
 	top: var(--global--admin-bar--height);
 	right: 0;
-	color: var(--primary-nav--color-text);
-	font-size: var(--primary-nav--font-size);
+	font-size: var(--wp--preset--font-size--scale-up-02, 1.2em);
 	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -96,11 +95,11 @@
 		bottom: 0;
 		left: 0;
 		// Height of the menu-button-container using font size, line height, and total padding, plus 5px so the focus of the first item is visible.
-		padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 42px + 5px);
+		padding-top: calc(1.15 * var(--wp--preset--font-size--scale-up-01, 1.2em) + 42px + 5px);
 		padding-left: var(--wp--style--block-gap, 20px);
 		padding-right: var(--wp--style--block-gap, 20px);
 		padding-bottom: var(--wp--preset--spacing--scale-up-2, 16px);
-		background-color: var(--global--color-background);
+		background-color: var(--background, #fff);
 		transform: translateY(var(--wp--style--block-gap, 20px));
 
 		@media (prefers-reduced-motion: no-preference) {
@@ -128,7 +127,7 @@
 			}
 
 			&:focus {
-				border: 2px solid var(--global--color-primary);
+				border: 2px solid var(--wp--preset--color--reading-light, #333);
 			}
 		}
 	}
@@ -200,6 +199,7 @@
 		justify-content: flex-start;
 		flex-wrap: wrap;
 		list-style: none;
+		gap: var(--wp--preset--spacing--scale-up-2, 16px);
 		margin: 0;
 		max-width: none;
 		padding-left: 0;
@@ -231,7 +231,7 @@
 		// Sub-menu buttons
 		.sub-menu-toggle {
 			display: flex;
-			height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
+			height: calc(2 * var(--wp--preset--color--reading-light, #333) + 1.15em + 1px);
 			width: 44px;
 			padding: 0;
 			justify-content: center;
@@ -241,7 +241,7 @@
 			border: none;
 
 			&:focus {
-				outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+				outline: 2px solid var(--interactive);
 			}
 
 			@include media(mobile-only) {
@@ -305,17 +305,17 @@
 					top: -10px;
 					left: var(--wp--preset--spacing--scale-up-2, 16px);
 					border-style: solid;
-					border-color: var(--primary-nav--border-color) transparent;
+					border-color: var(--wp--preset--color--border-light, #ccc) transparent;
 					border-width: 0 7px 10px 7px;
 				}
 
 				&:after {
 					top: -9px;
-					border-color: var(--global--color-background) transparent;
+					border-color: var(--background, #fff) transparent;
 				}
 
 				li {
-					background: var(--global--color-background);
+					background: var(--background, #fff);
 				}
 
 				&.submenu-reposition-left {
@@ -359,27 +359,22 @@
 		}
 	}
 
-	// Top-level Item Link Colors
-	.primary-menu > .menu-item:hover > a {
-		color: var(--primary-nav--color-link-hover);
-	}
-
 	.primary-menu-container {
 		@include media(mobile) {
 			// Better align with the site title when the menu wraps.
-			margin-right: calc(0px - var(--primary-nav--padding));
-			margin-left: calc(0px - var(--primary-nav--padding));
+			margin-right: calc(0px - var(--wp--preset--color--reading-light, #333));
+			margin-left: calc(0px - var(--wp--preset--color--reading-light, #333));
 
 			// Top-level Menu Item
 			> ul > .menu-item {
 				display: flex;
 
 				> a {
-					padding-left: var(--primary-nav--padding);
-					padding-right: var(--primary-nav--padding);
+					padding-left: var(--wp--preset--color--reading-light, #333);
+					padding-right: var(--wp--preset--color--reading-light, #333);
 
 					+ .sub-menu-toggle {
-						margin-left: calc(5px - var(--primary-nav--padding));
+						margin-left: calc(5px - var(--wp--preset--color--reading-light, #333));
 					}
 				}
 			}
@@ -390,24 +385,18 @@
 	a {
 		display: block;
 		font-size: var(--primary-nav--font-size-mobile);
-		font-weight: var(--primary-nav--font-weight);
-		padding: var(--primary-nav--padding) 0;
+		font-weight: normal;
+		padding: var(--wp--preset--color--reading-light, #333) 0;
 		text-decoration: none;
 
 		@include media(mobile) {
 			display: block;
-			font-size: var(--primary-nav--font-size);
-			font-weight: var(--primary-nav--font-weight);
+			font-size: var(--wp--preset--font-size--scale-up-02, 1.2em);
+			font-weight: normal;
 		}
 
 		+ svg {
-			fill: var(--primary-nav--color-text);
-		}
-
-		&:hover,
-		&:link,
-		&:visited {
-			color: var(--primary-nav--color-link-hover);
+			fill: var(--interactive);
 		}
 
 		&:hover {
@@ -439,8 +428,8 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		margin-left: var(--primary-nav--padding);
-		border: 1px solid var(--primary-nav--border-color);
+		margin-left: var(--wp--preset--color--reading-light, #333);
+		border: 1px solid var(--wp--preset--color--border-light, #ccc);
 
 		.sub-menu {
 			border: none;
@@ -466,14 +455,14 @@
 			}
 
 			> a {
-				padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+				padding: calc(1.25 * var(--wp--preset--spacing--scale-base, 1em)) var(--wp--preset--spacing--scale-base, 1em);
 				display: block;
-				font-size: var(--primary-nav--font-size-sub-menu-mobile);
-				font-style: var(--primary-nav--font-style-sub-menu-mobile);
+				font-size: var(--wp--preset--font-size--scale--base, 1.0em);
+				font-style: normal;
 
 				@include media(mobile) {
-					font-size: var(--primary-nav--font-size-sub-menu);
-					font-style: var(--primary-nav--font-style);
+					font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
+					font-style: normal;
 				}
 			}
 		}

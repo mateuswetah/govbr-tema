@@ -1,32 +1,4 @@
 /**
- * Reset specific elements to make them easier to style in other contexts.
- */
-
-html,
-body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-form,
-legend,
-textarea,
-pre,
-iframe,
-hr {
-	padding: 0;
-	margin: 0;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-}
-
-/**
  * Apply generic border-box to all elements.
  * See:
  * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
@@ -38,7 +10,7 @@ html {
 	box-sizing: border-box;
 
 	// HTML resets
-	line-height: var(--wp--custom--line-height--medium, 1.45);
+	line-height: var(--font-line-height-medium, 1.45);
 }
 
 /**
@@ -56,9 +28,7 @@ html {
 // body resets
 body {
 	font-weight: normal;
-	color: var(--global--color-primary);
 	text-align: left;
-	background-color: var(--global--color-background);
 }
 
 

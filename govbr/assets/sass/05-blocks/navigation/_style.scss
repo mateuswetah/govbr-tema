@@ -3,8 +3,8 @@
 	.wp-block-navigation-link {
 
 		.wp-block-navigation-link__label {
-			font-size: var(--primary-nav--font-size);
-			font-weight: var(--primary-nav--font-weight);
+			font-size: var(--wp--preset--font-size--scale-up-02, 1.2em);
+			font-weight: normal;
 		}
 	}
 
@@ -39,12 +39,12 @@
 		> .has-child {
 
 			> .wp-block-navigation__container {
-				background: var(--global--color-background);
+				background: var(--background, #fff);
 				margin: 0;
 				padding: 0;
 				position: absolute;
 				top: 100%;
-				border: 1px solid var(--primary-nav--border-color);
+				border: 1px solid var(--wp--preset--color--border-light, #ccc);
 
 				&:before,
 				&:after {
@@ -55,13 +55,13 @@
 					top: -10px;
 					left: var(--wp--preset--spacing--scale-up-2, 16px);
 					border-style: solid;
-					border-color: var(--primary-nav--border-color) transparent;
+					border-color: var(--wp--preset--color--border-light, #ccc) transparent;
 					border-width: 0 7px 10px 7px;
 				}
 
 				&:after {
 					top: -9px;
-					border-color: var(--global--color-background) transparent;
+					border-color: var(--background, #fff) transparent;
 				}
 			}
 		}
@@ -70,10 +70,10 @@
 	&:not(.has-background) {
 
 		.wp-block-navigation__container {
-			background: var(--global--color-background);
+			background: var(--background, #fff);
 
 			.wp-block-navigation__container {
-				background: var(--global--color-background);
+				background: var(--background, #fff);
 			}
 		}
 	}
@@ -86,12 +86,7 @@
 
 				&:hover,
 				&:focus {
-					color: var(--primary-nav--color-link-hover);
-				}
-
-				&:hover {
-					text-decoration: underline;
-					text-decoration-style: dotted;
+					color: var(--interactive);
 				}
 			}
 		}

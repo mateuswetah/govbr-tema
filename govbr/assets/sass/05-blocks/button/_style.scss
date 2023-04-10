@@ -7,116 +7,45 @@ input[type="submit"],
 input[type="reset"],
 .wp-block-search .wp-block-search__button,
 .wp-block-button .wp-block-button__link,
-.wp-block-file a.wp-block-file__button {
+.wp-block-file a.wp-block-file__button,
+.wp-element-button {
+	
 	// Extend button style
 	@include button-style();
-}
 
-/**
- * Block Options
- */
-.wp-block-button {
-
-	// Target the default and filled button states.
-	&:not(.is-style-outline) {
-
-		.wp-block-button__link:not(:hover):not(:active) {
-
-			// Text colors
-			&:not(.has-text-color) {
-				color: var(--global--color-background);
-
-				// Nested
-				.has-background & {
-					color: var(--local--color-background, var(--global--color-background));
-
-					&.has-background {
-						color: var(--global--color-primary);
-					}
-				}
-			}
-
-			// Background-colors
-			&:not(.has-background) {
-				background-color: var(--global--color-primary);
-
-				// Nested
-				.has-background & {
-					background-color: var(--local--color-primary, var(--global--color-primary));
-				}
-			}
-		}
-
-		// Hover Button color should match parent element foreground color
-		.wp-block-button__link:hover,
-		.wp-block-button__link:active {
-			border-color: currentColor !important;
-			background-color: transparent !important;
-			color: inherit !important;
-		}
+	/* Tertiary style */
+	.is-style-tertiary > & {
+		--interactive-rgb: var(--interactive-light-rgb);
+		background-color: transparent;
+		color: var(--interactive);
 	}
 
-	// Outline Style.
-	&.is-style-outline {
-
-		.wp-block-button__link:not(:hover):not(:active) {
-
-			// Border colors
-			&:not(.has-text-color),
-			&:not(.has-background),
-			&.has-background {
-				border-color: currentColor;
-			}
-
-			// Text colors
-			&:not(.has-text-color) {
-				color: var(--global--color-primary);
-
-				// Nested
-				.has-background & {
-					color: var(--local--color-primary, var(--global--color-primary));
-				}
-			}
-
-			&.has-background {
-				// Nested
-				.has-background &:not(.has-text-color) {
-					color: inherit;
-				}
-			}
-
-			// Background-colors
-			&:not(.has-background) {
-				background-color: transparent;
-			}
-		}
-
-		.wp-block-button__link:hover,
-		.wp-block-button__link:active {
-
-			border-color: transparent !important;
-			background-color: var(--global--color-primary) !important;
-			color: var(--global--color-background) !important;
-
-			.has-background & {
-				background-color: var(--local--color-primary, var(--global--color-primary)) !important;
-				color: var(--local--color-background, var(--global--color-background)) !important;
-			}
-
-			.has-text-color & {
-				color: var(--local--color-background, var(--global--color-background)) !important;
-			}
-		}
-	}
-
-	// Squared Style
-	.is-style-squared .wp-block-button__link {
-		border-radius: 0;
+	/* Magic style */
+	.is-style-magic > & {
+		--focus-offset: calc( (var(--magic-support-size) - var(--magic-size)) * 0.5 + 4px );
+		--button-size: var(--magic-size);
+		background-color: var(--interactive-alternative);
+		color: var(--color-dark);
+		font-size: var(--font-size-scale-up-02);
+		font-weight: var(--font-weight-semi-bold);
 	}
 }
 
-.is-style-outline .wp-block-button__link[style*="radius"]:focus,
-.wp-block-button a.wp-block-button__link[style*="radius"]:focus {
-	outline-offset: 2px;
-	outline: 2px dotted var(--button--color-background);
+.wp-block-button.is-style-magic {
+	--magic-size: var(--magic-medium);
+	--magic-small: var(--spacing-scale-4xh);
+	--magic-medium: var(--spacing-scale-5xh);
+	--magic-large: var(--spacing-scale-6xh);
+	--magic-support-size: var(--magic-support-medium);
+	--magic-support-small: var(--spacing-scale-7x);
+	--magic-support-medium: var(--spacing-scale-8x);
+	--magic-support-large: var(--spacing-scale-9x);
+	--magic-z-index: var(--z-index-layer-1);
+	align-items: center;
+	background-color: var(--gray-5);
+	border-radius: 100em;
+	box-shadow: var(--surface-shadow-md);
+	display: inline-flex;
+	height: var(--magic-support-size);
+	padding: calc((var(--magic-support-size) - var(--magic-size)) * 0.5);
 }

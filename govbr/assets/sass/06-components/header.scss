@@ -21,7 +21,6 @@
 
 // Site branding
 .site-branding {
-	color: var(--branding--color-text);
 	margin-right: 140px;
 
 	&:last-child {
@@ -38,40 +37,9 @@
 
 // Site title
 .site-title {
-
-	color: var(--branding--color-link);
 	font-size: var(--wp--preset--font-size--scale-up-03, 1.728em);
-	text-transform: var(--branding--title--text-transform);
-	line-height: var(--wp--custom--line-height--low, 1.15);
+	line-height: var(--font-line-height-low, 1.15);
 	margin-bottom: calc(var(--wp--style--block-gap, 20px) / 6);
-
-	a {
-		color: currentColor;
-		font-weight: var(--branding--title--font-weight);
-
-		&:link,
-		&:visited,
-		&:active {
-			color: currentColor;
-		}
-
-		&:hover,
-		&:focus {
-			color: var(--branding--color-link-hover);
-		}
-
-	}
-}
-
-// Site description
-.site-description {
-	color: currentColor;
-	font-size: var(--branding--description--font-size);
-	line-height: 1.4;
-}
-
-.site-title > a {
-	text-decoration-color: var(--global--color-secondary);
 }
 
 // Site logo
@@ -88,8 +56,8 @@
 	.custom-logo {
 		margin-left: auto;
 		margin-right: auto;
-		max-width: var(--branding--logo--max-width-mobile);
-		max-height: var(--branding--logo--max-height-mobile);
+		max-width: 100%;
+		max-height: var(--header-logo-size);
 		height: auto;
 		display: inline-block;
 		width: auto;
@@ -98,8 +66,8 @@
 	@include media(mobile) {
 
 		.custom-logo {
-			max-width: var(--branding--logo--max-width);
-			max-height: var(--branding--logo--max-height);
+			max-width: 100%;
+			max-height: var(--header-logo-size);
 			height: auto;
 			width: auto;
 		}
@@ -127,7 +95,7 @@
 						}
 
 						img {
-							max-height: calc(var(--button--padding-vertical) - (0.25 * var(--wp--style--block-gap, 20px)) + 1.7em);
+							max-height: calc(var(--wp--preset--spacing--scale-up-2, 16px) - (0.25 * var(--wp--style--block-gap, 20px)) + 1.7em);
 						}
 					}
 				}
@@ -162,7 +130,7 @@
 					.menu-button-container {
 						position: relative;
 						padding-top: 0;
-						margin-top: calc(0px - var(--button--padding-vertical) + (0.25 * var(--wp--style--block-gap, 20px)));
+						margin-top: calc(0px - var(--wp--preset--spacing--scale-up-2, 16px) + (0.25 * var(--wp--style--block-gap, 20px)));
 
 						#primary-mobile-menu {
 							// The 4.5px here is to offset the icon size horizontallly

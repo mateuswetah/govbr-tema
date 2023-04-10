@@ -1,12 +1,12 @@
 .wp-block-separator,
 hr {
-	border-bottom: var(--separator--height) solid var(--separator--border-color);
+	border-bottom: var(--divider-size, 1px) solid var(--border-color, #ccc);
 	clear: both;
 	opacity: 1;
 
 	&[style*="text-align:right"],
 	&[style*="text-align: right"] {
-		border-right-color: var(--separator--border-color);
+		border-right-color: var(--border-color, #ccc);
 	}
 
 	[data-align="full"] > &,
@@ -27,7 +27,7 @@ hr {
 		}
 
 		&:before {
-			color: var(--separator--border-color);
+			color: var(--border-color, #ccc);
 		}
 	}
 

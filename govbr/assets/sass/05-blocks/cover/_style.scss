@@ -13,20 +13,6 @@
 	margin-top: inherit;
 	margin-bottom: inherit;
 
-	.wp-block-cover__inner-container,
-	.wp-block-cover-image-text,
-	.wp-block-cover-text {
-		color: currentColor; // Uses text color specified with background-color options in 07-utilities\color-palette.scss
-
-		a:not(.wp-block-button__link):not(.wp-block-file__button) {
-			color: currentColor;
-		}
-
-		.has-link-color a {
-			color: var(--wp--style--color--link, var(--global--color-primary));
-		}
-	}
-
 	.wp-block-cover__inner-container {
 
 		> * {
@@ -58,5 +44,9 @@
 	/* The background color class is used just for the overlay, and does not need to be applied to the inner container. */
 	&[class*="-background-color"][class] .wp-block-cover__inner-container {
 		background-color: unset;
+	}
+
+	&:not(.is-light) .wp-block-cover__inner-container {
+		@include dark-mode;
 	}
 }

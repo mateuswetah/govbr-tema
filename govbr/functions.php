@@ -238,22 +238,6 @@ function govbr_block_editor_script() {
 
 add_action( 'enqueue_block_editor_assets', 'govbr_block_editor_script' );
 
-/**
- * Enqueue non-latin language styles.
- *
- * @since Gov BR 1.0
- *
- * @return void
- */
-function gov_br_non_latin_languages() {
-	$custom_css = gov_br_get_non_latin_css( 'front-end' );
-
-	if ( $custom_css ) {
-		wp_add_inline_style( 'gov-br-style', $custom_css );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'gov_br_non_latin_languages' );
-
 // SVG Icons class.
 require get_template_directory() . '/classes/class-gov-br-svg-icons.php';
 

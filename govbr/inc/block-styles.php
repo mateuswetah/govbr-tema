@@ -27,6 +27,25 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => esc_html__( 'Overlap', 'govbr' ),
 			)
 		);
+
+		/* Button: Tertiary style */
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'tertiary',
+				'label' => esc_html__( 'Tertiary', 'govbr' )
+			)
+		);
+
+		/* Button: Magic style */
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'magic',
+				'label' => esc_html__( 'Magic', 'govbr' )
+			)
+		);
+		
 	}
 	add_action( 'init', 'gov_br_register_block_styles' );
 }

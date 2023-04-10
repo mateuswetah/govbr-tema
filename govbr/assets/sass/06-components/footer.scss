@@ -20,13 +20,12 @@
 // Footer Branding
 .site-footer > .site-info {
 	padding-top: var(--wp--style--block-gap, 20px);
-	color: var(--footer--color-text);
-	font-size: var(--footer--font-size);
-	line-height: var(--wp--custom--line-height--medium, 1.45);
-	border-top: 3px solid var(--global--color-border);
+	color: var(--wp--preset--color--reading-light, #333);
+	font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
+	line-height: var(--font-line-height-medium, 1.45);
+	border-top: 3px solid var(--wp--preset--color--border-dark, #888);
 
 	.site-name {
-		text-transform: var(--branding--title--text-transform);
 		font-size: var(--wp--preset--font-size--scale-up-03, 1.728em);
 	}
 
@@ -51,33 +50,6 @@
 
 		.privacy-policy + .powered-by {
 			margin-left: calc(0.5 * var(--wp--style--block-gap, 20px));
-		}
-	}
-
-	a {
-		color: var(--footer--color-link);
-
-		&:link,
-		&:visited,
-		&:active {
-			color: var(--footer--color-link);
-		}
-
-		&:hover {
-			color: var(--footer--color-link-hover);
-		}
-
-		&:focus {
-			color: var(--footer--color-link-hover);
-
-			.is-dark-theme & {
-				color: var(--wp--style--color--link, var(--global--color-background));
-			}
-
-			// Change colors when the body background is white.
-			.has-background-white & {
-				color: var(--wp--style--color--link, var(--global--color-white));
-			}
 		}
 	}
 }

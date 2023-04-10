@@ -1,6 +1,6 @@
 [data-type="core/html"] textarea {
 	// Make sure that the color is not white on white when a dark body background is used.
-	color: var(--global--color-dark-gray);
+	color: var(--wp--preset--color--reading-light, #333);
 	border-radius: 0;
 	padding: var(--wp--style--block-gap, 20px);
 }

@@ -118,7 +118,7 @@
 
 // Drop caps
 .has-drop-cap:not(:focus)::first-letter {
-	font-weight: var(--wp--custom--font-weight--regular, 400);
+	font-weight: var(--font-weight-regular, 400);
 	line-height: 0.66;
 	text-transform: uppercase;
 	font-style: normal;

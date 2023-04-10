@@ -16,20 +16,14 @@ table,
 	}
 
 	figcaption {
-		color: var(--global--color-primary);
+		color: var(--wp--preset--color--reading-light, #333);
 		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 	}
 
-	&.is-style-regular .has-background,
-	&.is-style-stripes .has-background,
-	&.is-style-stripes .has-background thead tr,
-	&.is-style-stripes .has-background tfoot tr,
-	&.is-style-stripes .has-background tbody tr {
-		color: var(--table--has-background-text-color);
-	}
+
 
 	&.is-style-stripes {
-		border-color: var(--table--stripes-border-color);
+		border-color: var(--wp--preset--color--border-light);
 
 		th,
 		td {
@@ -37,11 +31,11 @@ table,
 		}
 
 		tbody tr:nth-child(odd) {
-			background-color: var(--table--stripes-background-color);
+			background-color: var(--wp--preset--color--surface-light);
 		}
 
 		.has-background tbody tr:nth-child(odd) {
-			background-color: var(--global--color-white-90);
+			background-color: var(--wp--preset--color--surface-light-alternative);
 		}
 	}
 }

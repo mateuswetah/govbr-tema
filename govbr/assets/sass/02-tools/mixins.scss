@@ -17,65 +17,86 @@
 	}
 }
 
-// Button style
-// - Applies button styles to blocks and elements that share them.
+// Estilo dos botões
+// Este código é uma cópia do conteúdo da classe &
 @mixin button-style() {
-	border: var(--button--border-width) solid transparent;
-	border-radius: var(--button--border-radius);
+	--button-radius: 100em;
+	--button-xsmall: 24px;
+	--button-small: 32px;
+	--button-medium: 40px;
+	--button-large: 48px;
+	--button-size: var(--button-medium);
+	--interactive-rgb: var(--color-dark-rgb);
+	background-color: var(--interactive);
+	color: var(--color-dark);
+	align-items: center;
+	border: 0;
+	border-radius: var(--button-radius);
 	cursor: pointer;
-	font-weight: var(--button--font-weight);
-	font-size: var(--button--font-size);
-	line-height: var(--button--line-height);
-	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
-	text-decoration: none;
-
-	// Standard Button Color Relationship Logic
-	&:not(:hover):not(:active) {
-
-		// Text colors
-		&:not(.has-text-color) {
-			color: var(--global--color-background);
-
-			// Nested
-			.has-background & {
-				color: var(--local--color-background, var(--global--color-primary));
-
-				&.has-background {
-					color: var(--global--color-primary);
-				}
-			}
-		}
-
-		// Background-colors
-		&:not(.has-background) {
-			background-color: var(--global--color-primary);
-
-			// Nested
-			.has-background & {
-				background-color: var(--local--color-primary, var(--global--color-primary));
-			}
-		}
-	}
-
-	// Hover Button color should match parent element foreground color
-	&:hover,
-	&:active {
-		background-color: transparent;
-		border-color: currentColor;
-		color: inherit;
-	}
-
-	// Focus Button outline color should always match the current text color
-	&:focus {
-		outline-offset: -6px;
-		outline: 2px dotted currentColor;
-	}
+	display: inline-flex;
+	font-size: var(--font-size-scale-up-01);
+	font-weight: var(--font-weight-semi-bold);
+	height: var(--button-size);
+	justify-content: center;
+	overflow: hidden;
+	padding: 0 var(--spacing-scale-3x);
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	width: auto;
 
 	// Disabled Button colors
 	&:disabled {
-		background-color: var(--global--color-white-50);
-		border-color: var(--global--color-white-50);
-		color: var(--button--color-text-active);
+		cursor: not-allowed;
+		opacity: var(--disabled);
+	}
+
+	&:not(:disabled) {
+		--focus-offset: var(--spacing-scale-half);
+	}
+	&:not(:disabled):focus {
+		outline: none;
+	}
+	&:not(:disabled).focus-visible,
+	&:not(:disabled):focus-visible {
+		outline-color: var(--focus);
+		outline-offset: var(--focus-offset);
+		outline-style: var(--focus-style);
+		outline-width: var(--focus-width);
+	}
+	&:not(:disabled):not(:disabled):hover {
+		background-image: linear-gradient(rgba(var(--interactive-rgb), var(--hover)), rgba(var(--interactive-rgb), var(--hover)));
+	}
+	&:not(:disabled):not(:disabled):active {
+		background-image: linear-gradient(rgba(var(--interactive-rgb), var(--pressed)), rgba(var(--interactive-rgb), var(--pressed)));
+	}
+	&.active,
+	&.is-active,
+	&[active] {
+		--hover: var(--hover-dark);
+		background-color: var(--active);
+		color: var(--color-dark);
+	}
+	&.loading::after,
+	&[loading]::after,
+	&.is-loading::after {
+		border-color: var(--interactive) var(--interactive) transparent;
+		border-style: solid;
+	}
+	&.loading.primary::after, 
+	&.loading.danger::after, 
+	&.loading.success::after, 
+	&.loading.info::after, 
+	&[loading].primary::after, 
+	&[loading].danger::after, 
+	&[loading].success::after, 
+	&[loading].info::after, 
+	&.is-loading.primary::after, 
+	&.is-loading.danger::after, 
+	&.is-loading.success::after, 
+	&.is-loading.info::after {
+		border-color: var(--background) var(--background) transparent;
 	}
 }
 

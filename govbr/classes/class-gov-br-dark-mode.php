@@ -47,7 +47,7 @@ class Gov_BR_Dark_Mode {
 		// Add Dark Mode variable overrides.
 		wp_add_inline_style(
 			'gov-br-custom-color-overrides',
-			'.is-dark-theme.is-dark-theme .editor-styles-wrapper { --global--color-background: var(--global--color-dark-gray); --global--color-primary: var(--global--color-light-gray); --global--color-secondary: var(--global--color-light-gray); --button--color-text: var(--global--color-background); --button--color-text-hover: var(--global--color-secondary); --button--color-text-active: var(--global--color-secondary); --button--color-background: var(--global--color-secondary); --button--color-background-active: var(--global--color-background); --global--color-border: #9ea1a7; --table--stripes-border-color: rgba(240, 240, 240, 0.15); --table--stripes-background-color: rgba(240, 240, 240, 0.15); }'
+			'.is-dark-theme.is-dark-theme .editor-styles-wrapper { --wp--preset--color--surface-light-alternative: #222; --wp--preset--color--surface-light: #000; --wp--preset--color--border-light: #9ea1a7; --table--stripes-border-color: rgba(240, 240, 240, 0.15); }'
 		);
 
 		wp_enqueue_script(
@@ -164,7 +164,7 @@ class Gov_BR_Dark_Mode {
 					z-index: 20;
 				}
 				.is-dark-theme.is-dark-theme #dark-mode-toggler:not(:hover):not(:focus) {
-					color: var(--global--color-primary);
+					color: var(--wp--preset--color--reading-light, #333);
 				}
 				@media only screen and (max-width: 782px) {
 					#dark-mode-toggler {

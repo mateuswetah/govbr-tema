@@ -4,7 +4,7 @@
 }
 
 .wp-block-code {
-	border-color: var(--global--color-border);
+	border-color: var(--wp--preset--color--border-dark, #888);
 	border-radius: 0;
 	border-style: solid;
 	border-width: 0.1rem;

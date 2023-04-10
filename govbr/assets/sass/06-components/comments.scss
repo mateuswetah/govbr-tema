@@ -102,7 +102,7 @@
 .comment-meta {
 
 	.comment-author {
-		line-height: var(--wp--custom--line-height--low, 1.15);
+		line-height: var(--font-line-height-low, 1.15);
 		margin-bottom: calc(0.25 * var(--wp--style--block-gap, 20px));
 
 		@include media(mobile) {
@@ -121,7 +121,7 @@
 	}
 
 	.comment-metadata {
-		color: var(--global--color-primary);
+		color: var(--wp--preset--color--reading-light, #333);
 		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 		padding: 8px 0 9px 0;
 
@@ -142,7 +142,7 @@
 
 .reply {
 	font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
-	line-height: var(--wp--custom--line-height--low, 1.15);
+	line-height: var(--font-line-height-low, 1.15);
 }
 
 .bypostauthor {
@@ -262,7 +262,7 @@
 		font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
 		margin-bottom: calc(.5 * var(--wp--style--block-gap, 20px));
 		width: 100%;
-		font-weight: var(--form--label-weight);
+		font-weight: var(--font-weight-semi-bold, 600);
 	}
 
 	&.comment-form-cookies-consent {

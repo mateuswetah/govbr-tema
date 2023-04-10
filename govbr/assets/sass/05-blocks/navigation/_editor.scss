@@ -6,21 +6,21 @@
 	}
 
 	.wp-block-navigation__container {
-		background: var(--global--color-background);
+		background: var(--background, #fff);
 	}
 
 	.wp-block-navigation-link {
 
 		.wp-block-navigation-link__label {
-			font-size: var(--primary-nav--font-size);
-			font-weight: var(--primary-nav--font-weight);
+			font-size: var(--wp--preset--font-size--scale-up-02, 1.2em);
+			font-weight: 500;
 		}
 	}
 
 	.has-child {
 
 		.wp-block-navigation__container {
-			box-shadow: var(--global--elevation);
+			box-shadow: var(--surface-shadow-md);
 		}
 	}
 
@@ -32,7 +32,7 @@
 
 				&:hover,
 				&:focus {
-					color: var(--primary-nav--color-link-hover);
+					color: var(--interactive);
 				}
 			}
 		}

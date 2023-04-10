@@ -1,34 +1,11 @@
 .entry-title {
 	@extend %responsive-aligndefault-width;
-	color: var(--entry-header--color);
-	font-size: var(--entry-header--font-size);
-	line-height: var(--wp--custom--line-height--low, 1.15);
+	line-height: var(--font-line-height-low, 1.15);
 	overflow-wrap: break-word;
-
-	a {
-		color: var(--entry-header--color-link);
-		text-underline-offset: 0.15em;
-
-		&:hover {
-			color: var(--entry-header--color-hover);
-		}
-
-		&:focus {
-			color: var(--entry-header--color-focus);
-		}
-
-		&:active {
-			color: var(--entry-header--color-link);
-		}
-	}
-}
-
-.singular .entry-title {
-	font-size: var(--global--font-size-page-title);
 }
 
 h1.entry-title {
-	font-weight: var(--wp--custom--font-weight--page-title);
+	font-weight: var(--font-weight-light);
 }
 
 /**
@@ -57,7 +34,7 @@ h1.entry-title {
 
 .entry-footer {
 
-	color: var(--global--color-primary);
+	color: var(--wp--preset--color--reading-light, #333);
 	clear: both;
 	float: none;
 	font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
@@ -72,7 +49,7 @@ h1.entry-title {
 
 		&:hover,
 		&:focus {
-			color: var(--global--color-primary-hover);
+			color: var(--wp--preset--color--reading-light, #333);
 		}
 
 		&:active {
@@ -86,11 +63,11 @@ h1.entry-title {
 	margin-top: var(--wp--style--block-gap, 20px);
 	padding-top: var(--wp--style--block-gap, 20px);
 	padding-bottom: calc(1 * var(--wp--style--block-gap, 20px));
-	border-bottom: var(--separator--height) solid var(--separator--border-color);
+	border-bottom: var(--divider-size, 1px) solid var(--border-color, #ccc);
 }
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
-	border-bottom: var(--separator--height) solid transparent;
+	border-bottom: var(--divider-size, 1px) solid transparent;
 }
 
 .single .site-main > article > .entry-footer {
@@ -98,8 +75,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: calc(3.4 * var(--wp--style--block-gap, 20px));
 	padding-bottom: 0;
 	padding-top: calc(0.8 * var(--wp--style--block-gap, 20px));
-	border-top: 3px solid var(--separator--border-color);
-	border-bottom: var(--separator--height) solid transparent;
+	border-top: 3px solid var(--border-color, #ccc);
+	border-bottom: var(--divider-size, 1px) solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: calc(2 * var(--wp--preset--spacing--scale-up-2, 16px));
@@ -185,12 +162,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	.author-bio-content {
 
 		.author-title {
-			font-size: var(--entry-author-bio--font-size);
+			font-size: var(--wp--preset--font-size--scale-base, 1em);
 			display: inline;
 		}
 
 		.author-description {
-			font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
+			font-size: var(--wp--preset--font-size--scale-base, 1em);
 			margin-top: calc(0.5 * var(--wp--style--block-gap, 20px));
 			margin-bottom: calc(0.5 * var(--wp--style--block-gap, 20px));
 		}

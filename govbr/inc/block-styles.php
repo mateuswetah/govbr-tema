@@ -46,6 +46,24 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 		
+		/* Lists: BRGov style */
+		$list_blocks = [
+			'core/list',
+			'core/latest-posts',
+			'core/page-list',
+			'core/categories',
+			'core/navigation'
+		];
+		foreach($list_blocks as $block) {
+			register_block_style(
+				$block,
+				array(
+					'name'  => 'govbr-list',
+					'label' => esc_html__( 'DSGov', 'govbr' )
+				)
+			);
+		}
+		
 	}
 	add_action( 'init', 'gov_br_register_block_styles' );
 }

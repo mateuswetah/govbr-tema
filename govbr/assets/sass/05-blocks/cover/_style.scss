@@ -14,7 +14,8 @@
 	margin-bottom: inherit;
 
 	.wp-block-cover__inner-container {
-
+		color: var(--color, inherit);
+		
 		> * {
 
 			&:first-child {
@@ -46,7 +47,9 @@
 		background-color: unset;
 	}
 
-	&:not(.is-light) .wp-block-cover__inner-container {
+	& > .wp-block-cover__background.has-surface-dark-background-color ~ .wp-block-cover__inner-container,
+	& > .wp-block-cover__background.has-surface-dark-alternative-background-color ~ .wp-block-cover__inner-container,
+	& > .wp-block-cover__background.has-reading-light-background-color ~ .wp-block-cover__inner-container {
 		@include dark-mode;
 	}
 }

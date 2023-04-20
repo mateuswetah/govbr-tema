@@ -6,46 +6,54 @@ button,
 input[type="submit"],
 input[type="reset"],
 .wp-block-search .wp-block-search__button,
-.wp-block-button .wp-block-button__link,
 .wp-block-file a.wp-block-file__button,
+.wp-block-button .wp-block-button__link,
 .wp-element-button {
-	
-	// Extend button style
-	@include button-style();
+	@include button-configs();
+}
+input[type="submit"] {
+	@extend .primary;
+}
+input[type="reset"] {
+	@extend .secondary;
+}
+.wp-block-button__link {
 
-	/* Tertiary style */
-	.is-style-tertiary > & {
-		--interactive-rgb: var(--interactive-light-rgb);
-		background-color: transparent;
-		color: var(--interactive);
+	/* Primary style */
+	:not(.is-style-tertiary):not(.is-style-outline):not(.is-style-magic) > & {
+		@extend .primary;
+	}
+
+	/* Secondary style */
+	.is-style-outline > & {
+		@extend .secondary;
 	}
 
 	/* Magic style */
 	.is-style-magic > & {
-		--focus-offset: calc( (var(--magic-support-size) - var(--magic-size)) * 0.5 + 4px );
-		--button-size: var(--magic-size);
-		background-color: var(--interactive-alternative);
-		color: var(--color-dark);
-		font-size: var(--font-size-scale-up-02);
-		font-weight: var(--font-weight-semi-bold);
+		@include button-magicbutton;
 	}
 }
 
-.wp-block-button.is-style-magic {
-	--magic-size: var(--magic-medium);
-	--magic-small: var(--spacing-scale-4xh);
-	--magic-medium: var(--spacing-scale-5xh);
-	--magic-large: var(--spacing-scale-6xh);
-	--magic-support-size: var(--magic-support-medium);
-	--magic-support-small: var(--spacing-scale-7x);
-	--magic-support-medium: var(--spacing-scale-8x);
-	--magic-support-large: var(--spacing-scale-9x);
-	--magic-z-index: var(--z-index-layer-1);
-	align-items: center;
-	background-color: var(--gray-5);
-	border-radius: 100em;
-	box-shadow: var(--surface-shadow-md);
-	display: inline-flex;
-	height: var(--magic-support-size);
-	padding: calc((var(--magic-support-size) - var(--magic-size)) * 0.5);
+/* Magic style */
+.is-style-magic {
+	@include magic-configs;
+}
+
+/* Dark backgrounds */
+.wp-block-cover > .wp-block-cover__background.has-surface-dark-background-color ~ .wp-block-cover__inner-container,
+.wp-block-group.has-surface-dark-background-color,
+.wp-block-columns.has-surface-dark-background-color > .wp-block-column:not(.has-background),
+.wp-block-column.has-surface-dark-background-color,
+.wp-block-cover > .wp-block-cover__background.has-surface-dark-alternative-background-color ~ .wp-block-cover__inner-container,
+.wp-block-group.has-surface-dark-alternative-background-color,
+.wp-block-columns.has-surface-dark-alternative-background-color > .wp-block-column:not(.has-background),
+.wp-block-column.has-surface-dark-alternative-background-color,
+.wp-block-cover > .wp-block-cover__background.has-reading-light-background-color ~ .wp-block-cover__inner-container,
+.wp-block-group.has-reading-light-background-color,
+.wp-block-columns.has-reading-light-background-color > .wp-block-column:not(.has-background),
+.wp-block-column.has-reading-light-background-color {
+	.wp-block-button__link {
+		@extend .inverted;
+	}
 }

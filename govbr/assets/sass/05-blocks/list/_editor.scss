@@ -27,3 +27,34 @@ li {
 dt {
 	font-weight: bold;
 }
+
+/* If govbr-list block style is added, we inherit it from the ds-gov scss */
+ul.is-style-govbr-list,
+ol.is-style-govbr-list {
+	@extend .br-list;
+	padding-left: 0;
+
+	&>li {
+		@extend .br-item;
+		
+		&>a:hover {
+			background: transparent;
+		} 
+	}
+}
+/* Not always the block root is a ul... this is the case for the navigation component */
+:not(ul):not(ol).is-style-govbr-list {
+	ul,
+	ol {
+		@extend .br-list;
+		padding-left: 0;
+
+		&>li {
+			@extend .br-item;
+
+			&>a:hover {
+				background: transparent;
+			} 
+		}
+	}
+}

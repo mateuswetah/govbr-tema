@@ -8,6 +8,10 @@
 	margin-top: inherit;
 	margin-bottom: inherit;
 
+	.wp-block-cover__inner-container {
+		color: var(--color, inherit);
+	}
+	
 	[data-align="full"] & {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -20,7 +24,9 @@
 		background-color: unset;
 	}
 
-	&.is-dark-theme .wp-block-cover__inner-container {
+	& > .wp-block-cover__background.has-surface-dark-background-color ~ .wp-block-cover__inner-container,
+	& > .wp-block-cover__background.has-surface-dark-alternative-background-color ~ .wp-block-cover__inner-container,
+	& > .wp-block-cover__background.has-reading-light-background-color ~ .wp-block-cover__inner-container {
 		@include dark-mode;
 	}
 }

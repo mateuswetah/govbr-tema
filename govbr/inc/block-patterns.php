@@ -142,6 +142,11 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			require get_theme_file_path( '/inc/patterns/footer-links.php' )
 		);
 
+		register_block_pattern(
+			'govbr/footer-credits',
+			require get_theme_file_path( '/inc/patterns/footer-credits.php' )
+		);
+
 	}
 	add_action( 'init', 'gov_br_register_block_pattern' );
 }

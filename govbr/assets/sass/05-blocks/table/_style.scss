@@ -3,24 +3,13 @@ table,
 	width: 100%;
 	min-width: 240px;
 	border-collapse: collapse;
-
-	thead,
-	tfoot {
-		text-align: center;
-	}
-
-	td,
-	th {
-		padding: calc(0.5 * var(--wp--style--block-gap, 20px));
-		border: 1px solid;
-	}
+	
+	@extend .br-table;
 
 	figcaption {
 		color: var(--wp--preset--color--reading-light, #333);
 		font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
 	}
-
-
 
 	&.is-style-stripes {
 		border-color: var(--wp--preset--color--border-light);

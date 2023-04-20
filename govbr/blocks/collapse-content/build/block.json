@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "govbr/collapse-content",
+  "title": "Collapsable content",
+  "category": "widgets",
+  "description": "A container for the items that are collpsable.",
+  "usesContext": [
+    "govbr/blockId"
+  ],
+  "parent": [
+    "govbr/collapse"
+  ],
+  "attributes": {
+    "parentBlockId": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "govbr",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

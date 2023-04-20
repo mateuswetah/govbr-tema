@@ -1,98 +1,86 @@
 /* OS dark theme preference */
 @media only screen {
-
-	.is-dark-theme.is-dark-theme {
-		--background: #000;
-		--color: var(--color-dark);
-		--color-rgb: var(--color-dark-rgb);
-		--text-color: var(--color);
-		--interactive: var(--interactive-dark);
-		--interactive-rgb: var(--interactive-dark-rgb);
-		--visited: var(--visited-dark);
-		--hover: var(--hover-dark);
-		--pressed: var(--pressed-dark);
-		--focus-color: var(--focus-color-dark);
-		--focus: var(--focus-color);
-	}
-
-	.is-dark-theme img {
-		filter: brightness(0.85) contrast(1.1);
-	}
-
-	.is-dark-theme body {
-		background-color: var(--background, #fff);
-	}
-
-	#dark-mode-toggler {
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: var(--font-size-scale-up-01);
-		padding: 0.5em;
-		min-height: 44px;
-		min-width: max-content;
-		border: 2px solid currentcolor;
-		box-shadow: none;
-		background: var(--background);
-		color: var(--color);
-		z-index: 9998;
-	}
-
-	.no-js #dark-mode-toggler {
-		display: none;
-	}
-
-	#dark-mode-toggler.fixed-bottom {
-		position: fixed;
-		bottom: 5px;
-		right: 5px;
-	}
-
-	#dark-mode-toggler.fixed-bottom.hide:not(:focus) {
-		bottom: -80px;
-	}
+  .is-dark-theme.is-dark-theme {
+    --background: #000;
+    --color: var(--color-dark);
+    --color-rgb: var(--color-dark-rgb);
+    --text-color: var(--color);
+    --interactive: var(--interactive-dark);
+    --interactive-rgb: var(--interactive-dark-rgb);
+    --visited: var(--visited-dark);
+    --hover: var(--hover-dark);
+    --pressed: var(--pressed-dark);
+    --focus-color: var(--focus-color-dark);
+    --focus: var(--focus-color);
+  }
+  .is-dark-theme img {
+    filter: brightness(0.85) contrast(1.1);
+  }
+  .is-dark-theme body {
+    background-color: var(--background, #fff);
+  }
+  #dark-mode-toggler {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-scale-up-01);
+    padding: 0.5em;
+    min-height: 44px;
+    min-width: max-content;
+    border: 2px solid currentColor;
+    box-shadow: none;
+    background: var(--background);
+    color: var(--color);
+    z-index: 9998;
+  }
+  .no-js #dark-mode-toggler {
+    display: none;
+  }
+  #dark-mode-toggler.fixed-bottom {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+  }
+  #dark-mode-toggler.fixed-bottom.hide:not(:focus) {
+    bottom: -80px;
+  }
 }
 @media only screen and (prefers-reduced-motion: no-preference) {
-
-	#dark-mode-toggler.fixed-bottom {
-		transition: bottom 0.5s;
-	}
+  #dark-mode-toggler.fixed-bottom {
+    transition: bottom 0.5s;
+  }
 }
 @media only screen {
-
-	#dark-mode-toggler.relative {
-		position: absolute;
-		height: 44px;
-		top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px);
-		right: calc(50vw - var(--responsive--aligndefault-width) / 2 - 0.5em);
-	}
-
-	.admin-bar #dark-mode-toggler.relative {
-		top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 32px);
-	}
+  #dark-mode-toggler.relative {
+    position: absolute;
+    height: 44px;
+    top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px);
+    right: calc(50vw - var(--responsive--aligndefault-width) / 2 - 0.5em);
+  }
+  .admin-bar #dark-mode-toggler.relative {
+    top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 32px);
+  }
 }
 @media only screen and (max-width: 782px) {
-
-	.admin-bar #dark-mode-toggler.relative {
-		top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 46px);
-	}
+  .admin-bar #dark-mode-toggler.relative {
+    top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 46px);
+  }
 }
 @media only screen and (max-width: 481px) {
-
-	.admin-bar #dark-mode-toggler.relative {
-		top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 26px);
-	}
+  .admin-bar #dark-mode-toggler.relative {
+    top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 26px);
+  }
 }
 @media only screen and (max-width: 481px) {
-
-	body:not(.primary-navigation-open) #dark-mode-toggler.relative ~ nav {
-		top: 88px;
-	}
+  body:not(.primary-navigation-open) #dark-mode-toggler.relative ~ nav {
+    top: 88px;
+  }
 }
 @media only screen {
-
-	.primary-navigation-open #dark-mode-toggler {
-		display: none;
-	}
+  .primary-navigation-open #dark-mode-toggler {
+    display: none;
+  }
 }
+
+/*# sourceMappingURL=style-dark-mode.css.map */

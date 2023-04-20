@@ -198,6 +198,22 @@ function gov_br_scripts() {
 		true
 	);
 
+	// GOVBR scripts
+	wp_enqueue_script(
+		'gov-br-ds-script',
+		get_template_directory_uri() . '/node_modules/@govbr-ds/core/dist/core.min.js',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
+
+	// Our own script for initilizing DSGov components
+	wp_enqueue_script(
+		'gov-br-setup-script',
+		get_template_directory_uri() . '/assets/js/govbr-setup.js',
+		array( 'gov-br-ds-script' ),
+		wp_get_theme()->get( 'Version' )
+	);
+
 	// Fontawesome icons.
 	wp_enqueue_style( 'gov-br-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css', array(), wp_get_theme()->get( 'Version' ) );
 
@@ -215,8 +231,22 @@ function govbr_block_editor_script() {
 
 	wp_enqueue_script( 'govbr-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
-
 add_action( 'enqueue_block_editor_assets', 'govbr_block_editor_script' );
+
+/**
+ * Registers the block using the metadata loaded from the `block.json` file.
+ * Behind the scenes, it registers also all assets so they can be enqueued
+ * through the block editor in the corresponding context.
+ *
+ * @see https://developer.wordpress.org/reference/functions/register_block_type/
+ */
+function create_block_collapsable_list_block_init() {
+	register_block_type( __DIR__ . '/blocks/collapse/build/' );
+	register_block_type( __DIR__ . '/blocks/collapse-label/build/' );
+	register_block_type( __DIR__ . '/blocks/collapse-content/build/' );
+}
+add_action( 'init', 'create_block_collapsable_list_block_init' );
+
 
 // SVG Icons class.
 require get_template_directory() . '/classes/class-gov-br-svg-icons.php';
@@ -234,11 +264,14 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/classes/class-gov-br-customize.php';
 new Gov_BR_Customize();
 
-// Block Patterns.
-require get_template_directory() . '/inc/block-patterns.php';
-
 // Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
+
+// Block Styles.
+require get_template_directory() . '/inc/block-filters.php';
+
+// Block Patterns.
+require get_template_directory() . '/inc/block-patterns.php';
 
 // Dark Mode.
 require_once get_template_directory() . '/classes/class-gov-br-dark-mode.php';

@@ -1,6 +1,6 @@
 === Gov BR ===
 Contributors: wetah, wordpressdotorg
-Requires at least: 6.0
+Requires at least: 6.2
 Tested up to: 6.2
 Requires PHP: 5.6
 Stable tag: 0.1.0

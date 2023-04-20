@@ -16,6 +16,7 @@
 		"@wordpress/browserslist-config": "^5.13.0",
 		"@wordpress/eslint-plugin": "^14.3.0",
 		"@wordpress/stylelint-config": "^21.13.0",
+		"@wordpress/scripts": "^26.2.0",
 		"autoprefixer": "^10.4.13",
 		"chokidar-cli": "^3.0.0",
 		"eslint": "^8.37.0",
@@ -49,14 +50,17 @@
 		"build:style-dark-mode": "sass assets/sass/style-dark-mode.scss:assets/css/style-dark-mode.css --style=expanded --source-map",
 		"build:rtl": "rtlcss style.css style-rtl.css",
 		"build:dark-rtl": "rtlcss assets/css/style-dark-mode.css assets/css/style-dark-mode-rtl.css",
+		"build:collapse-block": "wp-scripts build --webpack-src-dir=blocks/collapse/src --output-path=blocks/collapse/build",
+		"build:collapse-label-block": "wp-scripts build --webpack-src-dir=blocks/collapse-label/src --output-path=blocks/collapse-label/build",
+		"build:collapse-content-block": "wp-scripts build --webpack-src-dir=blocks/collapse-content/src --output-path=blocks/collapse-content/build",
 		"build:print": "sass assets/sass/07-utilities/print.scss:assets/css/print.css --style=expanded --source-map",
-		"build:stylelint": "stylelint **/*.css --fix --config .stylelintrc-css.json",
 		"build": "run-s \"build:*\"",
 		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
 		"lint:scss": "stylelint **/*.scss",
 		"lint-fix:scss": "stylelint **/*.scss --fix"
 	},
 	"dependencies": {
-		"@govbr-ds/core": "^3.3.1"
+		"@govbr-ds/core": "^3.3.1",
+		"classnames": "^2.3.2"
 	}
 }

@@ -37,36 +37,6 @@ function gov_br_get_starter_content() {
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
-					<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
-					<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"large"} -->
-					<figure class="wp-block-image alignfull size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/roses-tremieres-hollyhocks-1884.jpg" alt="' . esc_attr__( '&#8220;Roses Trémières&#8221; by Berthe Morisot', 'govbr' ) . '"/></figure>
-					<!-- /wp:image -->
-
-					<!-- wp:spacer -->
-					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-					<!-- /wp:spacer -->
-
-					<!-- wp:image {"align":"full","sizeSlug":"large"} -->
-					<figure class="wp-block-image alignfull size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/in-the-bois-de-boulogne.jpg" alt="' . esc_attr__( '&#8220;In the Bois de Boulogne&#8221; by Berthe Morisot', 'govbr' ) . '"/></figure>
-					<!-- /wp:image --></div>
-					<!-- /wp:column -->
-
-					<!-- wp:column {"verticalAlignment":"center"} -->
-					<div class="wp-block-column is-vertically-aligned-center"><!-- wp:spacer -->
-					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-					<!-- /wp:spacer -->
-
-					<!-- wp:image {"sizeSlug":"large","className":"alignfull size-full"} -->
-					<figure class="wp-block-image size-large alignfull size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/young-woman-in-mauve.jpg" alt="' . esc_attr__( '&#8220;Young Woman in Mauve&#8221; by Berthe Morisot', 'govbr' ) . '"/></figure>
-					<!-- /wp:image --></div>
-					<!-- /wp:column --></div>
-					<!-- /wp:columns -->
-
-					<!-- wp:spacer {"height":50} -->
-					<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-					<!-- /wp:spacer -->
-
 					<!-- wp:columns {"verticalAlignment":"top","align":"wide"} -->
 					<div class="wp-block-columns are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top"} -->
 					<div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3} -->

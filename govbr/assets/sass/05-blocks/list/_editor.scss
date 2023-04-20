@@ -36,6 +36,8 @@ ol.is-style-govbr-list {
 
 	&>li {
 		@extend .br-item;
+		margin-top: 0px;
+		margin-bottom: 0px;
 		
 		&>a:hover {
 			background: transparent;

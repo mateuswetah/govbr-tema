@@ -22,50 +22,6 @@
 		}
 	}
 
-	&.is-style-govbr-columns-overlap {
-
-		justify-content: space-around;
-
-		@include media(laptop) {
-
-			.wp-block-column {
-
-				&:nth-child(2n) {
-					margin-left: calc(-2 * var(--wp--preset--spacing--scale-up-2, 16px));
-					margin-top: calc(2.5 * var(--wp--preset--spacing--scale-up-2, 16px));
-					z-index: 2;
-
-					// Provide text-based child blocks with a default background color to ensure they're readable.
-					> p,
-					> h1,
-					> h2,
-					> h3,
-					> h4,
-					> h5,
-					> h6,
-					> ul,
-					> ol,
-					> pre {
-
-						&:not(.has-background) {
-							padding: var(--wp--style--block-gap, 20px);
-						}
-					}
-
-					// Lists should still have their usual left padding.
-					> ul:not(.has-background),
-					> ol:not(.has-background) {
-						padding-left: calc(2 * var(--wp--preset--spacing--scale-up-2, 16px));
-					}
-
-					&.is-vertically-aligned-center {
-						margin-top: 0;
-					}
-				}
-			}
-		}
-	}
-
 	&.alignfull {
 
 		.wp-block-column {

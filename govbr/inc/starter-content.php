@@ -37,8 +37,8 @@ function gov_br_get_starter_content() {
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-govbr-columns-overlap"} -->
-					<div class="wp-block-columns are-vertically-aligned-center is-style-govbr-columns-overlap"><!-- wp:column {"verticalAlignment":"center"} -->
+					<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+					<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
 					<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"large"} -->
 					<figure class="wp-block-image alignfull size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/roses-tremieres-hollyhocks-1884.jpg" alt="' . esc_attr__( '&#8220;Roses Trémières&#8221; by Berthe Morisot', 'govbr' ) . '"/></figure>
 					<!-- /wp:image -->

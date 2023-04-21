@@ -1,13 +1,21 @@
 hr {
 	border-style: none;
-	border-bottom: var(--divider-size, 1px) solid var(--border-color, #ccc);
+	border-top: var(--divider-size, 1px) solid var(--border-color, #ccc);
 	clear: both;
 	margin-left: auto;
 	margin-right: auto;
 
 	&.wp-block-separator {
-		border-bottom: var(--divider-size, 1px) solid var(--border-color, #ccc);
 		opacity: 1;
+
+		&:not(.is-style-wide):not(.is-style-dots) {
+			width: 100%;
+		}
+
+		.has-global-padding > &.alignfull {
+			width: calc(100% + var(--wp--style--root--padding-right) + var(--wp--style--root--padding-right));
+			max-width: calc(100% + var(--wp--style--root--padding-right) + var(--wp--style--root--padding-right));
+		}
 
 		/**
 		 * Block Options

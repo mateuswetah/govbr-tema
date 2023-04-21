@@ -46,12 +46,11 @@ ol.is-style-govbr-list {
 }
 /* Not always the block root is a ul... this is the case for the navigation component */
 :not(ul):not(ol).is-style-govbr-list {
-	ul,
-	ol {
+	.wp-block-navigation__container {
 		@extend .br-list;
 		padding-left: 0;
 
-		&>li {
+		&>.wp-block-navigation-item {
 			@extend .br-item;
 
 			&>a:hover {

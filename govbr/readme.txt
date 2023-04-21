@@ -83,15 +83,3 @@ https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
 https://codepen.io/aaroniker/pen/ZEYoxEY Copyright (c) 2020 Aaron Iker
 https://codepen.io/chriscoyier/pen/FtnAa Copyright (c) 2020 Chris Coyier
 License: MIT.
-
-Images
-Art by Berthe Morisot 1841-1895. Public domain.
-https://www.wikiart.org/en/berthe-morisot/playing-in-the-sand
-https://www.wikiart.org/en/berthe-morisot/roses-tremieres-hollyhocks-1884
-https://www.wikiart.org/en/berthe-morisot/young-woman-in-mauve
-https://www.wikiart.org/en/berthe-morisot/in-the-bois-de-boulogne
-https://www.wikiart.org/en/berthe-morisot/daffodils
-https://www.wikiart.org/en/berthe-morisot/self-portrait-1885
-https://www.wikiart.org/en/berthe-morisot/the-garden-at-bougival-1884
-https://www.wikiart.org/en/berthe-morisot/villa-with-orange-trees-nice
-https://www.wikiart.org/en/berthe-morisot/reading

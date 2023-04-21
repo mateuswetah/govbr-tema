@@ -717,6 +717,16 @@
 					"style": "solid",
 					"width": "1.5px"
 				}
+			},
+			"core/separator": {
+				"border": {
+					"width": "0px",
+					"top": {
+						"width": "var(--divider-size)",
+						"style": "solid",
+						"color": "var(--border-color)"
+					}
+				}
 			}
 		}
 	},

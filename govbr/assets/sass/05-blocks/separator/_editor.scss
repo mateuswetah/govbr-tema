@@ -1,9 +1,16 @@
 .wp-block-separator,
 hr {
-	border-bottom: var(--divider-size, 1px) solid var(--border-color, #ccc);
+	border-top: var(--divider-size, 1px) solid var(--border-color, #ccc);
 	clear: both;
 	opacity: 1;
 
+	&:not(.is-style-wide):not(.is-style-dots) {
+		width: 100%;
+	}
+	.has-global-padding > &.alignfull {
+		width: calc(100% + var(--wp--style--root--padding-right) + var(--wp--style--root--padding-right));
+		max-width: calc(100% + var(--wp--style--root--padding-right) + var(--wp--style--root--padding-right));
+	}
 	&[style*="text-align:right"],
 	&[style*="text-align: right"] {
 		border-right-color: var(--border-color, #ccc);

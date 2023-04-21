@@ -3,8 +3,8 @@
 /**
  * These selectors set the default max width for content appearing inside a post or page.
  */
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator),
-*[class*="inner-container"].is-layout-constrained:not(*[class*="wp-container-"]) > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright),
+*[class*="inner-container"].is-layout-constrained:not(*[class*="wp-container-"]) > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
 	@extend %responsive-aligndefault-width;
 }
 

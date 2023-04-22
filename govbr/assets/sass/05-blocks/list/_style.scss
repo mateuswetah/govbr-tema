@@ -50,8 +50,11 @@ ol.is-style-govbr-list {
 	&>li {
 		@extend .br-item;
 		
-		&>a:hover {
-			background: transparent;
+		a {
+			text-decoration: none;
+			&:hover {
+				background: transparent;
+			}
 		} 
 	}
 }
@@ -65,8 +68,11 @@ ol.is-style-govbr-list {
 		&>li {
 			@extend .br-item;
 
-			&>a:hover {
-				background: transparent;
+			a {
+				text-decoration: none;
+				&:hover {
+					background: transparent;
+				}
 			} 
 		}
 	}

@@ -11,8 +11,8 @@ $image_placeholder_1 = esc_url( get_template_directory_uri() ) . '/assets/images
 $image_placeholder_2 = esc_url( get_template_directory_uri() ) . '/assets/images/logo-assign-negative.png';
 ?>
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"var:preset|spacing|scale-up-5","left":"var:preset|spacing|scale-up-5"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:0;padding-right:var(--wp--preset--spacing--scale-up-5);padding-bottom:0;padding-left:var(--wp--preset--spacing--scale-up-5)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|scale-up-6","bottom":"var:preset|spacing|scale-up-4"}}},"className":"logo","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|scale-up-6","bottom":"var:preset|spacing|scale-up-4"}}},"className":"logo","layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group logo" style="padding-top:var(--wp--preset--spacing--scale-up-6);padding-bottom:var(--wp--preset--spacing--scale-up-4)">
 <!-- wp:image {"id":11552,"height":48,"sizeSlug":"medium","linkDestination":"none"} -->
 <figure class="wp-block-image size-full is-resized"><img src="<?php echo $image_placeholder_1 ?>" alt="" class="wp-image-11552" height="48"/></figure>

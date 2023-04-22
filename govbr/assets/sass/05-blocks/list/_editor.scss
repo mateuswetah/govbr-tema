@@ -39,8 +39,11 @@ ol.is-style-govbr-list {
 		margin-top: 0px;
 		margin-bottom: 0px;
 		
-		&>a:hover {
-			background: transparent;
+		a {
+			text-decoration: none;
+			&:hover {
+				background: transparent;
+			}
 		} 
 	}
 }
@@ -53,8 +56,11 @@ ol.is-style-govbr-list {
 		&>.wp-block-navigation-item {
 			@extend .br-item;
 
-			&>a:hover {
-				background: transparent;
+			a {
+				text-decoration: none;
+				&:hover {
+					background: transparent;
+				}
 			} 
 		}
 	}

@@ -139,7 +139,7 @@
 		},
 		"layout": {
 			"contentSize": "var(--responsive--aligndefault-width, 1152px)",
-			"wideSize": "null"
+			"wideSize": null
 		},
 		"typography": {
 			"fluid": {
@@ -433,6 +433,30 @@
 				}
 			]
 		},
+		"shadow": {
+			"presets": [
+				{
+					"name": "Layer 1",
+					"slug": "layer-1",
+					"shadow": "var(--surface-offset-none) var(--surface-offset-sm) var(--surface-blur-lg) rgba(var(--surface-shadow-color),var(--surface-opacity-xs))"
+				},
+				{
+					"name": "Layer 2",
+					"slug": "layer-2",
+					"shadow": "var(--surface-offset-none) var(--surface-offset-md) var(--surface-blur-lg) rgba(var(--surface-shadow-color),var(--surface-opacity-xs))"
+				},
+				{
+					"name": "Layer 3",
+					"slug": "layer-3",
+					"shadow": "var(--surface-offset-none) var(--surface-offset-lg) var(--surface-blur-lg) rgba(var(--surface-shadow-color),var(--surface-opacity-xs))"
+				},
+				{
+					"name": "Layer 4",
+					"slug": "layer-4",
+					"shadow": "var(--surface-offset-none) var(--surface-offset-xl) var(--surface-blur-lg) rgba(var(--surface-shadow-color),var(--surface-opacity-xs))"
+				}
+			]
+		},
 		"spacing": {
 			"blockGap": true,
 			"margin": true,
@@ -606,14 +630,6 @@
 					"color": "var(--interactive)",
 					"width": "0px"
 				},
-				"color": {
-					"background": "var(--interactive-light)",
-					"text": "var(--color-dark)"
-				},
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--scale-up-01, 1.2em)",
-					"fontWeight": "var(--font-weight-semi-bold)"
-				},
 				"spacing": {
 					"padding": {
 						"top": "0",
@@ -630,7 +646,6 @@
 							"color": "var(--interactive)"
 						},
 						"color": {
-							"background": "var(--background-light)",
 							"text": "var(--interactive)"
 						}
 					}

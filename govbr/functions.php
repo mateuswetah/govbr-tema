@@ -134,6 +134,7 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'gov_br_setup' );
 
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -217,8 +218,23 @@ function gov_br_scripts() {
 	// Fontawesome icons.
 	wp_enqueue_style( 'gov-br-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css', array(), wp_get_theme()->get( 'Version' ) );
 
+	// Removes some core block styles
+	wp_deregister_style( 'wp-block-table' );
+
 }
 add_action( 'wp_enqueue_scripts', 'gov_br_scripts' );
+
+
+/**
+ * Loads each core block assets separately
+ * 
+ * While loosing a bit of performance, this allows us to deregister some core block styling
+ * that we are not interested at all, like the Table one.
+ * 
+ * @see https://make.wordpress.org/core/2021/07/01/block-styles-loading-enhancements-in-wordpress-5-8/
+ * 
+ */
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 
 /**
  * Enqueue block editor script.

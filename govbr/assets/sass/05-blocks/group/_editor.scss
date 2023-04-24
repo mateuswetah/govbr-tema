@@ -9,18 +9,12 @@
 	}
 
 	// Clear the top margin for the first-child.
-	> *:first-child {
+	&:not(.is-layout-flex) > *:first-child {
 		margin-top: 0;
 	}
 
 	// Last child that is not the appender.
-	> *:last-child:not(.block-list-appender) {
-		margin-bottom: 0;
-	}
-
-	// When selected, the last item becomes the second last because of the appender.
-	&.has-child-selected > *:nth-last-child(2),
-	&.is-selected > *:nth-last-child(2) {
+	&:not(.is-layout-flex) *:last-child:not(.block-list-appender) {
 		margin-bottom: 0;
 	}
 }

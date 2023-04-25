@@ -34,7 +34,7 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 		 */
 		public function register( $wp_customize ) {
 
-			// Change site-title & description to postMessage.
+			// Change header-title & description to postMessage.
 			$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage'; // @phpstan-ignore-line. Assume that this setting exists.
 			$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage'; // @phpstan-ignore-line. Assume that this setting exists.
 
@@ -42,7 +42,7 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 			$wp_customize->selective_refresh->add_partial(
 				'blogname',
 				array(
-					'selector'        => '.site-title',
+					'selector'        => '.header-title',
 					'render_callback' => array( $this, 'partial_blogname' ),
 				)
 			);
@@ -51,12 +51,12 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 			$wp_customize->selective_refresh->add_partial(
 				'blogdescription',
 				array(
-					'selector'        => '.site-description',
+					'selector'        => '.header-subtitle',
 					'render_callback' => array( $this, 'partial_blogdescription' ),
 				)
 			);
 
-			// Add "display_title_and_tagline" setting for displaying the site-title & tagline.
+			// Add "display_title_and_tagline" setting for displaying the header-title & tagline.
 			$wp_customize->add_setting(
 				'display_title_and_tagline',
 				array(

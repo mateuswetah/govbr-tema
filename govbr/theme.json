@@ -718,13 +718,6 @@
 					}
 				}
 			},
-			"core/site-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--scale-up-03, 1.728em)",
-					"fontWeight": "var(--font-weight-regular, 400)",
-					"textTransform": "uppercase"
-				}
-			},
 			"core/code": {
 				"border": {
 					"radius": "0px",

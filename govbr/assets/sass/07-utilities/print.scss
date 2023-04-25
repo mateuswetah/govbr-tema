@@ -28,14 +28,6 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		margin-bottom: 0;
 	}
 
-	.site-footer .site-info {
-		margin: 0;
-	}
-
-	.site-header {
-		padding: 0;
-	}
-
 	/* Fonts */
 
 	body {
@@ -158,9 +150,6 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	}
 
 	/* Visibility */
-	.primary-navigation,
-	.site-title + .primary-navigation,
-	.footer-navigation,
 	.entry-footer,
 	.post-navigation,
 	.navigation.pagination,

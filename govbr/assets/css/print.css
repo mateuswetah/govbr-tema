@@ -22,12 +22,6 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
     margin-top: 0;
     margin-bottom: 0;
   }
-  .site-footer .site-info {
-    margin: 0;
-  }
-  .site-header {
-    padding: 0;
-  }
   /* Fonts */
   body {
     font: 13pt Georgia, "Times New Roman", Times, serif;
@@ -128,9 +122,6 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
     content: "";
   }
   /* Visibility */
-  .primary-navigation,
-  .site-title + .primary-navigation,
-  .footer-navigation,
   .entry-footer,
   .post-navigation,
   .navigation.pagination,

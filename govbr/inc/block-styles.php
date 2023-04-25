@@ -19,14 +19,18 @@ if ( function_exists( 'register_block_style' ) ) {
 	 */
 	function gov_br_register_block_styles() {
 		
-		// Columns: Overlap.
-		register_block_style(
-			'core/columns',
-			array(
-				'name'  => 'govbr-columns-overlap',
-				'label' => esc_html__( 'Overlap', 'govbr' ),
-			)
-		);
+		// Group: Layers (shadows) style.
+		$layers = [1, 2, 3, 4];
+		foreach($layers as $layer) {
+			register_block_style(
+				'core/group',
+				array(
+					'name'  => 'govbr-layer-' . $layer,
+					'label' => esc_html__( 'Layer ' . $layer, 'govbr' ),
+					'inline_style' => '.wp-block-group.is-style-govbr-layer-' . $layer .' { box-shadow: var(--wp--preset--shadow--layer-' . $layer .'); }',
+				)
+			);
+		}
 
 		/* Button: Tertiary style */
 		register_block_style(

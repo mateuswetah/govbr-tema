@@ -199,21 +199,20 @@ function gov_br_scripts() {
 		true
 	);
 
-	// GOVBR scripts
-	wp_enqueue_script(
-		'gov-br-ds-script',
-		get_template_directory_uri() . '/node_modules/@govbr-ds/core/dist/core.min.js',
-		array(),
-		wp_get_theme()->get( 'Version' )
-	);
-
 	// Our own script for initilizing DSGov components
-	wp_enqueue_script(
-		'gov-br-setup-script',
-		get_template_directory_uri() . '/assets/js/govbr-setup.js',
-		array( 'gov-br-ds-script' ),
-		wp_get_theme()->get( 'Version' )
-	);
+	// Find the path.
+	$dependencies_file_path = get_template_directory() . '/scripts/build/index.asset.php';
+
+	// If the file exists, enqueue it.
+	if ( file_exists( $dependencies_file_path ) ) {
+		$dependencies = require $dependencies_file_path;
+		wp_enqueue_script(
+			'gov-br-setup-script',
+			get_template_directory_uri() . '/scripts/build/index.js',
+			$dependencies['dependencies'],
+			$dependencies['version']
+		);
+	}
 
 	// Fontawesome icons.
 	wp_enqueue_style( 'gov-br-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css', array(), wp_get_theme()->get( 'Version' ) );

@@ -11,7 +11,6 @@
  * Top Level Wrappers (header, main, footer)
  * - Set vertical padding and horizontal margins
  */
-.site-header,
 .site-main,
 .widget-area,
 .site-footer {
@@ -107,7 +106,6 @@
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-unit margins
  */
-//.site-header > *, // Removed, to align site title and menu.
 .entry-header > *,
 .post-thumbnail > *,
 .page-content > *,

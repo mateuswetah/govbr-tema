@@ -17,5 +17,7 @@ else
     sudo rm -f $1/govbr/package-lock.json
     sudo rm -rf $1/govbr/node_modules
     sudo rm -rf $1/govbr/assets/sass
+    sudo rm -rf $1/govbr/scripts/src
+    sudo rm -rf $1/govbr/blocks/*/src
     echo "Pronto!"
 fi

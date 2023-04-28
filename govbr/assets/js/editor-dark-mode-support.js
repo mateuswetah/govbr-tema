@@ -10,7 +10,7 @@ if ( document.body.classList.contains( 'govbr-supports-dark-theme' ) ) {
  *
  * Wait for the editor to load by periodically checking for an element, then we add the classes.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @param {number} attempt Track the number of tries
  * @return {void}

@@ -8,13 +8,13 @@
  *
  * @package WordPress
  * @subpackage Gov_BR
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  */
 
 /**
  * Display upgrade notice on theme switch.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @return void
  */
@@ -29,7 +29,7 @@ add_action( 'after_switch_theme', 'gov_br_switch_theme' );
  * Prints an update nag after an unsuccessful attempt to switch to
  * the theme on WordPress versions prior to 5.9.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @global string $wp_version WordPress version.
  *
@@ -48,7 +48,7 @@ function gov_br_upgrade_notice() {
 /**
  * Prevents the Customizer from being loaded on WordPress versions prior to 5.9.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @global string $wp_version WordPress version.
  *
@@ -72,7 +72,7 @@ add_action( 'load-customize.php', 'gov_br_customize' );
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 5.9.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @global string $wp_version WordPress version.
  *

@@ -4,14 +4,14 @@
  *
  * @package WordPress
  * @subpackage Gov_BR
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  */
 
 if ( ! function_exists( 'gov_br_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -37,7 +37,7 @@ if ( ! function_exists( 'gov_br_posted_by' ) ) {
 	/**
 	 * Prints HTML with meta information about theme author.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -59,7 +59,7 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 * Footer entry meta is displayed differently in archives and single posts.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -172,7 +172,7 @@ if ( ! function_exists( 'gov_br_post_thumbnail' ) ) {
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -214,7 +214,7 @@ if ( ! function_exists( 'gov_br_the_posts_navigation' ) ) {
 	/**
 	 * Print the next and previous posts navigation.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */

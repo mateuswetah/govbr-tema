@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Gov_BR
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  */
 
 // This theme requires WordPress 5.9 or later.
@@ -22,7 +22,7 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -140,7 +140,7 @@ add_action( 'after_setup_theme', 'gov_br_setup' );
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @global int $content_width Content width.
  *
@@ -157,7 +157,7 @@ add_action( 'after_setup_theme', 'gov_br_content_width', 0 );
 /**
  * Enqueue scripts and styles.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @return void
  */
@@ -238,7 +238,7 @@ add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 /**
  * Enqueue block editor script.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @return void
  */
@@ -269,9 +269,6 @@ require get_template_directory() . '/classes/class-gov-br-svg-icons.php';
 // Enhance the theme by hooking into WordPress.
 require get_template_directory() . '/inc/template-functions.php';
 
-// Menu functions and filters.
-require get_template_directory() . '/inc/menu-functions.php';
-
 // Custom template tags for the theme.
 require get_template_directory() . '/inc/template-tags.php';
 
@@ -295,7 +292,7 @@ new Gov_BR_Dark_Mode();
 /**
  * Calculate classes for the main <html> element.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @return void
  */
@@ -303,7 +300,7 @@ function govbr_the_html_classes() {
 	/**
 	 * Filters the classes for the main <html> element.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @param string The list of classes. Default empty string.
 	 */

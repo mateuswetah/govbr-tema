@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Gov_BR
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  */
 
 ?>
@@ -27,11 +27,14 @@
             <div class="br-list">
                 <div class="header">
                     <div class="title">Acesso Rápido</div>
-                </div><a class="br-item" href="javascript:void(0)">Link de acesso 1</a><a class="br-item"
-                    href="javascript:void(0)">Link de acesso 2</a><a class="br-item" href="javascript:void(0)">Link de
-                    acesso 3</a><a class="br-item" href="javascript:void(0)">Link de acesso 4</a>
+                </div>
+                <a class="br-item" href="javascript:void(0)">Link de acesso 1</a>
+                <a class="br-item" href="javascript:void(0)">Link de acesso 2</a>
+                <a class="br-item" href="javascript:void(0)">Link de acesso 3</a>
+                <a class="br-item" href="javascript:void(0)">Link de acesso 4</a>
             </div>
-        </div><span class="br-divider vertical mx-half mx-sm-1"></span>
+        </div>
+        <span class="br-divider vertical mx-half mx-sm-1"></span>
         <div class="header-functions dropdown">
             <button class="br-button circle small" type="button" data-toggle="dropdown"
                 aria-label="Abrir Funcionalidades do Sistema"><i class="fas fa-th" aria-hidden="true"></i>
@@ -41,23 +44,27 @@
                     <div class="title">Funcionalidades do Sistema</div>
                 </div>
                 <div class="br-item">
-                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 1"><i
-                            class="fas fa-chart-bar" aria-hidden="true"></i><span class="text">Funcionalidade 1</span>
+                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 1">
+                        <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                        <span class="text">Funcionalidade 1</span>
                     </button>
                 </div>
                 <div class="br-item">
-                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 2"><i
-                            class="fas fa-headset" aria-hidden="true"></i><span class="text">Funcionalidade 2</span>
+                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 2">
+                        <i class="fas fa-headset" aria-hidden="true"></i>
+                        <span class="text">Funcionalidade 2</span>
                     </button>
                 </div>
                 <div class="br-item">
-                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 3"><i
-                            class="fas fa-comment" aria-hidden="true"></i><span class="text">Funcionalidade 3</span>
+                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 3">
+                        <i class="fas fa-comment" aria-hidden="true"></i>
+                        <span class="text">Funcionalidade 3</span>
                     </button>
                 </div>
                 <div class="br-item">
-                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 4"><i
-                            class="fas fa-adjust" aria-hidden="true"></i><span class="text">Funcionalidade 4</span>
+                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 4">
+                        <i class="fas fa-adjust" aria-hidden="true"></i>
+                        <span class="text">Funcionalidade 4</span>
                     </button>
                 </div>
             </div>

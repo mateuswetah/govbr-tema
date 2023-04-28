@@ -7,7 +7,7 @@
 /**
  * Toggle an attribute's value
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @param {Element} el - The element.
  * @param {boolean} withListeners - Whether we want to add/remove listeners or not.
@@ -38,7 +38,7 @@ function govbrCollapseMenuOnClickOutside( event ) {
 /**
  * Changes the position of submenus so they always fit the screen horizontally.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @param {Element} li - The li element.
  */
@@ -68,7 +68,7 @@ function govbrSubmenuPosition( li ) {
 /**
  * Handle clicks on submenu toggles.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @param {Element} el - The element.
  */
@@ -97,7 +97,7 @@ function govbrExpandSubMenu( el ) { // jshint ignore:line
 	/**
 	 * Menu Toggle Behaviors
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @param {string} id - The ID.
 	 */
@@ -124,7 +124,7 @@ function govbrExpandSubMenu( el ) { // jshint ignore:line
 		 * Trap keyboard navigation in the menu modal.
 		 * Adapted from Twenty Twenty.
 		 *
-		 * @since Gov BR 1.0
+		 * @since Gov BR 0.1.0
 		 */
 		document.addEventListener( 'keydown', function( event ) {
 			var modal, elements, selectors, lastEl, firstEl, activeEl, tabKey, shiftKey, escKey;

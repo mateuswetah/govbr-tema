@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Gov_BR
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  */
 
 /**
@@ -15,7 +15,7 @@ class Gov_BR_Dark_Mode {
 	/**
 	 * Instantiate the object.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 */
 	public function __construct() {
 
@@ -38,7 +38,7 @@ class Gov_BR_Dark_Mode {
 	/**
 	 * Editor custom color variables & scripts.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -70,7 +70,7 @@ class Gov_BR_Dark_Mode {
 	/**
 	 * Enqueue scripts and styles.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -86,7 +86,7 @@ class Gov_BR_Dark_Mode {
 	/**
 	 * Adds a class to the <body> element in the editor to accommodate dark-mode.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @param string $classes The admin body-classes.
 	 * @return string
@@ -108,7 +108,7 @@ class Gov_BR_Dark_Mode {
 	/**
 	 * Add night/day switch.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -122,7 +122,7 @@ class Gov_BR_Dark_Mode {
 	 *
 	 * Inspired from https://codepen.io/aaroniker/pen/KGpXZo (MIT-licensed)
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @param array $attrs The attributes to add to our <button> element.
 	 * @return void
@@ -180,7 +180,7 @@ class Gov_BR_Dark_Mode {
 	/**
 	 * Print the dark-mode switch script.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -193,7 +193,7 @@ class Gov_BR_Dark_Mode {
 	/**
 	 * Adds information to the privacy policy.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */

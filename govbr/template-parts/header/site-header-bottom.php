@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Gov_BR
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  */
 
 $site_name    = get_bloginfo( 'name' );
@@ -45,17 +45,6 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
         </div>
     </div><!-- .header-menu -->
 
-    <div class="header-search">
-        <div class="br-input has-icon">
-            <label for="searchbox-53667">Texto da pesquisa</label>
-            <input id="searchbox-53667" type="text" placeholder="O que você procura?" />
-            <button class="br-button circle small" type="button" aria-label="Pesquisar"><i class="fas fa-search"
-                    aria-hidden="true"></i>
-            </button>
-        </div>
-        <button class="br-button circle search-close ml-1" type="button" aria-label="Fechar Busca"
-            data-dismiss="search"><i class="fas fa-times" aria-hidden="true"></i>
-        </button>
-    </div>
+    <?php echo get_search_form(); ?>
 
 </div><!-- .header-bottom -->

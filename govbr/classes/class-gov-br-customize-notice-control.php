@@ -4,13 +4,13 @@
  *
  * @package WordPress
  * @subpackage Gov_BR
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  */
 
 /**
  * Customize Notice Control class.
  *
- * @since Gov BR 1.0
+ * @since Gov BR 0.1.0
  *
  * @see WP_Customize_Control
  */
@@ -18,7 +18,7 @@ class Gov_BR_Customize_Notice_Control extends WP_Customize_Control {
 	/**
 	 * The control type.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @var string
 	 */
@@ -29,7 +29,7 @@ class Gov_BR_Customize_Notice_Control extends WP_Customize_Control {
 	 *
 	 * This simply prints the notice we need.
 	 *
-	 * @since Gov BR 1.0
+	 * @since Gov BR 0.1.0
 	 *
 	 * @return void
 	 */

@@ -34,6 +34,10 @@ if ( ! class_exists( 'Gov_BR_Walker_Nav_Menu' ) ) {
 		 * @param stdClass $args Optional. An object of wp_nav_menu() arguments. Default value: null.
 		 */
 		public function start_lvl( &$output, $depth = 0, $args = null ) {
+            
+            if ( $args->walker->db_fields['parent'] === 'menu_item_parent' && $depth > 0 )
+                $output .= '</span></a>';
+
             $output .= '<ul>';
 		}
 
@@ -84,6 +88,16 @@ if ( ! class_exists( 'Gov_BR_Walker_Nav_Menu' ) ) {
             $output .= '<a class="menu-item' . ($depth == 0 ? ' divider' : '') . '" href="' . $item_link . '">';
                 
             $output .= '<span class="content">' . $data_object->title;
+
+            if ( $args->walker->has_children && $depth == 0 ) {
+                $output .= '</span>';
+
+                $output .= '</a>';
+                    
+                if ( $depth > 0 )
+                    $output .= '</li>';
+            }
+
 		}
 
 
@@ -100,13 +114,16 @@ if ( ! class_exists( 'Gov_BR_Walker_Nav_Menu' ) ) {
          * @param array  $args        An array of additional arguments.
          */
         public function end_el( &$output, $data_object, $depth = 0, $args = array() ) {
+          
+            if ( !($args->walker->has_children && $depth == 0) ) {
+                $output .= '</span>';
 
-            $output .= '</span>';
-
-            $output .= '</a>';
-                
-            if ( $depth > 0 )
-                $output .= '</li>';
+                $output .= '</a>';
+                    
+                if ( $depth > 0 )
+                    $output .= '</li>';
+            }
+            
         }
 
 	}

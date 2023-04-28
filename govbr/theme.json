@@ -542,14 +542,6 @@
 					"color": {
 						"gradient": "linear-gradient(rgba(var(--interactive-rgb),var(--pressed)),rgba(var(--interactive-rgb),var(--pressed)))"
 					}
-				},
-				":focus": {
-					"outline": {
-						"color": "var(--focus)",
-						"offset": "var(--focus-offset)",
-						"style": "var(--focus-style)",
-						"width": "var(--focus-width)"
-					}
 				}
 			},
 			"h1": {

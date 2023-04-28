@@ -25,6 +25,16 @@ function setupHeader() {
 }
 
 /**
+ * Looks for menu components to initialize them
+ */
+function setupMenu() {
+	document.querySelectorAll('.br-menu')
+		.forEach((menuElement) => {
+			new core.BRMenu('br-menu', menuElement)
+		});
+}
+
+/**
  * Looks for collapses components to initialize them
  */
 function setupCollapses() {
@@ -46,5 +56,6 @@ function setupCollapses() {
  */
 performWhenDocumentIsLoaded( () => {
 	setupHeader();
+	setupMenu();
 	setupCollapses();
 } );

@@ -95,46 +95,6 @@
 	}
 }
 
-// Search widget styles
-.search-form {
-	display: flex;
-	flex-wrap: wrap;
-	margin: auto;
-	max-width: var(--responsive--aligndefault-width);
-
-	> label {
-		width: 100%;
-		margin-bottom: 0;
-		font-weight: var(--font-weight-semi-bold, 600);
-	}
-
-	.search-field {
-		flex-grow: 1;
-		max-width: inherit;
-		margin-top: calc(var(--wp--style--block-gap, 20px) / 3);
-		margin-right: calc(0.66 * var(--wp--preset--spacing--scale-up-2, 16px));
-	}
-
-	.search-submit {
-		margin-top: calc(var(--wp--style--block-gap, 20px) / 3);
-		margin-left: 10px;
-	}
-}
-
-.widget_search > .search-form {
-
-	.search-field {
-		margin-right: -1px;
-		-webkit-appearance: none;
-		margin-bottom: calc(0.5 * var(--wp--style--block-gap, 20px));
-	}
-
-	.search-submit {
-		margin-left: 0;
-		margin-bottom: calc(0.5 * var(--wp--style--block-gap, 20px));
-	}
-}
-
 .widget_rss a.rsswidget .rss-widget-icon {
 	display: none;
 }

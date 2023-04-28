@@ -6,3 +6,9 @@
         text-decoration: none;
     }
 }
+
+/* Header offcanvas menu should respect presense of the wordpress admin bar */
+.br-menu .menu-panel {
+    top: var(--global--admin-bar--height, 0px);
+    height: calc(100vh - var(--global--admin-bar--height, 0px));
+}

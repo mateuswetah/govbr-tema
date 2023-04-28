@@ -542,6 +542,9 @@
 					"color": {
 						"gradient": "linear-gradient(rgba(var(--interactive-rgb),var(--pressed)),rgba(var(--interactive-rgb),var(--pressed)))"
 					}
+				},
+				"typography": {
+					"textDecoration": "none"
 				}
 			},
 			"h1": {

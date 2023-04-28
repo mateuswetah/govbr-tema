@@ -14,9 +14,12 @@ h1.entry-title {
 
 .entry-content {
 	font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
-
+	
 	p {
 		word-wrap: break-word;
+	}
+	a:not(.wp-block-button__link) {
+		text-decoration: underline;
 	}
 
 	// Overwrite iframe embeds that have inline styles.

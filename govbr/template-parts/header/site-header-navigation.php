@@ -35,7 +35,7 @@
                     <?php endif; ?>
                     </div>
                 </div>
-                <!-- <xmp> -->
+                
                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
                     <?php
                         wp_nav_menu(
@@ -50,7 +50,7 @@
                         );
                     ?>
                 <?php endif; ?>
-                    <!-- </xmp> -->
+
                 <div class="menu-footer">
                     <div class="menu-links">
                         <a href="https://www.gov.br/pt-br/orgaos-do-governo">

@@ -6,4 +6,11 @@
 		margin-bottom: 0;
 	}
 
+	&.is-style-logos-only {
+		a {
+			padding: 6px;
+			border-radius: 100em;
+		}
+	}
+
 }

@@ -272,6 +272,10 @@ require get_template_directory() . '/inc/template-functions.php';
 // Custom template tags for the theme.
 require get_template_directory() . '/inc/template-tags.php';
 
+// Adds signature field to settings.
+require get_template_directory() . '/classes/class-gov-br-signature-field.php';
+new Gov_BR_Signature_Field();
+
 // Customizer additions.
 require get_template_directory() . '/classes/class-gov-br-customize.php';
 new Gov_BR_Customize();

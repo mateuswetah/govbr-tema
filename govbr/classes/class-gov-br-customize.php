@@ -34,6 +34,14 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 		 */
 		public function register( $wp_customize ) {
 
+			// Add partial for the header logo.
+			$wp_customize->selective_refresh->add_partial(
+				'custom_logo',
+				array(
+					'selector'        => '.header-logo',
+				)
+			);
+
 			// Change header-title & description to postMessage.
 			$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage'; // @phpstan-ignore-line. Assume that this setting exists.
 			$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage'; // @phpstan-ignore-line. Assume that this setting exists.
@@ -72,45 +80,75 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 				array(
 					'type'    => 'checkbox',
 					'section' => 'title_tagline',
-					'label'   => esc_html__( 'Display Site Title & Tagline', 'govbr' ),
+					'label'   => esc_html__( 'Mostrar título e descrição', 'govbr' ),
 				)
 			);
 
-			/**
-			 * Add excerpt or full text selector to customizer
-			 */
-			$wp_customize->add_section(
-				'excerpt_settings',
-				array(
-					'title'    => esc_html__( 'Excerpt Settings', 'govbr' ),
-					'priority' => 120,
-				)
-			);
-
+			// Add "Signature text" setting
 			$wp_customize->add_setting(
-				'display_excerpt_or_full_post',
+				'govbr-signature-field__text',
 				array(
-					'capability'        => 'edit_theme_options',
-					'default'           => 'excerpt',
-					'sanitize_callback' => static function( $value ) {
-						return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
-					},
+					'capability' => 'edit_theme_options',
+					'default'    => get_option('govbr-signature-field__text'),
+					'transport'  => 'postMessage'
 				)
 			);
 
+			// Add control for the "Signature text" setting.
 			$wp_customize->add_control(
-				'display_excerpt_or_full_post',
+				'govbr-signature-field__text',
 				array(
-					'type'    => 'radio',
-					'section' => 'excerpt_settings',
-					'label'   => esc_html__( 'On Archive Pages, posts show:', 'govbr' ),
-					'choices' => array(
-						'excerpt' => esc_html__( 'Summary', 'govbr' ),
-						'full'    => esc_html__( 'Full text', 'govbr' ),
-					),
+					'type'    => 'text',
+					'section' => 'title_tagline',
+					'label'   => esc_html__( 'Título da Assinatura', 'govbr' ),
 				)
 			);
 
+			// Add partial for "Signature text" setting.
+			$wp_customize->selective_refresh->add_partial(
+				'govbr-signature-field__text',
+				array(
+					'selector'        => '.header-sign',
+					'render_callback' => array( $this, 'partial_signature_text' ),
+				)
+			);
+
+			// Add "Signature url" setting
+			$wp_customize->add_setting(
+				'govbr-signature-field__url',
+				array(
+					'capability' => 'edit_theme_options',
+					'default'    => get_option('govbr-signature-field__url'),
+					'transport'  => 'postMessage'
+				)
+			);
+
+			// Add control for the "Signature url" setting.
+			$wp_customize->add_control(
+				'govbr-signature-field__url',
+				array(
+					'type'    => 'url',
+					'section' => 'title_tagline',
+					'label'   => esc_html__( 'Link da Assinatura', 'govbr' ),
+				)
+			);
+
+			// Add partial for the primary menu links.
+			$wp_customize->selective_refresh->add_partial(
+				'nav_menu_locations[primary]',
+				array(
+					'selector'        => '#primary-menu-list',
+				)
+			);
+
+			// Add partial for the institutional menu links.
+			$wp_customize->selective_refresh->add_partial(
+				'nav_menu_locations[institutional]',
+				array(
+					'selector'        => '.header-links .br-list',
+				)
+			);
+			
 		}
 
 		/**
@@ -145,6 +183,23 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 		 */
 		public function partial_blogdescription() {
 			bloginfo( 'description' );
+		}
+
+		/**
+		 * Render the site signature for the selective refresh partial.
+		 *
+		 * @since Gov BR 0.1.0
+		 *
+		 * @return void
+		 */
+		public function partial_signature_text() {
+			if ( !empty( get_theme_mod('govbr-signature-field__url') ) ): ?>
+				<a href="<?php echo esc_url( get_theme_mod('govbr-signature-field__url') ); ?>">
+					<?php echo get_theme_mod('govbr-signature-field__text'); ?>
+				</a>
+			<?php else: ?>
+				<?php echo get_theme_mod('govbr-signature-field__text'); ?>
+			<?php endif;
 		}
 	}
 }

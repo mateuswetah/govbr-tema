@@ -1,3 +1,4 @@
+/* Entry header and inner elements */
 .entry-title {
 	@extend %responsive-aligndefault-width;
 	line-height: var(--font-line-height-low, 1.15);
@@ -6,6 +7,16 @@
 
 h1.entry-title {
 	font-weight: var(--font-weight-light);
+}
+
+.entry-header-meta {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--border-color, #ccc);
+	border-bottom: 1px solid var(--border-color, #ccc);
+	padding-top: 12px;
+	padding-bottom: 12px;
+	gap: 2rem;
 }
 
 /**
@@ -78,7 +89,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: calc(3.4 * var(--wp--style--block-gap, 20px));
 	padding-bottom: 0;
 	padding-top: calc(0.8 * var(--wp--style--block-gap, 20px));
-	border-top: 3px solid var(--border-color, #ccc);
+	border-top: 1px solid var(--border-color, #ccc);
 	border-bottom: var(--divider-size, 1px) solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);

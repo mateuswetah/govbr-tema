@@ -1,7 +1,7 @@
 .wp-block-cover,
 .wp-block-cover-image {
 
-	&:not(.alignwide):not(.alignfull) {
+	&:not(.alignfull) {
 		clear: both;
 	}
 

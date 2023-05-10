@@ -54,6 +54,53 @@ if ( ! function_exists( 'gov_br_posted_by' ) ) {
 	}
 }
 
+if ( ! function_exists( 'gov_br_entry_meta_header' ) ) {
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Header entry meta is displayed differently in archives and single posts.
+	 *
+	 * @since Gov BR 0.1.0
+	 *
+	 * @return void
+	 */
+	function gov_br_entry_meta_header() {
+
+		// Early exit if not a post.
+		if ( 'post' !== get_post_type() ) {
+			return;
+		}
+
+		echo '<div class="entry-header-meta">';
+
+		// Hide meta information on pages.
+		if ( ! is_single() ) {
+
+			if ( is_sticky() ) {
+				echo '<p>' . esc_html_x( 'Featured post', 'Label for sticky posts', 'govbr' ) . '</p>';
+			}
+
+			$post_format = get_post_format();
+			if ( 'aside' === $post_format || 'status' === $post_format ) {
+				echo '<p><a href="' . esc_url( get_permalink() ) . '">' . gov_br_continue_reading_text() . '</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
+			}
+
+			// Posted on.
+			gov_br_posted_on();
+
+		} else {
+
+			// Posted on.
+			gov_br_posted_on();
+			// Posted by.
+			gov_br_posted_by();
+
+		}
+
+		echo '</div>';
+	}
+}
+
+
 if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -72,18 +119,6 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 
 		// Hide meta information on pages.
 		if ( ! is_single() ) {
-
-			if ( is_sticky() ) {
-				echo '<p>' . esc_html_x( 'Featured post', 'Label for sticky posts', 'govbr' ) . '</p>';
-			}
-
-			$post_format = get_post_format();
-			if ( 'aside' === $post_format || 'status' === $post_format ) {
-				echo '<p><a href="' . esc_url( get_permalink() ) . '">' . gov_br_continue_reading_text() . '</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
-			}
-
-			// Posted on.
-			gov_br_posted_on();
 
 			// Edit post link.
 			edit_post_link(
@@ -121,11 +156,6 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 			}
 		} else {
 
-			echo '<div class="posted-by">';
-			// Posted on.
-			gov_br_posted_on();
-			// Posted by.
-			gov_br_posted_by();
 			// Edit post link.
 			edit_post_link(
 				sprintf(
@@ -136,7 +166,6 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 				'<span class="edit-link">',
 				'</span>'
 			);
-			echo '</div>';
 
 			if ( has_category() || has_tag() ) {
 
@@ -197,7 +226,7 @@ if ( ! function_exists( 'gov_br_post_thumbnail' ) ) {
 		<?php else : ?>
 
 			<figure class="post-thumbnail">
-				<a class="post-thumbnail-inner alignwide" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+				<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 					<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 				</a>
 				<?php if ( wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>

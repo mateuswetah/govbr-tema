@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-	<header class="page-header alignwide">
+	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'govbr' ); ?></h1>
 	</header><!-- .page-header -->
 

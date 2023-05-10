@@ -12,7 +12,7 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header alignwide">
+	<header class="page-header">
 		<?php if ( is_search() ) : ?>
 
 			<h1 class="page-title">

@@ -13,9 +13,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header alignwide">
+	<header class="entry-header default-max-width">
+		
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		
+		<?php gov_br_entry_meta_header(); ?>
+
 		<?php gov_br_post_thumbnail(); ?>
+		
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

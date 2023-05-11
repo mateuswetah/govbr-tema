@@ -67,7 +67,7 @@ export default function Save(props) {
 				/>
 				<div class="support">
 					<i 
-						class="fas fa-angle-down fa-chevron-down"
+						class="fas fa-angle-down"
 						aria-hidden="true"
 						aria-label={ __(
 							'Expand/Collapse',

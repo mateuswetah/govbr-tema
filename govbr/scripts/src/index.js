@@ -41,8 +41,8 @@ function setupCollapses() {
 	document.querySelectorAll('[data-toggle="collapse"]')
 		.forEach((trigger) => {
 			const config = {
-				iconToHide: 'fa-chevron-up',
-				iconToShow: 'fa-chevron-down',
+				iconToHide: 'fa-angle-up',
+				iconToShow: 'fa-angle-down',
 				trigger,
 				useIcons: true,
 			}

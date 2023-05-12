@@ -9,6 +9,8 @@
  */
 
 get_header();
+
+the_breadcrumb();
 ?>
 
 	<header class="page-header">

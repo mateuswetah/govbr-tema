@@ -11,6 +11,8 @@
 get_header();
 
 $description = get_the_archive_description();
+
+the_breadcrumb();
 ?>
 
 <?php if ( have_posts() ) : ?>

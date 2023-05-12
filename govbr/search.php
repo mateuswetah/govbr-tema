@@ -10,6 +10,8 @@
 
 get_header();
 
+the_breadcrumb();
+
 if ( have_posts() ) {
 	?>
 	<header class="page-header">

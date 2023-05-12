@@ -12,6 +12,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<?php the_breadcrumb(); ?>
+
 	<header class="entry-header default-max-width">
 		
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

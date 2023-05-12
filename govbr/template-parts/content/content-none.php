@@ -11,6 +11,9 @@
 ?>
 
 <section class="no-results not-found">
+
+	<?php the_breadcrumb(); ?>
+
 	<header class="page-header">
 		<?php if ( is_search() ) : ?>
 

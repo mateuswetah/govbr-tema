@@ -51,6 +51,17 @@ function setupCollapses() {
 		});
 }
 
+
+/**
+ * Looks for breadcrumb components to initialize them
+ */
+function setupBreadcrumbs() {
+	document.querySelectorAll('.br-breadcrumb')
+		.forEach((breadcrubmElement) => {
+			new core.BRBreadcrumb('br-breadcrumb', breadcrubmElement)
+		});
+}
+
 /*
  * Waiting the page to be loaded to initialize things
  */
@@ -58,4 +69,5 @@ performWhenDocumentIsLoaded( () => {
 	setupHeader();
 	setupMenu();
 	setupCollapses();
+	setupBreadcrumbs();
 } );

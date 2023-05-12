@@ -12,6 +12,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<?php the_breadcrumb(); ?>
+
 	<?php if ( ! is_front_page() ) : ?>
 		<header class="entry-header default-max-width">
 			<?php get_template_part( 'template-parts/header/entry-header' ); ?>

@@ -4,8 +4,7 @@
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
- * @package WordPress
- * @subpackage Gov_BR
+ * @package Gov_BR
  * @since Gov BR 0.1.0
  */
 

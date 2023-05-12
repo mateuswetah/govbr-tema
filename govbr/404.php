@@ -4,8 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package WordPress
- * @subpackage Gov_BR
+ * @package Gov_BR
  * @since Gov BR 0.1.0
  */
 

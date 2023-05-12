@@ -4,8 +4,7 @@
  *
  * @link https://developer.wordpress.org/reference/functions/register_block_style/
  *
- * @package WordPress
- * @subpackage Gov_BR
+ * @package Gov_BR
  * @since Gov BR 0.1.0
  */
 

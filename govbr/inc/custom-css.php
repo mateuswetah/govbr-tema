@@ -2,8 +2,7 @@
 /**
  * Custom CSS
  *
- * @package WordPress
- * @subpackage Gov_BR
+ * @package Gov_BR
  * @since Gov BR 0.1.0
  */
 

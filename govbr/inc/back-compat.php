@@ -6,8 +6,7 @@
  * since this theme is not meant to be backward compatible beyond that and
  * relies on many newer functions and markup changes introduced in 5.9.
  *
- * @package WordPress
- * @subpackage Gov_BR
+ * @package Gov_BR
  * @since Gov BR 0.1.0
  */
 

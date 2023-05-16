@@ -14,7 +14,7 @@
 
 	<?php the_breadcrumb(); ?>
 
-	<header class="page-header">
+	<header class="page-header container-lg">
 		<?php if ( is_search() ) : ?>
 
 			<h1 class="page-title">
@@ -34,7 +34,7 @@
 		<?php endif; ?>
 	</header><!-- .page-header -->
 
-	<div class="page-content default-max-width">
+	<div class="page-content">
 
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 

@@ -13,7 +13,7 @@ while ( have_posts() ) {
 	the_post();
 	?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header default-max-width">
+		<header class="entry-header container-lg">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 
@@ -50,7 +50,7 @@ while ( have_posts() ) {
 			?>
 		</div><!-- .entry-content -->
 
-		<footer class="entry-footer default-max-width">
+		<footer class="entry-footer container-lg">
 			<?php
 			// Check if there is a parent, then add the published in link.
 			if ( wp_get_post_parent_id( $post ) ) {

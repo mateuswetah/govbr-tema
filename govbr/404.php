@@ -13,11 +13,11 @@ get_header();
 the_breadcrumb();
 ?>
 
-	<header class="page-header">
+	<header class="page-header container-lg">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'govbr' ); ?></h1>
 	</header><!-- .page-header -->
 
-	<div class="error-404 not-found default-max-width">
+	<div class="error-404 not-found container-lg">
 		<div class="page-content">
 			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'govbr' ); ?></p>
 			<?php get_search_form(); ?>

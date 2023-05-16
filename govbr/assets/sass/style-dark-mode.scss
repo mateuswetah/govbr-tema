@@ -48,34 +48,6 @@
 			}
 		}
 
-		&.relative {
-			position: absolute;
-			height: 44px;
-			top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px);
-			right: calc(50vw - var(--responsive--aligndefault-width) / 2 - 0.5em);
-
-			.admin-bar & {
-				top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 32px);
-
-				@media only screen and (max-width: 782px) {
-					top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 46px);
-				}
-
-				@media only screen and (max-width: 481px) {
-					top: calc(2.4 * var(--wp--style--block-gap, 20px) - 44px + 26px);
-				}
-			}
-
-			~ nav {
-
-				body:not(.primary-navigation-open) & {
-					@media only screen and (max-width: 481px) {
-						top: calc(44px + 44px);
-					}
-				}
-			}
-		}
-
 		.primary-navigation-open & {
 			display: none;
 		}

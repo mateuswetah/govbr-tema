@@ -7,9 +7,9 @@
  */
 ?>
 
-<header class="entry-header default-max-width">
+<header class="entry-header container-lg">
 	<?php
-	the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
+	the_title( sprintf( '<h2 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
 	gov_br_post_thumbnail();
 	?>
 </header><!-- .entry-header -->

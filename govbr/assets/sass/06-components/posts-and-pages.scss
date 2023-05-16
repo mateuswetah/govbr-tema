@@ -2,10 +2,6 @@
 	// This class is required to pass ThemeCheck.
 }
 
-.page-header {
-	@extend %responsive-aligndefault-width;
-}
-
 .no-results.not-found > *:first-child {
 	margin-bottom: calc(3 * var(--wp--style--block-gap, 20px));
 }

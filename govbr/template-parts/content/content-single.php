@@ -14,7 +14,7 @@
 
 	<?php the_breadcrumb(); ?>
 
-	<header class="entry-header default-max-width">
+	<header class="entry-header container-lg">
 		
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		
@@ -39,7 +39,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer default-max-width">
+	<footer class="entry-footer container-lg">
 		<?php gov_br_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 

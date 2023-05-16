@@ -20,7 +20,7 @@ function the_breadcrumb() {
     
     if ( !is_home() && !is_front_page() ) {
 
-        echo '<div id="breadcrumbs" class="br-breadcrumb default-max-width"><ul class="crumb-list">';
+        echo '<div id="breadcrumbs" class="br-breadcrumb container-lg"><ul class="crumb-list">';
         
         echo '<li class="crumb home"><a class="br-button circle" href="' . $home_link . '"><span class="sr-only">' . $home_label . '</span><i class="fas fa-home"></i></a></li>';
         

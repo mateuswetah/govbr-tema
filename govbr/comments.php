@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 $gov_br_comment_count = get_comments_number();
 ?>
 
-<div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
+<div id="comments" class="comments-area container-lg <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
 	<?php
 	if ( have_comments() ) :

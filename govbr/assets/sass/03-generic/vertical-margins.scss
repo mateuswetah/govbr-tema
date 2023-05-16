@@ -11,9 +11,7 @@
  * Top Level Wrappers (header, main, footer)
  * - Set vertical padding and horizontal margins
  */
-.site-main,
-.widget-area,
-.site-footer {
+.site-main {
 	padding-top: var(--wp--style--block-gap, 20px);
 	padding-bottom: var(--wp--style--block-gap, 20px);
 	margin-left: auto;
@@ -35,20 +33,6 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
-}
-
-/**
- * Set the default maximum responsive content-width
- */
-.default-max-width {
-	@extend %responsive-aligndefault-width;
-}
-
-/**
- * Set the wide maximum responsive content-width
- */
-.wide-max-width {
-	@extend %responsive-aligndefault-width;
 }
 
 /**
@@ -94,12 +78,6 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
-}
-
-.site-footer > *,
-.widget-area > * {
-	margin-top: calc(0.666 * var(--wp--style--block-gap, 20px));
-	margin-bottom: calc(0.666 * var(--wp--style--block-gap, 20px));
 }
 
 /*

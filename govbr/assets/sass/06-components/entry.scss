@@ -1,6 +1,6 @@
 /* Entry header and inner elements */
 .entry-title {
-	@extend %responsive-aligndefault-width;
+	max-width: 100%;
 	line-height: var(--font-line-height-low, 1.15);
 	overflow-wrap: break-word;
 }
@@ -39,11 +39,6 @@ h1.entry-title {
 		margin: var(--wp--style--block-gap, 20px) 0 !important;
 		max-width: 100% !important;
 	}
-
-	// Classic editor audio embeds.
-	.wp-audio-shortcode {
-		@extend %responsive-aligndefault-width;
-	}
 }
 
 .entry-footer {
@@ -56,19 +51,6 @@ h1.entry-title {
 
 	> span {
 		display: inline-block;
-	}
-
-	a {
-		color: currentColor;
-
-		&:hover,
-		&:focus {
-			color: var(--wp--preset--color--reading-light, #333);
-		}
-
-		&:active {
-			color: currentColor;
-		}
 	}
 }
 
@@ -131,7 +113,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  */
 
 .post-thumbnail {
-	@extend %responsive-aligndefault-width;
+	max-width: 100%;
 	text-align: center;
 
 	.wp-post-image {
@@ -151,7 +133,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .author-bio {
 	position: relative;
 	font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);
-	max-width: var(--responsive--aligndefault-width);
+	max-width: 100%;
 
 	.site-main > article > & {
 		margin-top: calc(2 * var(--wp--style--block-gap, 20px));
@@ -169,7 +151,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		.author-bio-content {
 			display: inline-block;
 			padding-left: var(--wp--preset--spacing--scale-up-2, 16px);
-			max-width: calc(var(--responsive--aligndefault-width) - 90px);
+			max-width: calc(100% - 90px);
 		}
 	}
 

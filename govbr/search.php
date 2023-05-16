@@ -14,7 +14,7 @@ the_breadcrumb();
 
 if ( have_posts() ) {
 	?>
-	<header class="page-header">
+	<header class="page-header container-lg">
 		<h1 class="page-title">
 			<?php
 			printf(
@@ -26,7 +26,7 @@ if ( have_posts() ) {
 		</h1>
 	</header><!-- .page-header -->
 
-	<div class="search-result-count default-max-width">
+	<div class="search-result-count container-lg">
 		<?php
 		printf(
 			esc_html(

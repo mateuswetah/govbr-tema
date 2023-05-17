@@ -40,19 +40,6 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer container-lg">
-			<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Post title. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'govbr' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+	<?php gov_br_entry_meta_footer(); ?>
+
 </article><!-- #post-<?php the_ID(); ?> -->

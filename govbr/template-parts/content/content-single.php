@@ -39,9 +39,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer container-lg">
-		<?php gov_br_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<?php gov_br_entry_meta_footer(); ?>
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
 		<?php get_template_part( 'template-parts/post/author-bio' ); ?>

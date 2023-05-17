@@ -111,85 +111,64 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 	 */
 	function gov_br_entry_meta_footer() {
 
-		// Early exit if not a post.
-		if ( 'post' !== get_post_type() ) {
+		// Early exit if in the main page
+		if ( is_home() || is_front_page() )
 			return;
+
+		echo '<footer class="entry-footer container-lg"><div class="entry-meta-footer">';
+
+		if ( has_category() || has_tag() ) {
+
+			echo '<div class="post-taxonomies">';
+
+			$categories_list = get_the_category_list( ' ' );
+			if ( $categories_list ) {
+				$categories_label = '<strong>' . esc_html__( 'Categorized as', 'govbr' ) . ': </strong>';
+				printf(
+					'<span class="cat-links">' . $categories_label . ' %s</span>',
+					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+				);
+			}
+
+			$tags_list = get_the_tag_list( '', ' ' );
+			if ( $tags_list ) {
+				$tags_label = '<strong>' . esc_html__( 'Tagged as', 'govbr' ) . ': </strong>';
+				printf(
+					'<span class="tags-links">' . $tags_label . '%s</span>',
+					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+				);
+			}
+			echo '</div>';
 		}
 
-		// Hide meta information on pages.
-		if ( ! is_single() ) {
+		if ( is_page_template( 'image.php' ) ) {
 
-			// Edit post link.
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Post title. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'govbr' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
-				),
-				'<span class="edit-link">',
-				'</span><br>'
-			);
-
-			if ( has_category() || has_tag() ) {
-
-				echo '<div class="post-taxonomies">';
-
-				$categories_list = get_the_category_list( wp_get_list_item_separator() );
-				if ( $categories_list ) {
-					printf(
-						/* translators: %s: List of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'govbr' ) . ' </span>',
-						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-					);
-				}
-
-				$tags_list = get_the_tag_list( '', wp_get_list_item_separator() );
-				if ( $tags_list ) {
-					printf(
-						/* translators: %s: List of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'govbr' ) . '</span>',
-						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-					);
-				}
-				echo '</div>';
+			// Check if there is a parent, then add the published in link.
+			if ( wp_get_post_parent_id( $post ) ) {
+				echo '<span class="posted-on">';
+				printf(
+					/* translators: %s: Parent post. */
+					esc_html__( 'Published in %s', 'govbr' ),
+					'<a href="' . esc_url( get_the_permalink( wp_get_post_parent_id( $post ) ) ) . '">' . esc_html( get_the_title( wp_get_post_parent_id( $post ) ) ) . '</a>'
+				);
+				echo '</span>';
 			}
-		} else {
 
-			// Edit post link.
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Post title. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'govbr' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-
-			if ( has_category() || has_tag() ) {
-
-				echo '<div class="post-taxonomies">';
-
-				$categories_list = get_the_category_list( wp_get_list_item_separator() );
-				if ( $categories_list ) {
-					printf(
-						/* translators: %s: List of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'govbr' ) . ' </span>',
-						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-					);
-				}
-
-				$tags_list = get_the_tag_list( '', wp_get_list_item_separator() );
-				if ( $tags_list ) {
-					printf(
-						/* translators: %s: List of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'govbr' ) . '</span>',
-						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-					);
-				}
-				echo '</div>';
+			// Retrieve attachment metadata.
+			$metadata = wp_get_attachment_metadata();
+			if ( $metadata ) {
+				printf(
+					'<span class="full-size-link"><span class="screen-reader-text">%1$s</span><a href="%2$s">%3$s &times; %4$s</a></span>',
+					/* translators: Hidden accessibility text. */
+					esc_html_x( 'Full size', 'Used before full size attachment link.', 'govbr' ), // phpcs:ignore WordPress.Security.EscapeOutput
+					esc_url( wp_get_attachment_url() ),
+					absint( $metadata['width'] ),
+					absint( $metadata['height'] )
+				);
 			}
 		}
+
+		echo '</div></footer>';
 	}
 }
 

@@ -316,17 +316,3 @@ function govbr_the_html_classes() {
 	}
 	echo 'class="' . esc_attr( $classes ) . '"';
 }
-
-if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
-	/**
-	 * Retrieves the list item separator based on the locale.
-	 *
-	 * Added for backward compatibility to support pre-6.0.0 WordPress versions.
-	 *
-	 * @since 6.0.0
-	 */
-	function wp_get_list_item_separator() {
-		/* translators: Used between list items, there is a space after the comma. */
-		return __( ', ', 'govbr' );
-	}
-endif;

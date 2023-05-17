@@ -26,11 +26,6 @@ while ( have_posts() ) :
 		);
 	}
 
-	// If comments are open or there is at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) {
-		comments_template();
-	}
-
 	// Previous/next post navigation.
 	$govbr_next = is_rtl() ? gov_br_get_icon_svg( 'ui', 'arrow_left' ) : gov_br_get_icon_svg( 'ui', 'arrow_right' );
 	$govbr_prev = is_rtl() ? gov_br_get_icon_svg( 'ui', 'arrow_right' ) : gov_br_get_icon_svg( 'ui', 'arrow_left' );
@@ -40,10 +35,17 @@ while ( have_posts() ) :
 
 	the_post_navigation(
 		array(
+			'class' => 'container-lg',
 			'next_text' => '<p class="meta-nav">' . $govbr_next_label . $govbr_next . '</p><p class="post-title">%title</p>',
 			'prev_text' => '<p class="meta-nav">' . $govbr_prev . $govbr_previous_label . '</p><p class="post-title">%title</p>',
 		)
 	);
+
+	// If comments are open or there is at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) {
+		comments_template();
+	}
+
 endwhile; // End of the loop.
 
 get_footer();

@@ -18,7 +18,6 @@
 		<?php get_template_part( 'template-parts/excerpt/excerpt', get_post_format() ); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer container-lg">
-		<?php gov_br_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<?php gov_br_entry_meta_footer(); ?>
+	
 </article><!-- #post-${ID} -->

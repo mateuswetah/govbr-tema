@@ -16,7 +16,7 @@
 		margin-right: -1px;
 		padding: 0 var(--spacing-scale-2x);
 
-		.is-dark-theme & {
+		.is-contrast-mode & {
 			background: var(--wp--preset--color--surface-light-alternative);
 		}
 
@@ -82,7 +82,7 @@
 					color: var(--interactive);
 				}
 
-				.is-dark-theme & {
+				.is-contrast-mode & {
 					color: var(--wp--preset--color--reading-light, #333);
 
 					&:hover {

@@ -24,8 +24,8 @@ Take it for a spin! See how Gov BR elevates your portfolio, business website, or
 5. Navigate to Appearance > Customize in your admin panel and customize to your taste.
 
 == Privacy ==
-Gov BR uses LocalStorage to save the setting when Dark Mode support is turned on or off.
-LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.
+Gov BR uses LocalStorage to save the setting when Contrast Mode support is turned on or off.
+LocalStorage is necessary for the setting to work and is only used when a user clicks on the Contrast Mode button.
 No data is saved in the database or transferred.
 
 == Changelog ==

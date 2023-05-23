@@ -1,0 +1,73 @@
+/* OS constrast theme preference */
+@media only screen {
+  .is-contrast-mode.is-contrast-mode {
+    --background-contrast: #000;
+    --text-contrast: #fff;
+    --interactive-contrast: rgb(0, 247, 255);
+    --interactive-contrast--focus: rgb(255, 145, 0);
+    --interactive-contrast--hover: rgb(251, 255, 0);
+    --interactive-contrast--active: rgb(21, 255, 0);
+    --interactive-contrast--visited: rgb(255, 0, 234);
+  }
+  .is-contrast-mode.is-contrast-mode *,
+  .is-contrast-mode.is-contrast-mode *::placeholder,
+  .is-contrast-mode.is-contrast-mode *.has-background,
+  .is-contrast-mode.is-contrast-mode *.has-text-color {
+    background-color: var(--background-contrast, #000) !important;
+    color: var(--text-contrast, #fff) !important;
+    fill: var(--text-contrast, #fff) !important;
+  }
+  .is-contrast-mode.is-contrast-mode a,
+  .is-contrast-mode.is-contrast-mode a.has-link-color {
+    color: var(--interactive-contrast, rgb(0, 247, 255)) !important;
+  }
+  .is-contrast-mode.is-contrast-mode a > *,
+  .is-contrast-mode.is-contrast-mode a.has-link-color > * {
+    color: inherit !important;
+  }
+  .is-contrast-mode.is-contrast-mode a:active,
+  .is-contrast-mode.is-contrast-mode a.has-link-color:active {
+    color: var(--interactive-contrast--active, rgb(21, 255, 0)) !important;
+  }
+  .is-contrast-mode.is-contrast-mode a:hover,
+  .is-contrast-mode.is-contrast-mode a.has-link-color:hover {
+    color: var(--interactive-contrast--hover, rgb(251, 255, 0)) !important;
+  }
+  .is-contrast-mode.is-contrast-mode a:visited,
+  .is-contrast-mode.is-contrast-mode a.has-link-color:visited {
+    color: var(--interactive-contrast--visited, rgb(255, 0, 234)) !important;
+  }
+  .is-contrast-mode.is-contrast-mode button,
+  .is-contrast-mode.is-contrast-mode .wp-block-button,
+  .is-contrast-mode.is-contrast-mode input,
+  .is-contrast-mode.is-contrast-mode textarea,
+  .is-contrast-mode.is-contrast-mode select {
+    box-shadow: 0 0 0 3px var(--interactive-contrast, rgb(0, 247, 255)) !important;
+  }
+  .is-contrast-mode.is-contrast-mode button:focus,
+  .is-contrast-mode.is-contrast-mode .wp-block-button:focus,
+  .is-contrast-mode.is-contrast-mode input:focus,
+  .is-contrast-mode.is-contrast-mode textarea:focus,
+  .is-contrast-mode.is-contrast-mode select:focus {
+    box-shadow: 0 0 0 3px var(--interactive-contrast--focus, rgb(255, 145, 0)) !important;
+  }
+  .is-contrast-mode.is-contrast-mode button:hover,
+  .is-contrast-mode.is-contrast-mode .wp-block-button:hover,
+  .is-contrast-mode.is-contrast-mode input:hover,
+  .is-contrast-mode.is-contrast-mode textarea:hover,
+  .is-contrast-mode.is-contrast-mode select:hover {
+    box-shadow: 0 0 0 3px var(--interactive-contrast--hover, rgb(251, 255, 0)) !important;
+  }
+  .is-contrast-mode.is-contrast-mode button:active,
+  .is-contrast-mode.is-contrast-mode .wp-block-button:active,
+  .is-contrast-mode.is-contrast-mode input:active,
+  .is-contrast-mode.is-contrast-mode textarea:active,
+  .is-contrast-mode.is-contrast-mode select:active {
+    box-shadow: 0 0 0 3px var(--interactive-contrast--active, rgb(21, 255, 0)) !important;
+  }
+  .is-contrast-mode img {
+    filter: brightness(0.85) contrast(1.1);
+  }
+}
+
+/*# sourceMappingURL=style-contrast-mode.css.map */

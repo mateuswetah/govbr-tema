@@ -33,7 +33,7 @@ textarea {
 		opacity: var(--disabled);
 	}
 
-	.is-dark-theme & {
+	.is-contrast-mode & {
 		background: var(--wp--preset--color--surface-light-alternative);
 	}
 }
@@ -44,7 +44,7 @@ input[type="search"] {
 	&:focus {
 		outline-offset: -7px;
 
-		.is-dark-theme & {
+		.is-contrast-mode & {
 			outline-color: var(--background, #fff);
 		}
 	}
@@ -79,7 +79,7 @@ select {
 		outline: none;
 	}
 
-	.is-dark-theme & {
+	.is-contrast-mode & {
 		background: var(--wp--preset--color--surface-light) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat; // stylelint-disable-line function-url-quotes
 		background-position: right var(--spacing-scale-2x) top 60%;
 	}
@@ -118,7 +118,7 @@ License: MIT.
 			opacity: var(--disabled);
 		}
 
-		.is-dark-theme & {
+		.is-contrast-mode & {
 			background: var(--wp--preset--color--surface-light-alternative);
 		}
 	}

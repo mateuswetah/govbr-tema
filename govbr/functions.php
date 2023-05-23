@@ -103,7 +103,6 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
-		add_theme_support( 'dark-editor-style' );
 
 		$editor_stylesheet_path = './assets/css/style-editor.css';
 
@@ -291,9 +290,9 @@ require get_template_directory() . '/inc/block-filters.php';
 // Block Patterns.
 require get_template_directory() . '/inc/block-patterns.php';
 
-// Dark Mode.
-require_once get_template_directory() . '/classes/class-gov-br-dark-mode.php';
-new Gov_BR_Dark_Mode();
+// Contrast Mode.
+require_once get_template_directory() . '/classes/class-gov-br-contrast-mode.php';
+new Gov_BR_Contrast_Mode();
 
 // Plugins: Icon Block
 if ( is_plugin_active( 'icon-block/icon-block.php' ) ) {

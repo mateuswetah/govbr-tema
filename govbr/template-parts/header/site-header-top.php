@@ -85,7 +85,12 @@
                     </button>
                 </div>
                 <div class="br-item">
-                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 4">
+                    <button
+                            id="contrast-mode-toggler"
+                            class="br-button circle small"
+                            type="button"
+                            aria-label="Funcionalidade 4"
+                            aria-pressed="false">
                         <i class="fas fa-adjust" aria-hidden="true"></i>
                         <span class="text">Funcionalidade 4</span>
                     </button>

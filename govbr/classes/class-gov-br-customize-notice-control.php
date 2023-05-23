@@ -35,9 +35,9 @@ class Gov_BR_Customize_Notice_Control extends WP_Customize_Control {
 	public function render_content() {
 		?>
 		<div class="notice notice-warning">
-			<p><?php esc_html_e( 'To access the Dark Mode settings, select a light background color.', 'govbr' ); ?></p>
-			<p><a href="<?php echo esc_url( __( 'https://wordpress.org/documentation/article/gov-br/#dark-mode-support', 'govbr' ) ); ?>">
-				<?php esc_html_e( 'Learn more about Dark Mode.', 'govbr' ); ?>
+			<p><?php esc_html_e( 'To access the Contrast Mode settings, select a light background color.', 'govbr' ); ?></p>
+			<p><a href="<?php echo esc_url( __( 'https://wordpress.org/documentation/article/gov-br/#contrast-mode-support', 'govbr' ) ); ?>">
+				<?php esc_html_e( 'Learn more about Contrast Mode.', 'govbr' ); ?>
 			</a></p>
 		</div><!-- .notice -->
 		<?php

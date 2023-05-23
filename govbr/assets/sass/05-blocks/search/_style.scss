@@ -94,7 +94,7 @@
 			button.wp-block-search__button {
 				padding: var(--wp--preset--spacing--scale-up-2, 16px) var(--wp--preset--spacing--scale-up-4, 36px);
 
-				.is-dark-theme & {
+				.is-contrast-mode & {
 					color: var(--wp--preset--color--reading-light, #333);
 
 					&:hover {

@@ -10,7 +10,7 @@ a:hover {
 .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
 
 	// Change text color when the body background is dark.
-	.is-dark-theme & {
+	.is-contrast-mode & {
 		
 		.meta-nav {
 			color: var(--wp--style--color--link, var(--background-light, #fff));

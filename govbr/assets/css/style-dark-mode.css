@@ -19,42 +19,6 @@
   .is-dark-theme body {
     background-color: var(--background, #fff);
   }
-  #dark-mode-toggler {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-scale-up-01);
-    padding: 0.5em;
-    min-height: 44px;
-    min-width: max-content;
-    border: 2px solid currentColor;
-    box-shadow: none;
-    background: var(--background);
-    color: var(--color);
-    z-index: 9998;
-  }
-  .no-js #dark-mode-toggler {
-    display: none;
-  }
-  #dark-mode-toggler.fixed-bottom {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-  }
-  #dark-mode-toggler.fixed-bottom.hide:not(:focus) {
-    bottom: -80px;
-  }
-}
-@media only screen and (prefers-reduced-motion: no-preference) {
-  #dark-mode-toggler.fixed-bottom {
-    transition: bottom 0.5s;
-  }
-}
-@media only screen {
-  .primary-navigation-open #dark-mode-toggler {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=style-dark-mode.css.map */

@@ -5,17 +5,19 @@
 		clear: both;
 	}
 
+	margin-top: inherit;
+	margin-bottom: inherit;
+
 	&.alignfull {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
 
-	margin-top: inherit;
-	margin-bottom: inherit;
+	.wp-block-cover__inner-container:not(.has-text-color) {
+		color: var(--color, inherit);
+	}
 
 	.wp-block-cover__inner-container {
-		color: var(--color, inherit);
-		
 		> * {
 
 			&:first-child {

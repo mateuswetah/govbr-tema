@@ -1,3 +1,30 @@
 .wp-block-group {
 	display: flow-root; // stylelint-disable-line declaration-block-no-duplicate-properties
+
+	&.is-style-link-inside {
+		position: relative;
+
+		&:hover a {
+			background-image: none;
+		
+			&::after {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				border: 0;
+				bottom: 0;
+				background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(19,81,180,.16)),to(rgba(19,81,180,.16)));
+				background-image: -webkit-linear-gradient(rgba(19,81,180,.16),rgba(19,81,180,.16));
+				background-image: linear-gradient(rgba(19,81,180,.16),rgba(19,81,180,.16));
+				background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(var(--interactive-rgb),var(--hover))),to(rgba(var(--interactive-rgb),var(--hover))));
+				background-image: -webkit-linear-gradient(rgba(var(--interactive-rgb),var(--hover)),rgba(var(--interactive-rgb),var(--hover)));
+				background-image: linear-gradient(rgba(var(--interactive-rgb),var(--hover)),rgba(var(--interactive-rgb),var(--hover)));
+				inset-block: 0;
+				inset-inline: 0;
+				cursor: pointer;	
+			}
+		}
+	}
 }

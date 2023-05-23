@@ -14,7 +14,13 @@
 	}
 
 	// Last child that is not the appender.
-	&:not(.is-layout-flex) *:last-child:not(.block-list-appender) {
+	&:not(.is-layout-flex) *:not(.block-list-appender) {
+		margin-bottom: 0;
+	}
+
+	// On layout flex the margin is made by block spacing.
+	&.is-layout-flex > *:not(.block-list-appender) {
+		margin-top: 0;
 		margin-bottom: 0;
 	}
 }

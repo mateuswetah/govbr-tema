@@ -64,7 +64,7 @@ export default function Edit(props) {
 	setAttributes( { parentBlockId: parentBlockId } );
 
 	return (
-		<div { ...blockProps } data-toggle="collapse" data-target={ 'brgov-collapse--' + parentBlockId }>
+		<div { ...blockProps } data-toggle="collapse"  data-breakpoint="true" data-target={ 'brgov-collapse--' + parentBlockId }>
 			<div class="content">
 				<RichText
 					className={ elementClasses }

@@ -57,7 +57,7 @@ export default function Save(props) {
 	const blockProps = useBlockProps.save( { className: wrapperClasses + ' br-item header' } );
 
 	return (
-		<div { ...blockProps } data-toggle="collapse" data-target={ 'brgov-collapse--' + attributes.parentBlockId }>
+		<div { ...blockProps } data-toggle="collapse"  data-breakpoint="true" data-target={ 'brgov-collapse--' + attributes.parentBlockId }>
 			<div class="content">
 				<RichText.Content
 					className={ elementClasses }

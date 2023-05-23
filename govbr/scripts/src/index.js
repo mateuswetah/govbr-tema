@@ -48,6 +48,7 @@ function setupCollapses() {
 			}
 			const collapse = new core.Collapse(config);
 			collapse.setBehavior();
+			console.log(collapse)
 		});
 }
 

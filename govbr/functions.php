@@ -295,6 +295,11 @@ require get_template_directory() . '/inc/block-patterns.php';
 require_once get_template_directory() . '/classes/class-gov-br-dark-mode.php';
 new Gov_BR_Dark_Mode();
 
+// Plugins: Icon Block
+if ( is_plugin_active( 'icon-block/icon-block.php' ) ) {
+	require get_template_directory() . '/plugins/icon-block.php';
+}
+
 /**
  * Calculate classes for the main <html> element.
  *

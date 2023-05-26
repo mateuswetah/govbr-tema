@@ -32,6 +32,9 @@ class Gov_BR_VLibras {
 	 * @return void
 	 */
 	public function enqueue_scripts() {
+		
+		if ( !get_theme_mod( 'enable_feature_vlibras', true ) )
+			return;
 
 		wp_enqueue_style( 'govbr-vlibras-style', get_template_directory_uri() . '/assets/css/style-vlibras.css', array(), wp_get_theme()->get( 'Version' ) ); // @phpstan-ignore-line. Version is always a string.
 
@@ -47,6 +50,10 @@ class Gov_BR_VLibras {
 	 * @return void
 	 */
 	public function add_html_before_footer() {
+		
+		if ( !get_theme_mod( 'enable_feature_vlibras', true ) )
+			return;
+
 		?>
 		<div vw class="enabled">
 			<!-- We do not use this trigger, as there is a vw-access-button inside the header buttons -->

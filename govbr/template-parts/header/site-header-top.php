@@ -8,6 +8,11 @@
 
  require_once get_template_directory() . '/classes/class-gov-br-walker-institutional-menu.php';
 
+ $is_feature_contrast_mode_enabled = get_theme_mod('enable_feature_constrast_mode', true);
+ $is_feature_vlibras_enabled = get_theme_mod('enable_feature_vlibras', true);
+ $is_wordpress_login_enabled = get_theme_mod('enable_wordpress_login', true);
+
+ $has_some_feature_enabled = $is_feature_vlibras_enabled || $is_feature_contrast_mode_enabled;
 ?>
 
 <div class="header-top">
@@ -58,49 +63,77 @@
             </div>
         <?php endif; ?>
         <span class="br-divider vertical mx-half mx-sm-1"></span>
-        <div class="header-functions dropdown">
-            <button class="br-button circle small" type="button" data-toggle="dropdown"
-                aria-label="Abrir Funcionalidades do Sistema"><i class="fas fa-th" aria-hidden="true"></i>
-            </button>
-            <div class="br-list">
-                <div class="header">
-                    <div class="title"><?php echo __('Funcionalidades do Sistema', 'govbr'); ?></div>
-                </div>
-                <div class="br-item">
-                    <button vw-access-button class="br-button circle small" type="button" aria-label="<?php echo __('VLibras', 'govbr'); ?>">
-                        <i class="fas fa-hands" aria-hidden="true"></i>
-                        <span class="text"><?php echo __('VLibras', 'govbr'); ?></span>
-                    </button>
-                    <button class="br-button circle small" type="button" aria-label="<?php echo __('VLibras', 'govbr'); ?>">
-                        <i class="fas fa-hands" aria-hidden="true"></i>
-                        <span class="text"><?php echo __('VLibras', 'govbr'); ?></span>
-                    </button>
-                </div>
-                <div class="br-item">
-                    <button
-                            id="contrast-mode-toggler"
-                            class="br-button circle small"
-                            type="button"
-                            aria-label="<?php echo __('Alto contraste', 'govbr'); ?>"
-                            aria-pressed="false">
-                        <i class="fas fa-adjust" aria-hidden="true"></i>
-                        <span class="text"><?php echo __('Alto contraste', 'govbr'); ?></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="header-search-trigger">
-            <button class="br-button circle" type="button" aria-label="Abrir Busca" data-toggle="search"
-                data-target=".header-search"><i class="fas fa-search" aria-hidden="true"></i>
-            </button>
-        </div>
-        <div class="header-login">
-            <div class="header-sign-in">
-                <button class="br-sign-in small" type="button" data-trigger="login"><i class="fas fa-user"
-                        aria-hidden="true"></i><span class="d-sm-inline">Entrar</span>
+        <?php if ( $has_some_feature_enabled ) : ?>
+            <div class="header-functions dropdown">
+                <button class="br-button circle small" type="button" data-toggle="dropdown"
+                    aria-label="Abrir Funcionalidades do Sistema"><i class="fas fa-th" aria-hidden="true"></i>
                 </button>
+                <div class="br-list">
+                    <div class="header">
+                        <div class="title"><?php echo __('Funcionalidades do Sistema', 'govbr'); ?></div>
+                    </div>
+                    <?php if ( $is_feature_vlibras_enabled ) : ?>
+                        <div class="br-item">
+                            <button id="vlibras-toggler" vw-access-button class="br-button circle small" type="button" aria-label="<?php echo __('VLibras', 'govbr'); ?>">
+                                <i class="fas fa-hands" aria-hidden="true"></i>
+                                <span class="text"><?php echo __('VLibras', 'govbr'); ?></span>
+                            </button>
+                            <button class="br-button circle small" type="button" aria-label="<?php echo __('VLibras', 'govbr'); ?>">
+                                <i class="fas fa-hands" aria-hidden="true"></i>
+                                <span class="text"><?php echo __('VLibras', 'govbr'); ?></span>
+                            </button>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ( $is_feature_contrast_mode_enabled ) : ?>
+                        <div class="br-item">
+                            <button
+                                    id="contrast-mode-toggler"
+                                    class="br-button circle small"
+                                    type="button"
+                                    aria-label="<?php _e('Alto contraste', 'govbr'); ?>"
+                                    aria-pressed="false">
+                                <i class="fas fa-adjust" aria-hidden="true"></i>
+                                <span class="text"><?php _e('Alto contraste', 'govbr'); ?></span>
+                            </button>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
-            <div class="header-avatar"></div>
+        <?php endif; ?>
+        <div class="header-search-trigger">
+            <button class="br-button circle" type="button" aria-label="Abrir Busca" data-toggle="search" data-target=".header-search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
         </div>
+        <?php if ( $is_wordpress_login_enabled ) : ?>
+            <div class="header-login">
+                <?php if ( !is_user_logged_in() ): ?>
+                    <div class="header-sign-in">
+                        <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>"class="br-sign-in small" data-trigger="login">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <span class="d-sm-inline"><?php _e('Entrar', 'govbr'); ?></span>
+                        </a>
+                    </div>
+                <?php else: $current_user = wp_get_current_user(); ?>
+                    <div class="header-sign-in">
+                        <button class="br-sign-in medium" type="button" id="avatar-dropdown-trigger" data-toggle="dropdown" data-target="avatar-menu" aria-label="Avatar com dropdown">
+                            <span class="br-avatar" title="<?php echo $current_user->display_name; ?>">
+                                <?php if ( get_avatar( $current_user->ID ) ) : ?>
+                                    <span class="content"><?php echo get_avatar( $current_user->ID, 32 ); ?></span>
+                                <?php else: ?>
+                                    <span class="content bg-orange-vivid-30 text-pure-0"><?php echo substr($current_user->display_name, 0, 1); ?></span>
+                                <?php endif; ?>
+                            </span>
+                            <span class="ml-2 text-gray-80 text-weight-regular">Olá, <span class="text-weight-semi-bold"><?php echo strtok($current_user->display_name, " "); ?></span></span>
+                            <i class="fas fa-caret-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="br-list" id="avatar-menu" hidden="hidden">
+                            <a class="br-item" href="<?php echo esc_url( get_edit_profile_url() ); ?>"><?php _e('Perfil', 'govbr'); ?></a>
+                            <a class="br-item" href="<?php echo esc_url( wp_logout_url( get_permalink() ) ); ?>"><?php _e('Sair', 'govbr'); ?></a>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
     </div>
 </div>

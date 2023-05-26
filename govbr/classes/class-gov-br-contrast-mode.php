@@ -34,6 +34,9 @@ class Gov_BR_Contrast_Mode {
 	 */
 	public function enqueue_scripts() {
 
+		if ( !get_theme_mod( 'enable_feature_constrast_mode', true ) )
+			return;
+
 		wp_enqueue_style( 'govbr-contrast-mode-style', get_template_directory_uri() . '/assets/css/style-contrast-mode.css', array( 'gov-br-style' ), wp_get_theme()->get( 'Version' ) ); // @phpstan-ignore-line. Version is always a string.
 
 		wp_enqueue_script( 'govbr-contrast-mode-script', get_template_directory_uri() . '/assets/js/contrast-mode.js', array(), wp_get_theme()->get( 'Version' ), true );
@@ -47,9 +50,13 @@ class Gov_BR_Contrast_Mode {
 	 * @return void
 	 */
 	public function add_privacy_policy_content() {
-		if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+
+		if ( !get_theme_mod( 'enable_feature_constrast_mode', true ) )
 			return;
-		}
+
+		if ( !function_exists( 'wp_add_privacy_policy_content' ) )
+			return;
+		
 		$content = '<p class="privacy-policy-tutorial">' . __( 'Gov BR uses LocalStorage when Contrast Mode support is enabled.', 'govbr' ) . '</p>'
 				. '<strong class="privacy-policy-tutorial">' . __( 'Suggested text:', 'govbr' ) . '</strong> '
 				. __( 'This website uses LocalStorage to save the setting when Contrast Mode support is turned on or off.<br> LocalStorage is necessary for the setting to work and is only used when a user clicks on the Contrast Mode button.<br> No data is saved in the database or transferred.', 'govbr' );

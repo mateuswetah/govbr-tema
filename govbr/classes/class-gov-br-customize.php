@@ -147,6 +147,85 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 					'selector'        => '.header-links .br-list',
 				)
 			);
+
+
+			// Add "System features" section 
+			$wp_customize->add_section(
+				'system_features',
+				array(
+  					'capability' => 'edit_theme_options',
+					'title'   => esc_html__( 'Funcionalidades do Sistema', 'govbr' ),
+					'description'   => esc_html__( 'As opções habilitadas aqui estarão disponíveis do canto direito do rodapé superior.', 'govbr' ),
+				)
+			);
+
+			// Add "enable_feature_vlibras" setting for displaying the VLibras button.
+			$wp_customize->add_setting(
+				'enable_feature_vlibras',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
+				)
+			);
+
+			// Add control for the "enable_feature_vlibras" setting.
+			$wp_customize->add_control(
+				'enable_feature_vlibras',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'system_features',
+					'label'   => esc_html__( 'Mostrar botão de Libras', 'govbr' ),
+				)
+			);
+
+			// Add "enable_feature_constrast_mode" setting for displaying the High Contrast mode button.
+			$wp_customize->add_setting(
+				'enable_feature_constrast_mode',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
+				)
+			);
+
+			// Add control for the "enable_feature_constrast_mode" setting.
+			$wp_customize->add_control(
+				'enable_feature_constrast_mode',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'system_features',
+					'label'   => esc_html__( 'Mostrar botão de Alto Contraste', 'govbr' ),
+				)
+			);
+
+			// Add partial for the header loging section.
+			$wp_customize->selective_refresh->add_partial(
+				'enable_wordpress_login',
+				array(
+					'selector' => '.header-login',
+				)
+			);
+
+			// Add "enable_wordpress_login" setting for displaying the WordPress login and user button.
+			$wp_customize->add_setting(
+				'enable_wordpress_login',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
+				)
+			);
+
+			// Add control for the "enable_wordpress_login" setting.
+			$wp_customize->add_control(
+				'enable_wordpress_login',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'system_features',
+					'label'   => esc_html__( 'Login via WordPress', 'govbr' ),
+				)
+			);
 			
 		}
 

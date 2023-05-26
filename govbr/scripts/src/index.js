@@ -48,10 +48,25 @@ function setupCollapses() {
 			}
 			const collapse = new core.Collapse(config);
 			collapse.setBehavior();
-			console.log(collapse)
 		});
 }
 
+/**
+ * Looks for the Avatar dropdown component to initialize it
+ */
+function setupAvatarDropdown() {
+	const avatarDropdown = document.getElementById('avatar-dropdown-trigger');
+	if ( avatarDropdown ) {
+		const config = {
+			iconToHide: 'fa-caret-up',
+			iconToShow: 'fa-caret-down',
+			trigger: avatarDropdown,
+			useIcons: true,
+		}
+		const dropdown = new core.Dropdown(config);
+		dropdown.setBehavior();
+	}
+}
 
 /**
  * Looks for breadcrumb components to initialize them
@@ -67,6 +82,7 @@ function setupBreadcrumbs() {
  * Waiting the page to be loaded to initialize things
  */
 performWhenDocumentIsLoaded( () => {
+	setupAvatarDropdown();
 	setupHeader();
 	setupMenu();
 	setupCollapses();

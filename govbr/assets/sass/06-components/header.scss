@@ -12,3 +12,18 @@
     top: var(--global--admin-bar--height, 0px);
     height: calc(100vh - var(--global--admin-bar--height, 0px));
 }
+
+/* Login menu with avatar is a bit smaller */
+#avatar-dropdown-trigger {
+    padding: 5px;
+
+    .br-avatar .content {
+        font-size: var(--font-size-scale-up-01);
+        height: 32px;
+        width: 32px;
+        line-height: 32px;
+    }
+}
+#avatar-menu {
+    z-index: 9;
+}

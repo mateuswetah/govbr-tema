@@ -64,24 +64,16 @@
             </button>
             <div class="br-list">
                 <div class="header">
-                    <div class="title">Funcionalidades do Sistema</div>
+                    <div class="title"><?php echo __('Funcionalidades do Sistema', 'govbr'); ?></div>
                 </div>
                 <div class="br-item">
-                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 1">
-                        <i class="fas fa-chart-bar" aria-hidden="true"></i>
-                        <span class="text">Funcionalidade 1</span>
+                    <button vw-access-button class="br-button circle small" type="button" aria-label="<?php echo __('VLibras', 'govbr'); ?>">
+                        <i class="fas fa-hands" aria-hidden="true"></i>
+                        <span class="text"><?php echo __('VLibras', 'govbr'); ?></span>
                     </button>
-                </div>
-                <div class="br-item">
-                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 2">
-                        <i class="fas fa-headset" aria-hidden="true"></i>
-                        <span class="text">Funcionalidade 2</span>
-                    </button>
-                </div>
-                <div class="br-item">
-                    <button class="br-button circle small" type="button" aria-label="Funcionalidade 3">
-                        <i class="fas fa-comment" aria-hidden="true"></i>
-                        <span class="text">Funcionalidade 3</span>
+                    <button class="br-button circle small" type="button" aria-label="<?php echo __('VLibras', 'govbr'); ?>">
+                        <i class="fas fa-hands" aria-hidden="true"></i>
+                        <span class="text"><?php echo __('VLibras', 'govbr'); ?></span>
                     </button>
                 </div>
                 <div class="br-item">
@@ -89,10 +81,10 @@
                             id="contrast-mode-toggler"
                             class="br-button circle small"
                             type="button"
-                            aria-label="Funcionalidade 4"
+                            aria-label="<?php echo __('Alto contraste', 'govbr'); ?>"
                             aria-pressed="false">
                         <i class="fas fa-adjust" aria-hidden="true"></i>
-                        <span class="text">Funcionalidade 4</span>
+                        <span class="text"><?php echo __('Alto contraste', 'govbr'); ?></span>
                     </button>
                 </div>
             </div>

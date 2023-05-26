@@ -112,7 +112,7 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 	function gov_br_entry_meta_footer() {
 
 		// Early exit if in the main page
-		if ( is_home() || is_front_page() )
+		if ( is_front_page() )
 			return;
 
 		echo '<footer class="entry-footer container-lg"><div class="entry-meta-footer">';
@@ -205,7 +205,7 @@ if ( ! function_exists( 'gov_br_post_thumbnail' ) ) {
 
 			<figure class="post-thumbnail">
 				<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-					<?php the_post_thumbnail( 'post-thumbnail' ); ?>
+					<?php the_post_thumbnail( 'medium' ); ?>
 				</a>
 				<?php if ( wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
 					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?></figcaption>
@@ -228,32 +228,11 @@ if ( ! function_exists( 'gov_br_the_posts_navigation' ) ) {
 	function gov_br_the_posts_navigation() {
 		the_posts_pagination(
 			array(
-				'before_page_number' => esc_html__( 'Page', 'govbr' ) . ' ',
-				'mid_size'           => 0,
-				'prev_text'          => sprintf(
-					'%s <span class="nav-prev-text">%s</span>',
-					is_rtl() ? gov_br_get_icon_svg( 'ui', 'arrow_right' ) : gov_br_get_icon_svg( 'ui', 'arrow_left' ),
-					wp_kses(
-						__( 'Newer <span class="nav-short">posts</span>', 'govbr' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					)
-				),
-				'next_text'          => sprintf(
-					'<span class="nav-next-text">%s</span> %s',
-					wp_kses(
-						__( 'Older <span class="nav-short">posts</span>', 'govbr' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					is_rtl() ? gov_br_get_icon_svg( 'ui', 'arrow_left' ) : gov_br_get_icon_svg( 'ui', 'arrow_right' )
-				),
+				'mid_size'           => 3,
+				'show_all'			 => true,
+				'type'				 => 'list',
+				'prev_text'          => '<i class="fas fa-angle-left" aria-hidden="true"></i>',
+				'next_text'          => '<i class="fas fa-angle-right" aria-hidden="true"></i>',
 			)
 		);
 	}

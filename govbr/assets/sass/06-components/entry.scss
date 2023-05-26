@@ -56,11 +56,14 @@ h1.entry-title {
 
 // Entry meta
 .site-main > article > .entry-footer .entry-meta-footer {
-	margin-top: calc(3.4 * var(--wp--style--block-gap, 20px));
-	margin-bottom: calc(3.4 * var(--wp--style--block-gap, 20px));
-	padding-bottom: 0;
-	padding-top: calc(0.8 * var(--wp--style--block-gap, 20px));
-	border-top: var(--divider-size, 1px) solid var(--border-color, #ccc);
+
+	.singular & {
+		margin-top: calc(3.4 * var(--wp--style--block-gap, 20px));
+		margin-bottom: calc(3.4 * var(--wp--style--block-gap, 20px));
+		padding-bottom: 0;
+		padding-top: calc(0.8 * var(--wp--style--block-gap, 20px));
+		border-top: var(--divider-size, 1px) solid var(--border-color, #ccc);
+	}
 
 	.full-size-link:first-child:last-child {
 		grid-column: span 2;
@@ -101,7 +104,7 @@ h1.entry-title {
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: calc(2 * var(--wp--style--block-gap, 20px));
+		margin-top: var(--wp--style--block-gap, 20px);
 	}
 }
 

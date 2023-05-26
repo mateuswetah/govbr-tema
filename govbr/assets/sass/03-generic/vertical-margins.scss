@@ -23,8 +23,8 @@
  * - Add double vertical margins here for clearer hierarchy
  */
 .site-main > * {
-	margin-top: calc(3 * var(--wp--style--block-gap, 20px));
-	margin-bottom: calc(3 * var(--wp--style--block-gap, 20px));
+	margin-top: calc(2 * var(--wp--style--block-gap, 20px));
+	margin-bottom: calc(2 * var(--wp--style--block-gap, 20px));
 
 	&:first-child {
 		margin-top: 0;

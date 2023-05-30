@@ -20,24 +20,27 @@ while ( have_posts() ) :
 		// Parent post navigation.
 		the_post_navigation(
 			array(
+				'class' => 'container-lg',
 				/* translators: %s: Parent post link. */
 				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'govbr' ), '%title' ),
 			)
 		);
 	}
 
-	// Previous/next post navigation.
-	$govbr_next = is_rtl() ? gov_br_get_icon_svg( 'ui', 'arrow_left' ) : gov_br_get_icon_svg( 'ui', 'arrow_right' );
-	$govbr_prev = is_rtl() ? gov_br_get_icon_svg( 'ui', 'arrow_right' ) : gov_br_get_icon_svg( 'ui', 'arrow_left' );
+	$current_post_type = get_post_type_object( get_post_type() );
 
-	$govbr_next_label     = esc_html__( 'Next post', 'govbr' );
-	$govbr_previous_label = esc_html__( 'Previous post', 'govbr' );
+	// Previous/next post navigation.
+	$govbr_next_label     = esc_html__( 'Next', 'govbr' ) . ' ' . ($current_post_type->labels ? __( 'Post', 'govbr' ) : $current_post_type->labels->singular_name);
+	$govbr_previous_label = esc_html__( 'Previous', 'govbr' ) . ' ' . ($current_post_type->labels ? __( 'Post', 'govbr' ) : $current_post_type->labels->singular_name);
+
+	$govbr_next_button = is_rtl() ? '<button class="br-button circle" type="button" data-previous-page="data-previous-page" aria-label="Página anterior"><i class="fas fa-angle-left" aria-hidden="true"></i></button>' : '<button class="br-button circle" type="button" data-next-page="data-next-page" aria-label="Página seguinte"><i class="fas fa-angle-right" aria-hidden="true"></i></button>';
+	$govbr_prev_button = is_rtl() ? '<button class="br-button circle" type="button" data-next-page="data-next-page" aria-label="Página seguinte"><i class="fas fa-angle-right" aria-hidden="true"></i></button>' : '<button class="br-button circle" type="button" data-previous-page="data-previous-page" aria-label="Página anterior"><i class="fas fa-angle-left" aria-hidden="true"></i></button>';
 
 	the_post_navigation(
 		array(
 			'class' => 'container-lg',
-			'next_text' => '<p class="meta-nav">' . $govbr_next_label . $govbr_next . '</p><p class="post-title">%title</p>',
-			'prev_text' => '<p class="meta-nav">' . $govbr_prev . $govbr_previous_label . '</p><p class="post-title">%title</p>',
+			'next_text' => '<p class="meta-nav">' . $govbr_next_label . $govbr_next_button . '</p><p class="post-title">%title</p>',
+			'prev_text' => '<p class="meta-nav">' . $govbr_prev_button . $govbr_previous_label . '</p><p class="post-title">%title</p>',
 		)
 	);
 

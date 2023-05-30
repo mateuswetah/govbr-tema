@@ -88,7 +88,9 @@ function the_breadcrumb() {
     } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
 
         $post_type = get_post_type_object(get_post_type());
-        echo $before_current . $post_type->labels->singular_name . $after_current;
+      
+        if ( $post_type && $post_type->labels )
+            echo $before_current . $post_type->labels->singular_name . $after_current;
         
     } elseif ( is_attachment() ) {
 

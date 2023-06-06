@@ -10,7 +10,7 @@ function the_breadcrumb() {
     global $post;
 
     // Early exit if in the main page
-	if ( is_home() || is_front_page() )
+	if ( is_front_page() )
         return;
 
     $delimiter = '<i class="icon fas fa-chevron-right"></i>';
@@ -92,6 +92,13 @@ function the_breadcrumb() {
         if ( $post_type && $post_type->labels )
             echo $before_current . $post_type->labels->singular_name . $after_current;
         
+    } elseif ( is_home() ) {
+
+        $post_type = get_post_type_object(get_post_type());
+        
+        if ( $post_type && $post_type->labels )
+            echo $before_current . $post_type->labels->items_list . $after_current;
+    
     } elseif ( is_attachment() ) {
 
         $parent = get_post($post->post_parent);

@@ -13,7 +13,11 @@
  * @since Gov BR 0.1.0
  */
 
-get_header(); ?>
+get_header();
+
+the_breadcrumb();
+
+?>
 
 <?php if ( is_home() && ! is_front_page() && ! empty( single_post_title( '', false ) ) ) : ?>
 	<header class="page-header container-lg">
@@ -31,8 +35,9 @@ if ( have_posts() ) {
 		get_template_part( 'template-parts/content/content', 'excerpt' );
 	}
 
-	// Previous/next page navigation.
+	echo '<div class="container-lg">';
 	gov_br_the_posts_navigation();
+	echo '</div>';
 
 } else {
 

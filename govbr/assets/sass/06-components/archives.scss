@@ -41,6 +41,10 @@
 		.cat-links,
 		.tags-links {
 			display: block;
+
+			a {
+				text-decoration: underline;
+			}
 		}
 
 		.entry-meta-footer {

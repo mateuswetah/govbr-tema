@@ -56,7 +56,9 @@ if ( have_posts() ) {
 	} // End the loop.
 
 	// Previous/next page navigation.
+	echo '<div class="container-lg">';
 	gov_br_the_posts_navigation();
+	echo '</div>';
 
 	// If no content, include the "No posts found" template.
 } else {

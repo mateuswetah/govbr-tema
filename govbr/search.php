@@ -19,7 +19,7 @@ if ( have_posts() ) {
 			<?php
 			printf(
 				/* translators: %s: Search term. */
-				esc_html__( 'Results for "%s"', 'govbr' ),
+				esc_html__( 'Resultados para "%s"', 'govbr' ),
 				'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
 			);
 			?>
@@ -32,8 +32,8 @@ if ( have_posts() ) {
 			esc_html(
 				/* translators: %d: The number of search results. */
 				_n(
-					'We found %d result for your search.',
-					'We found %d results for your search.',
+					'Foi encontrado %d resultado para sua busca.',
+					'Foram encontrados %d resultados para sua busca.',
 					(int) $wp_query->found_posts,
 					'govbr'
 				)

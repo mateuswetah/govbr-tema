@@ -22,7 +22,7 @@ while ( have_posts() ) :
 			array(
 				'class' => 'container-lg',
 				/* translators: %s: Parent post link. */
-				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'govbr' ), '%title' ),
+				'prev_text' => sprintf( __( '<span class="meta-nav">Publicado em </span><span class="post-title">%s</span>', 'govbr' ), '%title' ),
 			)
 		);
 	}
@@ -30,8 +30,8 @@ while ( have_posts() ) :
 	$current_post_type = get_post_type_object( get_post_type() );
 
 	// Previous/next post navigation.
-	$govbr_next_label     = esc_html__( 'Next', 'govbr' ) . ' ' . ($current_post_type->labels ? __( 'Post', 'govbr' ) : $current_post_type->labels->singular_name);
-	$govbr_previous_label = esc_html__( 'Previous', 'govbr' ) . ' ' . ($current_post_type->labels ? __( 'Post', 'govbr' ) : $current_post_type->labels->singular_name);
+	$govbr_next_label     = esc_html__( 'Próximo', 'govbr' ) . ' ' . ($current_post_type->labels ? __( 'Post', 'govbr' ) : $current_post_type->labels->singular_name);
+	$govbr_previous_label = esc_html__( 'Anterior', 'govbr' ) . ' ' . ($current_post_type->labels ? __( 'Post', 'govbr' ) : $current_post_type->labels->singular_name);
 
 	$govbr_next_button = is_rtl() ? '<button class="br-button circle" type="button" data-previous-page="data-previous-page" aria-label="Página anterior"><i class="fas fa-angle-left" aria-hidden="true"></i></button>' : '<button class="br-button circle" type="button" data-next-page="data-next-page" aria-label="Página seguinte"><i class="fas fa-angle-right" aria-hidden="true"></i></button>';
 	$govbr_prev_button = is_rtl() ? '<button class="br-button circle" type="button" data-next-page="data-next-page" aria-label="Página seguinte"><i class="fas fa-angle-right" aria-hidden="true"></i></button>' : '<button class="br-button circle" type="button" data-previous-page="data-previous-page" aria-label="Página anterior"><i class="fas fa-angle-left" aria-hidden="true"></i></button>';

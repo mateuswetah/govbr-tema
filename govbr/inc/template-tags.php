@@ -25,7 +25,7 @@ if ( ! function_exists( 'gov_br_posted_on' ) ) {
 		echo '<span class="posted-on">';
 		printf(
 			/* translators: %s: Publish date. */
-			esc_html__( 'Published %s', 'govbr' ),
+			esc_html__( 'Publicado em %s', 'govbr' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
 		echo '</span>';
@@ -45,7 +45,7 @@ if ( ! function_exists( 'gov_br_posted_by' ) ) {
 			echo '<span class="byline">';
 			printf(
 				/* translators: %s: Author name. */
-				esc_html__( 'By %s', 'govbr' ),
+				esc_html__( 'Por %s', 'govbr' ),
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a>'
 			);
 			echo '</span>';
@@ -75,7 +75,7 @@ if ( ! function_exists( 'gov_br_entry_meta_header' ) ) {
 		if ( ! is_single() ) {
 
 			if ( is_sticky() ) {
-				echo '<p>' . esc_html_x( 'Featured post', 'Label for sticky posts', 'govbr' ) . '</p>';
+				echo '<p>' . esc_html_x( 'Post destacado', 'Label for sticky posts', 'govbr' ) . '</p>';
 			}
 
 			$post_format = get_post_format();
@@ -123,7 +123,7 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 
 			$categories_list = get_the_category_list( ' ' );
 			if ( $categories_list ) {
-				$categories_label = '<strong>' . esc_html__( 'Categorized as', 'govbr' ) . ': </strong>';
+				$categories_label = '<strong>' . esc_html__( 'Categorizado como', 'govbr' ) . ': </strong>';
 				printf(
 					'<span class="cat-links">' . $categories_label . ' %s</span>',
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
@@ -132,7 +132,7 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 
 			$tags_list = get_the_tag_list( '', ' ' );
 			if ( $tags_list ) {
-				$tags_label = '<strong>' . esc_html__( 'Tagged as', 'govbr' ) . ': </strong>';
+				$tags_label = '<strong>' . esc_html__( 'Marcado como', 'govbr' ) . ': </strong>';
 				printf(
 					'<span class="tags-links">' . $tags_label . '%s</span>',
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
@@ -160,7 +160,7 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 				printf(
 					'<span class="full-size-link"><span class="screen-reader-text">%1$s</span><a href="%2$s">%3$s &times; %4$s</a></span>',
 					/* translators: Hidden accessibility text. */
-					esc_html_x( 'Full size', 'Used before full size attachment link.', 'govbr' ), // phpcs:ignore WordPress.Security.EscapeOutput
+					esc_html_x( 'Tamanho completo', 'Used before full size attachment link.', 'govbr' ), // phpcs:ignore WordPress.Security.EscapeOutput
 					esc_url( wp_get_attachment_url() ),
 					absint( $metadata['width'] ),
 					absint( $metadata['height'] )

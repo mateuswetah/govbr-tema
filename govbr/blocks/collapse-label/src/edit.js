@@ -59,7 +59,7 @@ export default function Edit(props) {
 		? context[ 'govbr/blockId' ]
 		: '';
 
-	const blockProps = useBlockProps( { className: wrapperClasses + ' br-item header' } );
+	const blockProps = useBlockProps( { className: wrapperClasses + ' br-item' } );
 
 	setAttributes( { parentBlockId: parentBlockId } );
 
@@ -86,7 +86,7 @@ export default function Edit(props) {
 						setAttributes( { content } )
 					}
 					placeholder={ __(
-						'Category',
+						'Categoria',
 						'govbr'
 					) }
 				/>
@@ -94,8 +94,8 @@ export default function Edit(props) {
 					<i 
 						class="fas fa-angle-down"
 						aria-hidden="true"
-						aria-label={__(
-							'Expand/Collapse',
+						aria-label={ __(
+							'Expandir/Recolher',
 							'govbr'
 						)} />
 				</div>

@@ -54,7 +54,7 @@ export default function Save(props) {
 			attributes.fontSize || attributes.style?.typography?.fontSize,
 	} );
 
-	const blockProps = useBlockProps.save( { className: wrapperClasses + ' br-item header' } );
+	const blockProps = useBlockProps.save( { className: wrapperClasses + ' br-item' } );
 
 	return (
 		<div { ...blockProps } data-toggle="collapse"  data-breakpoint="true" data-target={ 'brgov-collapse--' + attributes.parentBlockId }>
@@ -70,7 +70,7 @@ export default function Save(props) {
 						class="fas fa-angle-down"
 						aria-hidden="true"
 						aria-label={ __(
-							'Expand/Collapse',
+							'Expandir/Recolher',
 							'govbr'
 						)} />
 				</div>

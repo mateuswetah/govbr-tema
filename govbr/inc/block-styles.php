@@ -25,7 +25,7 @@ if ( function_exists( 'register_block_style' ) ) {
 				'core/group',
 				array(
 					'name'  => 'govbr-layer-' . $layer,
-					'label' => esc_html__( 'Layer ' . $layer, 'govbr' ),
+					'label' => esc_html__( 'Sombra ' . $layer, 'govbr' ),
 					'inline_style' => '.wp-block-group.is-style-govbr-layer-' . $layer .' { box-shadow: var(--wp--preset--shadow--layer-' . $layer .'); }',
 				)
 			);
@@ -36,7 +36,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/button',
 			array(
 				'name'  => 'tertiary',
-				'label' => esc_html__( 'Tertiary', 'govbr' )
+				'label' => esc_html__( 'Terciário', 'govbr' )
 			)
 		);
 
@@ -45,7 +45,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/button',
 			array(
 				'name'  => 'magic',
-				'label' => esc_html__( 'Magic', 'govbr' )
+				'label' => esc_html__( 'Mágica!', 'govbr' )
 			)
 		);
 		
@@ -62,7 +62,7 @@ if ( function_exists( 'register_block_style' ) ) {
 				$block,
 				array(
 					'name'  => 'govbr-list',
-					'label' => esc_html__( 'DSGov', 'govbr' )
+					'label' => esc_html__( 'Lista do DS Gov', 'govbr' )
 				)
 			);
 		}

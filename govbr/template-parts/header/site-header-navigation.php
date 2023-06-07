@@ -22,7 +22,7 @@
             <div class="menu-panel">
                 <div class="menu-header">
                     <div class="menu-close">
-                        <button class="br-button circle" type="button" arial-label="<?php _e( 'Fechar o menu', 'govbr'); ?>" data-dismiss="menu">
+                        <button class="br-button circle" type="button" arial-label="<?php _e( 'Fechar o menu', 'govbr' ); ?>" data-dismiss="menu">
                             <i class="fas fa-times" aria-hidden="true"></i>
                         </button>
                     </div>

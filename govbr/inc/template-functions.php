@@ -129,7 +129,7 @@ function gov_br_get_avatar_size() {
 function gov_br_continue_reading_text() {
 	$continue_reading = sprintf(
 		/* translators: %s: Post title. Only visible to screen readers. */
-		esc_html__( 'Continue reading %s', 'govbr' ),
+		esc_html__( 'Continue lendo %s', 'govbr' ),
 		the_title( '<span class="screen-reader-text">', '</span>', false )
 	);
 
@@ -174,7 +174,7 @@ if ( ! function_exists( 'gov_br_post_title' ) ) {
 	 * @return string
 	 */
 	function gov_br_post_title( $title ) {
-		return '' === $title ? esc_html_x( 'Untitled', 'Added to posts and pages that are missing titles', 'govbr' ) : $title;
+		return '' === $title ? esc_html_x( 'Sem título', 'Added to posts and pages that are missing titles', 'govbr' ) : $title;
 	}
 }
 add_filter( 'the_title', 'gov_br_post_title' );
@@ -285,9 +285,9 @@ function gov_br_print_first_instance_of_block( $block_name, $content = null, $in
 function gov_br_password_form( $output, $post = 0 ) {
 	$post   = get_post( $post );
 	$label  = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
-	$output = '<p class="post-password-message">' . esc_html__( 'This content is password protected. Please enter a password to view.', 'govbr' ) . '</p>
+	$output = '<p class="post-password-message">' . esc_html__( 'Este conteúdo está protegido por senha. Insira a senha para acessar.', 'govbr' ) . '</p>
 	<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
-	<label class="post-password-form__label" for="' . esc_attr( $label ) . '">' . esc_html_x( 'Password', 'Post password form', 'govbr' ) . '</label><input class="post-password-form__input" name="post_password" id="' . esc_attr( $label ) . '" type="password" spellcheck="false" size="20" /><input type="submit" class="post-password-form__submit" name="' . esc_attr_x( 'Submit', 'Post password form', 'govbr' ) . '" value="' . esc_attr_x( 'Enter', 'Post password form', 'govbr' ) . '" /></form>
+	<label class="post-password-form__label" for="' . esc_attr( $label ) . '">' . esc_html_x( 'Senha', 'Post password form', 'govbr' ) . '</label><input class="post-password-form__input" name="post_password" id="' . esc_attr( $label ) . '" type="password" spellcheck="false" size="20" /><input type="submit" class="post-password-form__submit" name="' . esc_attr_x( 'Enviado', 'Post password form', 'govbr' ) . '" value="' . esc_attr_x( 'Enviar', 'Post password form', 'govbr' ) . '" /></form>
 	';
 	return $output;
 }

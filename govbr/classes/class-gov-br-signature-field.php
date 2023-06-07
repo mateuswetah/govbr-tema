@@ -26,7 +26,7 @@ if ( ! class_exists( 'Gov_BR_Signature_Field' ) ) {
                     'show_in_rest' => array(
                         'name' => 'govbr-signature-field__text',
                     ),
-                    'default' => __( 'Ministério da Ciência, Tecnologia e Inovação', 'govbr' )
+                    'default' => __( 'Ministério ou Instituição Superior do Orgão do Site', 'govbr' )
                 )
             );
             
@@ -38,7 +38,7 @@ if ( ! class_exists( 'Gov_BR_Signature_Field' ) ) {
                     'show_in_rest' => array(
                         'name' => 'govbr-signature-field__url',
                     ),
-                    'default' => __( 'https://www.gov.br/mcti', 'govbr' )
+                    'default' => __( 'https://www.gov.br/', 'govbr' )
                 )
             );
 

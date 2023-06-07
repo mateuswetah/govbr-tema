@@ -10,97 +10,97 @@
 			"palette": [
 				{
 					"slug": "surface-light",
-					"name": "Light background",
+					"name": "Cor de fundo",
 					"color": "var(--pure-0, #fff)"
 				},
 				{
 					"slug": "surface-light-alternative",
-					"name": "Alternative light background",
+					"name": "Cor de fundo alternativa",
 					"color": "var(--gray2, #f8f8f8)"
 				},
 				{
 					"slug": "surface-dark",
-					"name": "Dark background",
+					"name": "Cor de fundo escura",
 					"color": "var(--blue-warm-vivid-90, #071D41)"
 				},
 				{
 					"slug": "surface-dark-alternative",
-					"name": "Alternative dark background",
+					"name": "Cor de fundo escura alternativa",
 					"color": "var(--blue-warm-vivid-80, #0C326F)"
 				},
 				{
 					"slug": "reading-light",
-					"name": "Reading light",
+					"name": "Cor de texto",
 					"color": "var(--gray80, #333)"
 				},
 				{
 					"slug": "reading-dark",
-					"name": "Reading dark",
+					"name": "Cor de texto para fundo escuro",
 					"color": "var(--pure-0, #fff)"
 				},
 				{
 					"slug": "interaction-light",
-					"name": "Interaction light",
+					"name": "Cor de interação",
 					"color": "var(--blue-warm-vivid-70, #1351B4)"
 				},
 				{
 					"slug": "interaction-dark",
-					"name": "Interaction dark",
+					"name": "Cor de interação para fundo escuro",
 					"color": "var(--blue-warm-20, #C5D4EB)"
 				},
 				{
 					"slug": "feedback-info",
-					"name": "Feedback info",
+					"name": "Cor de informação",
 					"color": "var(--blue-warm-vivid-60, #155BCB)"
 				},
 				{
 					"slug": "feedback-info-alternative",
-					"name": "Feedback info alternative",
+					"name": "Cor de informação alternativa",
 					"color": "var(--blue-warm-vivid-10, #D4E5FF)"
 				},
 				{
 					"slug": "feedback-success",
-					"name": "Feedback success",
+					"name": "Cor de sucesso",
 					"color": "var(--green-cool-vivid-50, #168821)"
 				},
 				{
 					"slug": "feedback-success-alternative",
-					"name": "Feedback success alternative",
+					"name": "Cor de sucesso alternativa",
 					"color": "var(--green-cool-vivid-5, #168821)"
 				},
 				{
 					"slug": "feedback-warning",
-					"name": "Feedback warning",
+					"name": "Cor de alerta",
 					"color": "var(--yellow-vivid-20, #FFCD07)"
 				},
 				{
 					"slug": "feedback-warning-alternative",
-					"name": "Feedback warning alternative",
+					"name": "Cor de alerta alternativa",
 					"color": "var(--yellow-vivid-5, #FFF5C2)"
 				},
 				{
 					"slug": "feedback-error",
-					"name": "Feedback error",
+					"name": "Cor de erro",
 					"color": "var(--red-vivid-50, #E52207)"
 				},
 				{
 					"slug": "feedback-error-alternative",
-					"name": "Feedback error alternative",
+					"name": "Cor de erro alternativa",
 					"color": "var(--red-vivid-10, #FDE0DB)"
 				},
 				{
 					"slug": "border-light",
-					"name": "Border light",
+					"name": "Cor de borda clara",
 					"color": "var(--gray-20, #ccc)"
 				},
 				{
 					"slug": "border-dark",
-					"name": "Border dark",
+					"name": "Cor de borda escura",
 					"color": "var(--gray-40, #888)"
 				},
 				{
 					"slug": "highlight",
-					"name": "Highlight",
+					"name": "Destaque",
 					"color": "var(--highlight, #268744)"
 				}
 			],
@@ -108,32 +108,32 @@
 				{
 					"slug": "white-to-light",
 					"gradient": "linear-gradient(180deg, var(--wp--preset--color--surface-light), var(--wp--preset--color--surface-light-alternative))",
-					"name": "White to Light"
+					"name": "Branco para cinza claro"
 				},
 				{
 					"slug": "white-and-light",
 					"gradient": "linear-gradient(180deg, var(--wp--preset--color--surface-light) 50%, var(--wp--preset--color--surface-light-alternative) 50%)",
-					"name": "White and Light"
+					"name": "Branco e cinza claro"
 				},
 				{
 					"slug": "light-to-white",
 					"gradient": "linear-gradient(180deg, var(--wp--preset--color--surface-light-alternative), var(--wp--preset--color--surface-light))",
-					"name": "Light to White"
+					"name": "Cinza claro para branco"
 				},
 				{
 					"slug": "light-and-white",
 					"gradient": "linear-gradient(180deg, var(--wp--preset--color--surface-light-alternative) 50%, var(--wp--preset--color--surface-light) 50%)",
-					"name": "Light and White"
+					"name": "Cinza claro e branco"
 				},
 				{
 					"slug": "white-and-dark",
 					"gradient": "linear-gradient(180deg, var(--wp--preset--color--surface-light) 50%, var(--wp--preset--color--surface-dark-alternative) 50%)",
-					"name": "White and Dark"
+					"name": "Branco e escuro"
 				},
 				{
 					"slug": "dark-and-white",
 					"gradient": "linear-gradient(180deg, var(--wp--preset--color--surface-dark-alternative) 50%, var(--wp--preset--color--surface-light) 50%)",
-					"name": "Dark and White"
+					"name": "Escuro e branco"
 				}
 			]
 		},
@@ -149,17 +149,17 @@
 				{
 					"slug": "scale-down-03",
 					"size": "0.579em",
-					"name": "3x Smaller"
+					"name": "3x Menor"
 				},
 				{
 					"slug": "scale-down-02",
 					"size": "0.694em",
-					"name": "2x Smaller"
+					"name": "2x Menor"
 				},
 				{
 					"slug": "scale-down-01",
 					"size": "0.833em",
-					"name": "1x Smaller"
+					"name": "1x Menor"
 				},
 				{
 					"slug": "scale-base",
@@ -169,7 +169,7 @@
 				{
 					"slug": "scale-up-01",
 					"size": "1.2em",
-					"name": "1x Greater",
+					"name": "1x Maior",
 					"fluid": {
 						"min": "1em"
 					}
@@ -177,7 +177,7 @@
 				{
 					"slug": "scale-up-02",
 					"size": "1.44em",
-					"name": "2x Greater",
+					"name": "2x Maior",
 					"fluid": {
 						"min": "1em"
 					}
@@ -185,7 +185,7 @@
 				{
 					"slug": "scale-up-03",
 					"size": "1.728em",
-					"name": "3x Greater",
+					"name": "3x Maior",
 					"fluid": {
 						"min": "1.2em"
 					}
@@ -193,7 +193,7 @@
 				{
 					"slug": "scale-up-04",
 					"size": "2.074em",
-					"name": "4x Greater",
+					"name": "4x Maior",
 					"fluid": {
 						"min": "1.44em"
 					}
@@ -201,7 +201,7 @@
 				{
 					"slug": "scale-up-05",
 					"size": "2.488em",
-					"name": "5x Greater",
+					"name": "5x Maior",
 					"fluid": {
 						"min": "1.728em"
 					}
@@ -209,7 +209,7 @@
 				{
 					"slug": "scale-up-06",
 					"size": "2.986em",
-					"name": "6x Greater",
+					"name": "6x Maior",
 					"fluid": {
 						"min": "2.074em"
 					}
@@ -217,7 +217,7 @@
 				{
 					"slug": "scale-up-07",
 					"size": "3.583em",
-					"name": "7x Greater",
+					"name": "7x Maior",
 					"fluid": {
 						"min": "2.488em"
 					}
@@ -225,7 +225,7 @@
 				{
 					"slug": "scale-up-08",
 					"size": "4.3em",
-					"name": "8x Greater",
+					"name": "8x Maior",
 					"fluid": {
 						"min": "2.986em"
 					}
@@ -233,7 +233,7 @@
 				{
 					"slug": "scale-up-09",
 					"size": "5.16em",
-					"name": "9x Greater",
+					"name": "9x Maior",
 					"fluid": {
 						"min": "3.583em"
 					}
@@ -241,7 +241,7 @@
 				{
 					"slug": "scale-up-10",
 					"size": "6.192em",
-					"name": "10x Greater",
+					"name": "10x Maior",
 					"fluid": {
 						"min": "4.3em"
 					}
@@ -249,7 +249,7 @@
 				{
 					"slug": "scale-up-11",
 					"size": "7.43em",
-					"name": "11x Greater",
+					"name": "11x Maior",
 					"fluid": {
 						"min": "5.16em"
 					}
@@ -436,22 +436,22 @@
 		"shadow": {
 			"presets": [
 				{
-					"name": "Layer 1",
+					"name": "Sombra 1",
 					"slug": "layer-1",
 					"shadow": "var(--surface-offset-none) var(--surface-offset-sm) var(--surface-blur-lg) rgba(var(--surface-shadow-color),var(--surface-opacity-xs))"
 				},
 				{
-					"name": "Layer 2",
+					"name": "Sombra 2",
 					"slug": "layer-2",
 					"shadow": "var(--surface-offset-none) var(--surface-offset-md) var(--surface-blur-lg) rgba(var(--surface-shadow-color),var(--surface-opacity-xs))"
 				},
 				{
-					"name": "Layer 3",
+					"name": "Sombra 3",
 					"slug": "layer-3",
 					"shadow": "var(--surface-offset-none) var(--surface-offset-lg) var(--surface-blur-lg) rgba(var(--surface-shadow-color),var(--surface-opacity-xs))"
 				},
 				{
-					"name": "Layer 4",
+					"name": "Sombra 4",
 					"slug": "layer-4",
 					"shadow": "var(--surface-offset-none) var(--surface-offset-xl) var(--surface-blur-lg) rgba(var(--surface-shadow-color),var(--surface-opacity-xs))"
 				}
@@ -473,32 +473,32 @@
 					"slug": "scale-base"
 				},
 				{
-					"name": "2x Greater",
+					"name": "2x Maior",
 					"size": "16px",
 					"slug": "scale-up-2"
 				},
 				{
-					"name": "3x Greater",
+					"name": "3x Maior",
 					"size": "24px",
 					"slug": "scale-up-3"
 				},
 				{
-					"name": "4x Greater",
+					"name": "4x Maior",
 					"size": "36px",
 					"slug": "scale-up-4"
 				},
 				{
-					"name": "5x Greater",
+					"name": "5x Maior",
 					"size": "40px",
 					"slug": "scale-up-5"
 				},
 				{
-					"name": "6x Greater",
+					"name": "6x Maior",
 					"size": "48px",
 					"slug": "scale-up-6"
 				},
 				{
-					"name": "7x Greater",
+					"name": "7x Maior",
 					"size": "56px",
 					"slug": "scale-up-7"
 				}
@@ -735,8 +735,13 @@
 	},
 	"templateParts": [
 		{
+			"name": "menu-footer",
+			"title": "Menu lateral",
+			"area": "header"
+		},
+		{
 			"name": "footer",
-			"title": "Footer",
+			"title": "Rodapé",
 			"area": "footer"
 		}
 	]

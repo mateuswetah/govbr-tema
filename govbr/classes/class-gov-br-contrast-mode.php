@@ -57,9 +57,9 @@ class Gov_BR_Contrast_Mode {
 		if ( !function_exists( 'wp_add_privacy_policy_content' ) )
 			return;
 		
-		$content = '<p class="privacy-policy-tutorial">' . __( 'Gov BR uses LocalStorage when Contrast Mode support is enabled.', 'govbr' ) . '</p>'
-				. '<strong class="privacy-policy-tutorial">' . __( 'Suggested text:', 'govbr' ) . '</strong> '
-				. __( 'This website uses LocalStorage to save the setting when Contrast Mode support is turned on or off.<br> LocalStorage is necessary for the setting to work and is only used when a user clicks on the Contrast Mode button.<br> No data is saved in the database or transferred.', 'govbr' );
+		$content = '<p class="privacy-policy-tutorial">' . __( 'Este tema usa LocalStorage quando o modo de Contraste Alto está habilitado.', 'govbr' ) . '</p>'
+				. '<strong class="privacy-policy-tutorial">' . __( 'Texto sugerido:', 'govbr' ) . '</strong> '
+				. __( 'Este tema usar LocalStorage para salvar se o modo de Contraste Alto está desativado ou ativado.<br> LocalStorage é necessário para esta configuração funcionar e só é usado quando um usuário clica no botão de Contraste alto.<br> Nenhum dado é salvo no banco de dados ou transferida.', 'govbr' );
 		wp_add_privacy_policy_content( __( 'Gov BR', 'govbr' ), wp_kses_post( wpautop( $content, false ) ) );
 	}
 

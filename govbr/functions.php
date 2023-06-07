@@ -9,7 +9,7 @@
  */
 
 // This theme requires WordPress 5.9 or later.
-if ( version_compare( $GLOBALS['wp_version'], '5.9', '<' ) ) {
+if ( version_compare( $GLOBALS['wp_version'], '6.2', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
@@ -54,8 +54,8 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 
 		register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary menu', 'govbr' ),
-				'institutional' => esc_html__( 'Institutional menu', 'govbr' ),
+				'primary' => esc_html__( 'Menu principal', 'govbr' ),
+				'institutional' => esc_html__( 'Links institucionais', 'govbr' ),
 			)
 		);
 

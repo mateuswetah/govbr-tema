@@ -20,7 +20,7 @@ function the_breadcrumb() {
     $after_current = '</span></li>';
 
     $home_link = get_bloginfo('url');
-    $home_label = __( 'Home', 'govbr'); // text for the 'Home' link
+    $home_label = __( 'Início', 'govbr' ); // text for the 'Home' link
 
 
     echo '<div id="breadcrumbs" class="br-breadcrumb container-lg"><ul class="crumb-list">';
@@ -44,7 +44,7 @@ function the_breadcrumb() {
 
     } elseif ( is_search() ) {
 
-        echo $before_current . __( 'Search results for "', 'govbr' ) . get_search_query() . '"' . $after_current;
+        echo $before_current . __( 'Resultados de busca por "', 'govbr' ) . get_search_query() . '"' . $after_current;
     
     } elseif ( is_day() ) {
 
@@ -139,17 +139,17 @@ function the_breadcrumb() {
     
     } elseif ( is_tag() ) {
 
-        echo $before_current . __( 'Posts tagged "', 'govbr' ) . single_tag_title('', false) . '"' . $after_current;
+        echo $before_current . __( 'Posts marcados como "', 'govbr' ) . single_tag_title('', false) . '"' . $after_current;
 
     } elseif ( is_author() ) {
         global $author;
 
         $userdata = get_userdata($author);
-        echo $before_current . __( 'Articles posted by ', 'govbr' ) . $userdata->display_name . $after_current;
+        echo $before_current . __( 'Artigos postados por ', 'govbr' ) . $userdata->display_name . $after_current;
 
     } elseif (is_404()) {
 
-        echo $before_current . __( 'Error 404', 'govbr' ) . $after_current;
+        echo $before_current . __( 'Erro 404', 'govbr' ) . $after_current;
     
     }
 
@@ -158,7 +158,7 @@ function the_breadcrumb() {
         if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() )
             echo ' (';
         
-        echo __('Page') . ' ' . get_query_var('paged');
+        echo __( 'Página', 'govbr' ) . ' ' . get_query_var('paged');
         
         if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() )
             echo ')';

@@ -24,7 +24,7 @@ export default function Save(props) {
 	const innerBlocksProps = useInnerBlocksProps.save({});
 
 	return (
-		<div { ...blockProps } >
+		<div { ...blockProps } hidden>
 			<div { ...innerBlocksProps } />
 		</div>
 	);

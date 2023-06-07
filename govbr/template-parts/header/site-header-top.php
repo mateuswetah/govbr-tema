@@ -44,7 +44,7 @@
                 </button>
                 <div class="br-list">
                     <div class="header">
-                        <div class="title"><?php _e( 'Acesso Rápido', 'govbr'); ?></div>
+                        <div class="title"><?php _e( 'Acesso Rápido', 'govbr' ); ?></div>
                     </div>
                     <?php
                         wp_nav_menu(
@@ -70,17 +70,17 @@
                 </button>
                 <div class="br-list">
                     <div class="header">
-                        <div class="title"><?php echo __('Funcionalidades do Sistema', 'govbr'); ?></div>
+                        <div class="title"><?php echo __( 'Funcionalidades do Sistema', 'govbr' ); ?></div>
                     </div>
                     <?php if ( $is_feature_vlibras_enabled ) : ?>
                         <div class="br-item">
-                            <button id="vlibras-toggler" vw-access-button class="br-button circle small" type="button" aria-label="<?php echo __('VLibras', 'govbr'); ?>">
+                            <button id="vlibras-toggler" vw-access-button class="br-button circle small" type="button" aria-label="<?php echo __( 'VLibras', 'govbr' ); ?>">
                                 <i class="fas fa-hands" aria-hidden="true"></i>
-                                <span class="text"><?php echo __('VLibras', 'govbr'); ?></span>
+                                <span class="text"><?php echo __( 'VLibras', 'govbr' ); ?></span>
                             </button>
-                            <button class="br-button circle small" type="button" aria-label="<?php echo __('VLibras', 'govbr'); ?>">
+                            <button class="br-button circle small" type="button" aria-label="<?php echo __( 'VLibras', 'govbr' ); ?>">
                                 <i class="fas fa-hands" aria-hidden="true"></i>
-                                <span class="text"><?php echo __('VLibras', 'govbr'); ?></span>
+                                <span class="text"><?php echo __( 'VLibras', 'govbr' ); ?></span>
                             </button>
                         </div>
                     <?php endif; ?>
@@ -90,10 +90,10 @@
                                     id="contrast-mode-toggler"
                                     class="br-button circle small"
                                     type="button"
-                                    aria-label="<?php _e('Alto contraste', 'govbr'); ?>"
+                                    aria-label="<?php _e('Alto contraste', 'govbr' ); ?>"
                                     aria-pressed="false">
                                 <i class="fas fa-adjust" aria-hidden="true"></i>
-                                <span class="text"><?php _e('Alto contraste', 'govbr'); ?></span>
+                                <span class="text"><?php _e('Alto contraste', 'govbr' ); ?></span>
                             </button>
                         </div>
                     <?php endif; ?>
@@ -111,7 +111,7 @@
                     <div class="header-sign-in">
                         <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>"class="br-sign-in small" data-trigger="login">
                             <i class="fas fa-user" aria-hidden="true"></i>
-                            <span class="d-sm-inline"><?php _e('Entrar', 'govbr'); ?></span>
+                            <span class="d-sm-inline"><?php _e('Entrar', 'govbr' ); ?></span>
                         </a>
                     </div>
                 <?php else: $current_user = wp_get_current_user(); ?>
@@ -128,8 +128,8 @@
                             <i class="fas fa-caret-down" aria-hidden="true"></i>
                         </button>
                         <div class="br-list" id="avatar-menu" hidden="hidden">
-                            <a class="br-item" href="<?php echo esc_url( get_edit_profile_url() ); ?>"><?php _e('Perfil', 'govbr'); ?></a>
-                            <a class="br-item" href="<?php echo esc_url( wp_logout_url( get_permalink() ) ); ?>"><?php _e('Sair', 'govbr'); ?></a>
+                            <a class="br-item" href="<?php echo esc_url( get_edit_profile_url() ); ?>"><?php _e('Perfil', 'govbr' ); ?></a>
+                            <a class="br-item" href="<?php echo esc_url( wp_logout_url( get_permalink() ) ); ?>"><?php _e('Sair', 'govbr' ); ?></a>
                         </div>
                     </div>
                 <?php endif; ?>

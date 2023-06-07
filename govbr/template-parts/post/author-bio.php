@@ -15,7 +15,7 @@
 			<?php
 			printf(
 				/* translators: %s: Author name. */
-				esc_html__( 'By %s', 'govbr' ),
+				esc_html__( 'Por %s', 'govbr' ),
 				get_the_author()
 			);
 			?>
@@ -27,7 +27,7 @@
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				sprintf(
 					/* translators: %s: Author name. */
-					esc_html__( 'View all of %s\'s posts.', 'govbr' ),
+					esc_html__( 'Ver todos posts de %s', 'govbr' ),
 					get_the_author()
 				)
 			);

@@ -26,10 +26,10 @@ function gov_br_get_starter_content() {
 		'posts'     => array(
 			'front' => array(
 				'post_type'    => 'page',
-				'post_title'   => esc_html_x( 'Create your website with blocks', 'Theme starter content', 'govbr' ),
+				'post_title'   => esc_html_x( 'Crie seu site com blocos', 'Theme starter content', 'govbr' ),
 				'post_content' => '
 					<!-- wp:heading {"align":"wide","fontSize":"gigantic","style":{"typography":{"lineHeight":"1.1"}}} -->
-					<h2 class="has-text-align-wide has-gigantic-font-size" style="line-height:1.1">' . esc_html_x( 'Create your website with blocks', 'Theme starter content', 'govbr' ) . '</h2>
+					<h2 class="has-text-align-wide has-gigantic-font-size" style="line-height:1.1">' . esc_html_x( 'Crie seu site com blocos', 'Theme starter content', 'govbr' ) . '</h2>
 					<!-- /wp:heading -->
 
 					<!-- wp:spacer -->
@@ -39,11 +39,11 @@ function gov_br_get_starter_content() {
 					<!-- wp:columns {"verticalAlignment":"top","align":"wide"} -->
 					<div class="wp-block-columns are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top"} -->
 					<div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3} -->
-					<h3>' . esc_html_x( 'Add block patterns', 'Theme starter content', 'govbr' ) . '</h3>
+					<h3>' . esc_html_x( 'Adicione padrões de bloco', 'Theme starter content', 'govbr' ) . '</h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'Block patterns are pre-designed groups of blocks. To add one, select the Add Block button [+] in the toolbar at the top of the editor. Switch to the Patterns tab underneath the search bar, and choose a pattern.', 'Theme starter content', 'govbr' ) . '</p>
+					<p>' . esc_html_x( 'Padrões de bloco são grupos de blocos pré-definidos. Para adicionar um, selecionao botão Adicionar Bloco [+] na barra superior do editor. Troque para a aba de Padrões abaixo da barra de busca e escolha um padrão.', 'Theme starter content', 'govbr' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 
@@ -78,7 +78,7 @@ function gov_br_get_starter_content() {
 					<!-- /wp:spacer -->
 
 					<!-- wp:paragraph {"fontSize":"huge"} -->
-					<p class="has-huge-font-size">' . esc_html_x( 'Need help?', 'Theme starter content', 'govbr' ) . '</p>
+					<p class="has-huge-font-size">' . esc_html_x( 'Precisa de ajuda?', 'Theme starter content', 'govbr' ) . '</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:spacer {"height":75} -->
@@ -120,7 +120,7 @@ function gov_br_get_starter_content() {
 		'nav_menus' => array(
 			// Assign a menu to the "primary" location.
 			'primary' => array(
-				'name'  => esc_html__( 'Primary menu', 'govbr' ),
+				'name'  => esc_html__( 'Menu principal', 'govbr' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',

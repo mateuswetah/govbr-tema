@@ -14,12 +14,12 @@ the_breadcrumb();
 ?>
 
 	<header class="page-header container-lg">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'govbr' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Nada aqui', 'govbr' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="error-404 not-found container-lg">
 		<div class="page-content">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'govbr' ); ?></p>
+			<p><?php esc_html_e( 'Parece que nada foi encontrado nesta localização. Talvez tentando outra busca?', 'govbr' ); ?></p>
 			<?php get_search_form(); ?>
 		</div><!-- .page-content -->
 	</div><!-- .error-404 -->

@@ -2,9 +2,9 @@
 /**
  * Back compat functionality
  *
- * Prevents the theme from running on WordPress versions prior to 5.9,
+ * Prevents the theme from running on WordPress versions prior to 6.2,
  * since this theme is not meant to be backward compatible beyond that and
- * relies on many newer functions and markup changes introduced in 5.9.
+ * relies on many newer functions and markup changes introduced in 6.2.
  *
  * @package Gov_BR
  * @since Gov BR 0.1.0
@@ -26,7 +26,7 @@ add_action( 'after_switch_theme', 'gov_br_switch_theme' );
  * Adds a message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * the theme on WordPress versions prior to 5.9.
+ * the theme on WordPress versions prior to 6.2.
  *
  * @since Gov BR 0.1.0
  *
@@ -38,14 +38,14 @@ function gov_br_upgrade_notice() {
 	echo '<div class="error"><p>';
 	printf(
 		/* translators: %s: WordPress Version. */
-		esc_html__( 'This theme requires WordPress 5.9 or newer. You are running version %s. Please upgrade.', 'govbr' ),
+		esc_html__( 'Este tema exige a versão 6.2 do WordPress ou mais recente. Você está rodando a versão %s. Por favor, atualize.', 'govbr' ),
 		esc_html( $GLOBALS['wp_version'] )
 	);
 	echo '</p></div>';
 }
 
 /**
- * Prevents the Customizer from being loaded on WordPress versions prior to 5.9.
+ * Prevents the Customizer from being loaded on WordPress versions prior to 6.2.
  *
  * @since Gov BR 0.1.0
  *
@@ -57,7 +57,7 @@ function gov_br_customize() {
 	wp_die(
 		sprintf(
 			/* translators: %s: WordPress Version. */
-			esc_html__( 'This theme requires WordPress 5.9 or newer. You are running version %s. Please upgrade.', 'govbr' ),
+			esc_html__( 'Este tema exige a versão 6.2 do WordPress ou mais recente. Você está rodando a versão %s. Por favor, atualize.', 'govbr' ),
 			esc_html( $GLOBALS['wp_version'] )
 		),
 		'',
@@ -69,7 +69,7 @@ function gov_br_customize() {
 add_action( 'load-customize.php', 'gov_br_customize' );
 
 /**
- * Prevents the Theme Preview from being loaded on WordPress versions prior to 5.9.
+ * Prevents the Theme Preview from being loaded on WordPress versions prior to 6.2.
  *
  * @since Gov BR 0.1.0
  *
@@ -82,7 +82,7 @@ function gov_br_preview() {
 		wp_die(
 			sprintf(
 				/* translators: %s: WordPress Version. */
-				esc_html__( 'This theme requires WordPress 5.9 or newer. You are running version %s. Please upgrade.', 'govbr' ),
+				esc_html__( 'Este tema exige a versão 6.2 do WordPress ou mais recente. Você está rodando a versão %s. Por favor, atualize.', 'govbr' ),
 				esc_html( $GLOBALS['wp_version'] )
 			)
 		);

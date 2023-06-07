@@ -21,7 +21,7 @@
 				<?php
 				printf(
 					/* translators: %s: Search term. */
-					esc_html__( 'Results for "%s"', 'govbr' ),
+					esc_html__( 'Resultados para "%s"', 'govbr' ),
 					'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
 				);
 				?>
@@ -29,7 +29,7 @@
 
 		<?php else : ?>
 
-			<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'govbr' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Nada aqui', 'govbr' ); ?></h1>
 
 		<?php endif; ?>
 	</header><!-- .page-header -->
@@ -42,7 +42,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: %s: Link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'govbr' ),
+					__( 'Pronto para publicar seu primeiro posts? <a href="%s">Comece por aqui</a>.', 'govbr' ),
 					array(
 						'a' => array(
 							'href' => array(),
@@ -55,12 +55,12 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'govbr' ); ?></p>
+			<p><?php esc_html_e( 'Desculpe, mas não foi encontrado nada com estes termos de busca. Tente procurar algo direfente.', 'govbr' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'govbr' ); ?></p>
+			<p><?php esc_html_e( 'Parece que não foi possível encontrar o que foi procurado. Experimente fazer uma busca', 'govbr' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>

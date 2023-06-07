@@ -25,7 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content">
 		<?php
 		/* translators: Hidden accessibility text. */
-		esc_html_e( 'Skip to content', 'govbr' );
+		esc_html_e( 'Pular para conteúdo', 'govbr' );
 		?>
 	</a>
 

@@ -30,12 +30,12 @@ $gov_br_comment_count = get_comments_number();
 		?>
 		<h2 class="comments-title">
 			<?php if ( '1' === $gov_br_comment_count ) : ?>
-				<?php esc_html_e( '1 comment', 'govbr' ); ?>
+				<?php esc_html_e( '1 comentário', 'govbr' ); ?>
 			<?php else : ?>
 				<?php
 				printf(
 					/* translators: %s: Comment count number. */
-					esc_html( _nx( '%s comment', '%s comments', $gov_br_comment_count, 'Comments title', 'govbr' ) ),
+					esc_html( _nx( '%s comentário', '%s comentários', $gov_br_comment_count, 'Comments title', 'govbr' ) ),
 					esc_html( number_format_i18n( $gov_br_comment_count ) )
 				);
 				?>
@@ -57,16 +57,16 @@ $gov_br_comment_count = get_comments_number();
 		<?php
 		the_comments_pagination(
 			array(
-				'before_page_number' => esc_html__( 'Page', 'govbr' ) . ' ',
+				'before_page_number' => esc_html__( 'Página', 'govbr' ) . ' ',
 				'mid_size'           => 0,
 				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? gov_br_get_icon_svg( 'ui', 'arrow_right' ) : gov_br_get_icon_svg( 'ui', 'arrow_left' ),
-					esc_html__( 'Older comments', 'govbr' )
+					esc_html__( 'Comentários anteriores', 'govbr' )
 				),
 				'next_text'          => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
-					esc_html__( 'Newer comments', 'govbr' ),
+					esc_html__( 'Comentários mais recentes', 'govbr' ),
 					is_rtl() ? gov_br_get_icon_svg( 'ui', 'arrow_left' ) : gov_br_get_icon_svg( 'ui', 'arrow_right' )
 				),
 			)
@@ -74,14 +74,14 @@ $gov_br_comment_count = get_comments_number();
 		?>
 
 		<?php if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'govbr' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comentários não estão permitidos.', 'govbr' ); ?></p>
 		<?php endif; ?>
 	<?php endif; ?>
 
 	<?php
 	comment_form(
 		array(
-			'title_reply'        => esc_html__( 'Leave a comment', 'govbr' ),
+			'title_reply'        => esc_html__( 'Deixe um comentário', 'govbr' ),
 			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
 			'title_reply_after'  => '</h2>',
 		)

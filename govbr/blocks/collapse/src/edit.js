@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, useInnerBlocksProps, RichText } from '@wordpress/block-editor';
+import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
 
 /* Elements that are rendered inside the block */
 const TEMPLATE = [
@@ -41,7 +41,7 @@ export default function Edit(props) {
 
 
 	const blockProps = useBlockProps({ className: 'br-list' });
-	const innerBlocksProps = useInnerBlocksProps(blockProps, { template: TEMPLATE, allowedBlock: ALLOWED_BLOCKS, templateLock: 'all' });
+	const innerBlocksProps = useInnerBlocksProps(blockProps, { template: TEMPLATE, allowedBlock: ALLOWED_BLOCKS });
 
 	setAttributes( { blockId: clientId } );
 

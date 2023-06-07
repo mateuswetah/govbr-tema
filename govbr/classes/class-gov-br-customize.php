@@ -223,7 +223,7 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 				array(
 					'type'    => 'checkbox',
 					'section' => 'system_features',
-					'label'   => esc_html__( 'Login via WordPress', 'govbr' ),
+					'label'   => esc_html__( 'Login no WordPress', 'govbr' ),
 				)
 			);
 			

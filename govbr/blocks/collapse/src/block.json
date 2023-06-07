@@ -4,7 +4,8 @@
 	"name": "govbr/collapse",
 	"title": "Collapse",
 	"category": "widgets",
-	"description": "An area of content that can be collapsed by a header.",
+	"keywords": [ "collapse", "acordeão", "menu", "expandir", "esconder" ],
+	"description": "Uma área de conteudo que pode ser escondido ou expandido ao se clicar no rótulo.",
 	"attributes": {
 		"blockId": {
 			"type": "string",

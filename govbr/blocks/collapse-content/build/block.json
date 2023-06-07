@@ -4,7 +4,7 @@
   "name": "govbr/collapse-content",
   "title": "Collapsable content",
   "category": "widgets",
-  "description": "A container for the items that are collpsable.",
+  "description": "Uma região para se colocar itens dentro do collapse.",
   "usesContext": [
     "govbr/blockId"
   ],

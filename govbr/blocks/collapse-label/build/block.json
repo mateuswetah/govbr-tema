@@ -2,9 +2,9 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "govbr/collapse-label",
-  "title": "Collapse label",
+  "title": "Rótulo do collapse",
   "category": "widgets",
-  "description": "Label for the collapse component.",
+  "description": "Rótulo para o componente collapse.",
   "usesContext": [
     "govbr/blockId"
   ],

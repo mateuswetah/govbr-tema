@@ -186,6 +186,15 @@ function gov_br_scripts() {
 		true
 	);
 
+	// Back to top script
+	wp_enqueue_script(
+		'gov-br-back-to-top-script',
+		get_template_directory_uri() . '/assets/js/back-to-top.js',
+		array(),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
+
 	// Our own script for initilizing DSGov components
 	// Find the path.
 	$dependencies_file_path = get_template_directory() . '/scripts/build/index.asset.php';

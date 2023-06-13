@@ -53,6 +53,7 @@
  * Comments.............Comment styles.
  * Archives.............Archive styles.
  * Breadcrumbs..........Breadcrumb styles.
+ * Back to Top..........Back to Top styles.
  * 404..................404 styles.
  * Search...............Search styles.
  * Navigation...........Navigation styles.
@@ -101,6 +102,7 @@
 @import "06-components/entry";
 @import "06-components/archives";
 @import "06-components/breadcrumbs";
+@import "06-components/back-to-top";
 @import "06-components/404";
 @import "06-components/search";
 @import "06-components/comments";

@@ -213,7 +213,7 @@ function gov_br_scripts() {
 	}
 
 	// Fontawesome icons.
-	wp_enqueue_style( 'gov-br-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'gov-br-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// Removes some core block styles
 	wp_deregister_style( 'wp-block-table' );

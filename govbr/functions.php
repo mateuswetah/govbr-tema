@@ -177,17 +177,6 @@ function gov_br_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// Main navigation scripts.
-	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script(
-			'gov-br-primary-navigation-script',
-			get_template_directory_uri() . '/assets/js/primary-navigation.js',
-			array(),
-			wp_get_theme()->get( 'Version' ),
-			true
-		);
-	}
-
 	// Responsive embeds script.
 	wp_enqueue_script(
 		'gov-br-responsive-embeds-script',

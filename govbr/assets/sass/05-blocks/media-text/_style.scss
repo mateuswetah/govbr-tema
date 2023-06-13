@@ -10,10 +10,10 @@
 	}
 
 	.wp-block-media-text__content {
-		padding: var(--wp--preset--spacing--scale-up-2, 16px);
+		padding: var(--wp--preset--spacing--scale-up-2, 16px) !important;
 
 		@include media(tablet) {
-			padding: var(--wp--style--block-gap, 20px);
+			padding: var(--wp--style--block-gap, 20px) !important;
 		}
 
 		> * {

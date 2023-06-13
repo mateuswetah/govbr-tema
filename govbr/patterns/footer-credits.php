@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Footer credits
+ * Title: Rodapé com créditos
  * Slug: govbr/footer-credits
  * Categories: footer
  * Block Types: core/template-part/footer

@@ -18,18 +18,14 @@ if ( function_exists( 'register_block_style' ) ) {
 	 */
 	function gov_br_register_block_styles() {
 		
-		// Group: Layers (shadows) style.
-		$layers = [1, 2, 3, 4];
-		foreach($layers as $layer) {
-			register_block_style(
-				'core/group',
-				array(
-					'name'  => 'govbr-layer-' . $layer,
-					'label' => esc_html__( 'Sombra ' . $layer, 'govbr' ),
-					'inline_style' => '.wp-block-group.is-style-govbr-layer-' . $layer .' { box-shadow: var(--wp--preset--shadow--layer-' . $layer .'); }',
-				)
-			);
-		}
+		/* Group: Cartão clicável (com link interno) */
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'govbr-clickable-card',
+				'label' => esc_html__( 'Cartão clicável', 'govbr' )
+			)
+		);
 
 		/* Button: Tertiary style */
 		register_block_style(

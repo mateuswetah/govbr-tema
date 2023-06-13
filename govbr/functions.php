@@ -8,7 +8,7 @@
  * @since Gov BR 0.1.0
  */
 
-// This theme requires WordPress 5.9 or later.
+// This theme requires WordPress 6.2 or later.
 if ( version_compare( $GLOBALS['wp_version'], '6.2', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
@@ -109,16 +109,6 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 		// Enqueue editor styles.
 		add_editor_style( $editor_stylesheet_path );
 
-		/*
-		* Adds starter content to highlight the theme on fresh sites.
-		* This is done conditionally to avoid loading the starter content on every
-		* page load, as it is a one-off operation only needed once in the customizer.
-		*/
-		if ( is_customize_preview() ) {
-			require get_template_directory() . '/inc/starter-content.php';
-			add_theme_support( 'starter-content', gov_br_get_starter_content() );
-		}
-
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
@@ -128,6 +118,16 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 
 		// Remove feed icon link from legacy RSS widget.
 		add_filter( 'rss_widget_feed_link', '__return_empty_string' );
+
+		/*
+		* Adds starter content to highlight the theme on fresh sites.
+		* This is done conditionally to avoid loading the starter content on every
+		* page load, as it is a one-off operation only needed once in the customizer.
+		*/
+		if ( is_customize_preview() ) {
+			require get_template_directory() . '/inc/starter-content.php';
+			add_theme_support( 'starter-content', gov_br_get_starter_content() );
+		}
 	}
 }
 add_action( 'after_setup_theme', 'gov_br_setup' );

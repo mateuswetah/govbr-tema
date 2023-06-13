@@ -1,11 +1,12 @@
 
 <?php
 /**
- * Title: Menu footer
+ * Title: Parte inferior do menu lateral
  * Slug: govbr/menu-footer
  * Categories: header
  * Block Types: core/group
  * Inserter: false
+ * Viewport Width: 964
  */
 
 $image_placeholder_1 = esc_url( get_template_directory_uri() ) . '/assets/images/logo-positive.png';

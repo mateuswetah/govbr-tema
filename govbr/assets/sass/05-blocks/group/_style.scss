@@ -1,9 +1,12 @@
 .wp-block-group {
 	display: flow-root; // stylelint-disable-line declaration-block-no-duplicate-properties
 
-	&.is-style-link-inside {
+	&.is-style-govbr-clickable-card {
 		position: relative;
-
+		box-shadow: var(--surface-shadow-sm);
+		a:not(.wp-block-button__link) {
+			text-decoration: none;
+		}
 		&:hover a {
 			background-image: none;
 		

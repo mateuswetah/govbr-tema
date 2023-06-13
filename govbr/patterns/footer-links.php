@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Footer links
+ * Title: Rodapé com links
  * Slug: govbr/footer-links
  * Categories: footer
  * Block Types: core/template-part/footer

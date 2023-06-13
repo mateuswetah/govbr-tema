@@ -13,6 +13,11 @@
     height: calc(100vh - var(--global--admin-bar--height, 0px));
 }
 
+/* Also offsets skip links */
+.br-skiplink {
+    top: var(--global--admin-bar--height, 0px);
+}
+
 /* Login menu with avatar is a bit smaller */
 #avatar-dropdown-trigger {
     padding: 5px;

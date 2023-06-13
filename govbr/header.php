@@ -22,12 +22,13 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content">
-		<?php
-		/* translators: Hidden accessibility text. */
-		esc_html_e( 'Pular para conteúdo', 'govbr' );
-		?>
-	</a>
+
+	<nav class="br-skiplink">
+		<a class="br-item" href="#content" accesskey="1"><?php _e( 'Ir para o conteúdo (1/4)', 'govbr'); ?><span class="br-tag text ml-1">1</span></a>
+		<a class="br-item" href="#-navigation" accesskey="2"><?php _e( 'Ir para o menu (2/4)', 'govbr'); ?><span class="br-tag text ml-1">2</span></a>
+		<a class="br-item" href="#main-searchbox" accesskey="3"><?php _e( 'Ir para a busca (3/4)', 'govbr'); ?><span class="br-tag text ml-1">3</span></a>
+		<a class="br-item" href="#footer" accesskey="4"><?php _e( 'Ir para o rodapé (4/4)', 'govbr'); ?><span class="br-tag text ml-1">4</span></a>
+	</nav>
 
 	<?php get_template_part( 'template-parts/header/site-header' ); ?>
 

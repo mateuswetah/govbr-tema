@@ -257,6 +257,8 @@ function create_block_collapsable_list_block_init() {
 }
 add_action( 'init', 'create_block_collapsable_list_block_init' );
 
+/* Necessary for using is_plugin_active() later... maybe we should bind them do admin_init? */
+include_once(ABSPATH.'wp-admin/includes/plugin.php');
 
 // SVG Icons class.
 require get_template_directory() . '/classes/class-gov-br-svg-icons.php';

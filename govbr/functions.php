@@ -219,7 +219,6 @@ function gov_br_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'gov_br_scripts' );
 
-
 /**
  * Loads each core block assets separately
  * 

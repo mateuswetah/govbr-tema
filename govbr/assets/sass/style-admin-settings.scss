@@ -1,0 +1,96 @@
+/* Styles for the Admin Settings page */
+.appearance_page_govbr-settings {
+
+    #wpcontent {
+        padding-left: 0;
+    }
+
+    .govbr-theme-settings-header {
+        text-align: center;
+        margin: 0 0 1rem;
+        background: #fff;
+        border-bottom: 1px solid #dcdcde;
+
+        img {
+            max-width: 90px;
+        }
+        h1 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+            margin: 0 .8rem 1rem;
+            font-size: 23px;
+            padding: 9px 0 4px;
+            line-height: 2;
+        }
+    }
+
+    .govbr-theme-settings-title-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clear: both;
+        padding-top: 8px;
+    }
+    
+    .govbr-theme-settings-tabs-wrapper {
+        display: -ms-inline-grid;
+        -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        vertical-align: top;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+        &.tab-count-1 {
+            grid-template-columns: 1fr;
+        }
+        &.tab-count-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+        &.tab-count-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &.tab-count-4 {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        &.tab-count-5 {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .govbr-theme-settings-tab {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            padding: .5rem 1rem 1rem;
+            margin: 0 1rem;
+            transition: box-shadow .5s ease-in-out;
+        
+            &.active {
+                box-shadow: inset 0 -3px #3582c4;
+                font-weight: 600;
+            }
+            &:nth-child(1) {
+                -ms-grid-column: 1;
+            }
+        }
+    }
+
+    .govbr-theme-settings-body {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .govbr-theme-settings-cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        margin-bottom: 1rem;
+    }
+  
+    @media only screen and (max-width: 1004px) {
+        .govbr-theme-settings-body {
+            margin: 0 22px;
+            width: auto;
+        }
+    }
+}

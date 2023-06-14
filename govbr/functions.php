@@ -279,6 +279,10 @@ new Gov_BR_Signature_Field();
 require get_template_directory() . '/classes/class-gov-br-customize.php';
 new Gov_BR_Customize();
 
+// Admin Page
+require get_template_directory() . '/classes/class-gov-br-admin-page.php';
+new Gov_BR_Admin_Page();
+
 // Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
 

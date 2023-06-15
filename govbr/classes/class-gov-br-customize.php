@@ -149,12 +149,12 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 			);
 
 
-			// Add "System features" section 
+			// Add "Theme features" section 
 			$wp_customize->add_section(
-				'system_features',
+				'theme_features',
 				array(
   					'capability' => 'edit_theme_options',
-					'title'   => esc_html__( 'Funcionalidades do Sistema', 'govbr' ),
+					'title'   => esc_html__( 'Funcionalidades do Tema', 'govbr' ),
 					'description'   => esc_html__( 'As opções habilitadas aqui estarão disponíveis do canto direito do rodapé superior.', 'govbr' ),
 				)
 			);
@@ -174,14 +174,14 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 				'enable_feature_vlibras',
 				array(
 					'type'    => 'checkbox',
-					'section' => 'system_features',
+					'section' => 'theme_features',
 					'label'   => esc_html__( 'Mostrar botão de Libras', 'govbr' ),
 				)
 			);
 
-			// Add "enable_feature_constrast_mode" setting for displaying the High Contrast mode button.
+			// Add "enable_feature_contrast_mode" setting for displaying the High Contrast mode button.
 			$wp_customize->add_setting(
-				'enable_feature_constrast_mode',
+				'enable_feature_contrast_mode',
 				array(
 					'capability'        => 'edit_theme_options',
 					'default'           => true,
@@ -189,12 +189,12 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 				)
 			);
 
-			// Add control for the "enable_feature_constrast_mode" setting.
+			// Add control for the "enable_feature_contrast_mode" setting.
 			$wp_customize->add_control(
-				'enable_feature_constrast_mode',
+				'enable_feature_contrast_mode',
 				array(
 					'type'    => 'checkbox',
-					'section' => 'system_features',
+					'section' => 'theme_features',
 					'label'   => esc_html__( 'Mostrar botão de Alto Contraste', 'govbr' ),
 				)
 			);
@@ -222,7 +222,7 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 				'enable_wordpress_login',
 				array(
 					'type'    => 'checkbox',
-					'section' => 'system_features',
+					'section' => 'theme_features',
 					'label'   => esc_html__( 'Login no WordPress', 'govbr' ),
 				)
 			);

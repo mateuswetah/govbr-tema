@@ -34,7 +34,7 @@ class Gov_BR_Contrast_Mode {
 	 */
 	public function enqueue_scripts() {
 
-		if ( !get_theme_mod( 'enable_feature_constrast_mode', true ) )
+		if ( !get_theme_mod( 'enable_feature_contrast_mode', true ) )
 			return;
 
 		wp_enqueue_style( 'govbr-contrast-mode-style', get_template_directory_uri() . '/assets/css/style-contrast-mode.css', array( 'gov-br-style' ), wp_get_theme()->get( 'Version' ) ); // @phpstan-ignore-line. Version is always a string.
@@ -51,7 +51,7 @@ class Gov_BR_Contrast_Mode {
 	 */
 	public function add_privacy_policy_content() {
 
-		if ( !get_theme_mod( 'enable_feature_constrast_mode', true ) )
+		if ( !get_theme_mod( 'enable_feature_contrast_mode', true ) )
 			return;
 
 		if ( !function_exists( 'wp_add_privacy_policy_content' ) )

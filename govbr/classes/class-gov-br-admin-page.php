@@ -102,6 +102,10 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 
 			/**
 			 * Filter for adding extra tabs to be displayed on the theme settings page
+			 * 
+			 * @since Gov BR 0.1.0
+			 *
+			 * @param array $extra_tabs Associative array with the tabs to be added, where the key is the tab slug and the value is an array with the label and the content callback 
 			 */
 			$tabs = array_merge(
 				$default_tabs,
@@ -151,6 +155,37 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 			?>
 			<div class="govbr-theme-settings-section">
 				<h2><?php _e( 'Bem vindo ao tema Gov BR', 'govbr' ); ?></h2>
+
+				<div class="govbr-theme-settings-site-sample-grid">
+					<div id="site-sample-sidebar">
+						<div id="site-sample-sidebar-top">&nbsp;</div>
+						<div id="site-sample-sidebar-middle" class="selectable-area">&nbsp;</div>
+						<div id="site-sample-sidebar-bottom" class="selectable-area">&nbsp;</div>
+					</div>
+					<div id="site-sample-header-top">
+						<div id="site-sample-header-top-left" class="selectable-area">&nbsp;</div>
+						<div id="site-sample-header-top-center" class="selectable-area">
+							<span class="site-sample-link"></span>
+							<span class="site-sample-link"></span>
+							<span class="site-sample-link"></span>
+						</div>
+						<div id="site-sample-header-top-right" class="selectable-area">
+							<div class="site-sample-icon"></div>
+							<div class="site-sample-icon"></div>
+							<div class="site-sample-icon"></div>
+							<div class="site-sample-button"></div>
+						</div>
+					</div>
+					<div id="site-sample-header-bottom">
+						<div id="site-sample-header-bottom-left">&nbsp;</div>
+						<div id="site-sample-header-bottom-center" class="selectable-area">&nbsp;</div>
+						<div id="site-sample-header-bottom-right">
+							<div class="site-sample-input"></div>
+						</div>
+					</div>
+					<div id="site-sample-content">&nbsp;</div>
+					<div id="site-sample-footer" class="selectable-area">&nbsp;</div>
+				</div>
 			</div>
 			<?php
 		}
@@ -177,6 +212,10 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 
 			/**
 			 * Filter for adding extra plugins to be recommended on the theme settings page
+			 * 
+			 * @since Gov BR 0.1.0
+			 * 
+			 * @return array Associative array with the plugin slug as key and an array with the plugin name and description as value
 			 */
 			$plugins = 
 				apply_filters(
@@ -187,7 +226,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 			?>
 			<div class="govbr-theme-settings-section">
 				<h2><?php _e( 'Plugin recomendados', 'govbr' ); ?></h2>
-				<p><?php _e( 'O tema Gov BR funciona sem a necessidade de plugins instalados. Porém, alguns plugins do WordPress podem ser instalados para expandir suas funcionalidades.', 'govbr'); ?></p>
+				<p><?php _e( 'O tema Gov BR funciona sem a necessidade de plugins. Porém, alguns plugins do WordPress podem ser instalados para expandir suas funcionalidades.', 'govbr'); ?></p>
 				<p><?php _e( 'Os plugins que recomendamos a seguir, são plugins que tem uma base de usuários sólida e em alguns casos, são ferramentas para as quais tivemos algum esforço de realizar uma integração visual entre os recursos oferecidos pelo plugin e o que diz respeito ao tema em si.', 'govbr' ); ?></p>
 			
 				<div class="govbr-theme-settings-cards-container">
@@ -218,6 +257,32 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 			?>
 			<div class="govbr-theme-settings-section">
 				<h2><?php _e( 'Funcionalidades do tema', 'govbr' ); ?></h2>
+				<p><?php _e( 'O Tema Gov BR vem com algumas funcionalidades que são comuns a diversos sites do Governo Federal.', 'govbr'); ?></p>
+				<p><?php _e( 'Os recursos aqui listados também podem ser ativados ou desativados em uma visualização ao vivo, ', 'govbr'); ?><a href="<?php echo get_admin_url() . '/customize.php?autofocus[section]=theme_features'; ?>"><?php _e( 'acessando o menu Personalizar', 'govbr'); ?></a></p>
+			
+				<div class="govbr-theme-settings-cards-container">
+					<div class="card">
+						<label for="enable_feature_contrast_mode">
+							<input name="enable_feature_contrast_mode" type="checkbox" id="enable_feature_contrast_mode" value="<?php echo get_theme_mod('enable_feature_contrast_mode', true); ?>" <?php echo get_theme_mod('enable_feature_contrast_mode', true) ? 'checked="checked"' : ''; ?>>
+							<h3><?php _e( 'Modo de Alto Contraste', 'govbr'); ?></h3>
+						</label>
+						<p><?php _e('Com o botão de Alto Contraste, é possível ver o site em um fundo preto com cores fortes para leitura e interação por usuários que tem baixa visão.', 'govbr'); ?></p>
+					</div>
+					<div class="card">
+						<label for="enable_feature_vlibras">
+							<input name="enable_feature_vlibras" type="checkbox" id="enable_feature_vlibras" value="<?php echo get_theme_mod('enable_feature_vlibras', true); ?>" <?php echo get_theme_mod('enable_feature_vlibras', true) ? 'checked="checked"' : ''; ?>>
+							<h3><?php _e( 'Assistente VLibras', 'govbr'); ?></h3>
+						</label>
+						<p><?php _e('Com o botão de VLibras, é possível ativar um assistente virtual que vai ler o site na Linguagem Brasileira de Sinais para dar apoio à pessoas surdas.', 'govbr'); ?></p>
+					</div>
+					<div class="card">
+						<label for="enable_wordpress_login">
+							<input name="enable_wordpress_login" type="checkbox" id="enable_wordpress_login" value="<?php echo get_theme_mod('enable_wordpress_login', true); ?>" <?php echo get_theme_mod('enable_wordpress_login', true) ? 'checked="checked"' : ''; ?>>
+							<h3><?php _e( 'Login do WordPress', 'govbr'); ?></h3>
+						</label>
+						<p><?php _e('Exponha o botão de login no Painel Administrativo do WordPress. O botão também mostra informações do usuário quando logado, dando uma aparência de sistema ao site.', 'govbr'); ?></p>
+					</div>
+				</div>
 			</div>
 			<?php
 		}

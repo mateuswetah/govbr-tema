@@ -8,7 +8,7 @@
 
  require_once get_template_directory() . '/classes/class-gov-br-walker-institutional-menu.php';
 
- $is_feature_contrast_mode_enabled = get_theme_mod('enable_feature_constrast_mode', true);
+ $is_feature_contrast_mode_enabled = get_theme_mod('enable_feature_contrast_mode', true);
  $is_feature_vlibras_enabled = get_theme_mod('enable_feature_vlibras', true);
  $is_wordpress_login_enabled = get_theme_mod('enable_wordpress_login', true);
 

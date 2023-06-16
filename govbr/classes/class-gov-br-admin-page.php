@@ -158,16 +158,62 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 
 				<div class="govbr-theme-settings-site-sample-grid">
 					<div id="site-sample-sidebar">
-						<div id="site-sample-sidebar-top">&nbsp;</div>
-						<div id="site-sample-sidebar-middle" class="selectable-area">&nbsp;</div>
-						<div id="site-sample-sidebar-bottom" class="selectable-area">&nbsp;</div>
+						<div id="site-sample-sidebar-top">
+							<div class="site-sample-icon"></div>
+							<div class="site-sample-image"></div>
+							<span class="site-sample-text" style="max-width: 60px;"></span>
+						</div>
+						<div id="site-sample-sidebar-middle" class="selectable-area">
+							<div class="site-sample-menu-item">
+								<span class="site-sample-link" style="max-width: 72px"></span>
+							</div>
+							<div class="site-sample-menu-item">
+								<span class="site-sample-link" style="max-width: 42px"></span>
+							</div>
+							<div class="site-sample-menu-item">
+								<span class="site-sample-link"></span>
+								<div class="site-sample-icon"></div>
+							</div>
+							<div class="site-sample-menu-item">
+								<span class="site-sample-link" style="max-width: 64px"></span>
+							</div>
+							<div class="site-sample-menu-item">
+								<span class="site-sample-link"></span>
+							</div>
+							<div class="site-sample-menu-item">
+								<span class="site-sample-link" style="max-width: 36px"></span>
+								<div class="site-sample-icon"></div>
+							</div>
+						</div>
+						<div id="site-sample-sidebar-bottom" class="selectable-area">
+							<div class="site-sample-menu-item">
+								<div class="site-sample-image"></div>
+								<div class="site-sample-image" style="margin-right: auto;"></div>
+							</div>
+							<div class="site-sample-menu-item">
+								<span class="site-sample-link" style="max-width: 64px"></span>
+								<span class="site-sample-link"></span>
+							</div>
+							<div class="site-sample-menu-item" style="flex-wrap: wrap; height: 33px;">
+								<span class="site-sample-text" style="max-width: 20px"></span>
+								<div class="site-sample-social-icons">
+									<div class="site-sample-icon"></div>
+									<div class="site-sample-icon"></div>
+									<div class="site-sample-icon" ></div>
+								</div>
+							</div>
+							<div class="site-sample-text" style="margin: 8px auto;"></div>
+						</div>
 					</div>
 					<div id="site-sample-header-top">
-						<div id="site-sample-header-top-left" class="selectable-area">&nbsp;</div>
+						<div id="site-sample-header-top-left" class="selectable-area">
+							<div class="site-sample-image"></div>
+							<span class="site-sample-link" style="max-width: 126px;"></span>
+						</div>
 						<div id="site-sample-header-top-center" class="selectable-area">
 							<span class="site-sample-link"></span>
-							<span class="site-sample-link"></span>
-							<span class="site-sample-link"></span>
+							<span class="site-sample-link" style="max-width: 42px"></span>
+							<span class="site-sample-link" style="max-width: 56px"></span>
 						</div>
 						<div id="site-sample-header-top-right" class="selectable-area">
 							<div class="site-sample-icon"></div>
@@ -177,8 +223,13 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 						</div>
 					</div>
 					<div id="site-sample-header-bottom">
-						<div id="site-sample-header-bottom-left">&nbsp;</div>
-						<div id="site-sample-header-bottom-center" class="selectable-area">&nbsp;</div>
+						<div id="site-sample-header-bottom-left">
+							<div class="site-sample-icon"></div>
+						</div>
+						<div id="site-sample-header-bottom-center" class="selectable-area">
+							<span class="site-sample-title"></span>
+							<span class="site-sample-text"></span>
+						</div>
 						<div id="site-sample-header-bottom-right">
 							<div class="site-sample-input"></div>
 						</div>

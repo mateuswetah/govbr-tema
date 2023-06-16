@@ -105,9 +105,12 @@
             #site-sample-sidebar-top {
                 height: 32px;
                 border-bottom: 1px solid #e0e0e0;
+                display: flex;
+                align-items: center;
+                padding-left: 0.25rem;
             }
             #site-sample-sidebar-middle {
-                height: 180px;
+                height: 173px;
                 border-bottom: 1px solid #e0e0e0;
             }
             #site-sample-sidebar-bottom {
@@ -124,7 +127,10 @@
             box-shadow: inset 2px 0px 5px -4px #888;
 
             #site-sample-header-top-left {
-                width: 25%;
+                width: 34%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
             }
             #site-sample-header-top-center {
                 width: 35%;
@@ -151,10 +157,16 @@
 
             #site-sample-header-bottom-left {
                 width: 6%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             #site-sample-header-bottom-center {
                 width: 25%;
                 margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
             #site-sample-header-bottom-right {
                 width: 30%;
@@ -183,8 +195,26 @@
             background-color: #0076d6;
             max-width: 60px;
             border-radius: 4px;
-            height: 7px;
-            margin: 8px 2px;
+            height: 5px;
+            margin: 9px 2px;
+            width: 100%;
+        }
+        
+        .site-sample-text {
+            background-color: #7c7c7c;
+            max-width: 120px;
+            border-radius: 4px;
+            height: 5px;
+            margin: 2px 4px;
+            width: 100%;
+        }
+        
+        .site-sample-title {
+            background-color: #9c9c9c;
+            max-width: 75px;
+            border-radius: 6px;
+            height: 6px;
+            margin: 3px 4px;
             width: 100%;
         }
 
@@ -202,6 +232,30 @@
             height: 16px;
             width: 42px;
             margin: 8px 2px;
+        }
+
+        .site-sample-image {
+            background-color: rgba(26, 39, 59, 0.16);
+            border-radius: 2px;
+            height: 18px;
+            width: 42px;
+            margin: 8px 2px;
+        }
+
+        .site-sample-menu-item {
+            height: 20px;
+            border-bottom: 1px solid #dedede;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.25rem;
+        }
+
+        .site-sample-social-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            width: 100%;
         }
 
         .selectable-area {

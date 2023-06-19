@@ -155,7 +155,8 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 			?>
 			<div class="govbr-theme-settings-section">
 				<h2><?php _e( 'Bem vindo ao tema Gov BR', 'govbr' ); ?></h2>
-
+				<p><?php _e( 'Passe o mouse pelas diferentes regiões da figura abaixo para descobrir onde editar cada área do seu site.', 'govbr' ); ?></p>
+				
 				<div class="govbr-theme-settings-site-sample-grid">
 					<div id="site-sample-sidebar">
 						<div id="site-sample-sidebar-top">
@@ -234,10 +235,120 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 							<div class="site-sample-input"></div>
 						</div>
 					</div>
-					<div id="site-sample-content">&nbsp;</div>
-					<div id="site-sample-footer" class="selectable-area">&nbsp;</div>
+					<div id="site-sample-content">
+						<div class="card" data-related-area="site-sample-sidebar-middle">
+							<h3><?php _e( 'Menu de Navegação', 'govbr' ); ?></h3>
+							<p><?php _e( 'O menu principal que aparece dentro do painel lateral.', 'govbr'); ?></p>
+							<a class="button" href="<?php echo get_admin_url() . 'customize.php?autofocus[panel]=nav_menus'; ?>">
+								<?php _e( 'Configurar', 'govbr' ); ?>
+							</a>
+						</div>
+						<div class="card" data-related-area="site-sample-header-bottom-center">
+							<h3><?php _e( 'Área de Identificação', 'govbr' ); ?></h3>
+							<p><?php _e( 'Altere a logo, o título, subtítulo e assinatura do site.', 'govbr'); ?></p>
+							<a class="button" href="<?php echo get_admin_url() . 'customize.php?autofocus[section]=title_tagline'; ?>">
+								<?php _e( 'Configurar', 'govbr' ); ?>
+							</a>
+						</div>
+						<div class="card" data-related-area="site-sample-header-top-center">
+							<h3><?php _e( 'Menu Institucional', 'govbr' ); ?></h3>
+							<p><?php _e( 'Uma lista de links institucionais do cabeçalho superior.', 'govbr'); ?></p>
+							<a class="button" href="<?php echo get_admin_url() . 'customize.php?autofocus[panel]=nav_menus'; ?>">
+								<?php _e( 'Configurar', 'govbr' ); ?>
+							</a>
+						</div>
+						<div class="card" data-related-area="site-sample-sidebar-bottom">
+							<h3><?php _e( 'Informações do Painel Lateral', 'govbr' ); ?></h3>
+							<p><?php _e( 'Outras informações que podem ter diferentes formas no painel lateral.', 'govbr'); ?></p>
+							<a class="button" href="<?php echo get_admin_url() . 'site-editor.php?postId=govbr/menu-footer&postType=wp_template_partcustomize&canvas=edit'; ?>">
+								<?php _e( 'Editar com blocos', 'govbr' ); ?>
+							</a>
+						</div>
+						<div class="card" data-related-area="site-sample-footer">
+							<h3><?php _e( 'Informações do Rodapé', 'govbr' ); ?></h3>
+							<p><?php _e( 'Rodapé do site, com diferentes formas de se apresentar dados.', 'govbr'); ?></p>
+							<a class="button" href="<?php echo get_admin_url() . 'site-editor.php?postId=govbr/footer&postType=wp_template_partcustomize&canvas=edi'; ?>">
+								<?php _e( 'Editar com blocos', 'govbr' ); ?>
+							</a>
+						</div>
+						<div class="card" data-related-area="site-sample-header-top-right">
+							<h3><?php _e( 'Funcionalidades do Site', 'govbr' ); ?></h3>
+							<p><?php _e( 'Ative ou desative diferentes funcionalides para o site como login, ferramentas de acessibilidade, etc.', 'govbr'); ?></p>
+							<a class="button" href="<?php echo get_admin_url() . 'customize.php?autofocus[section]=theme_features'; ?>">
+								<?php _e( 'Configurar', 'govbr' ); ?>
+							</a>
+						</div>
+					</div>
+					<div id="site-sample-footer" class="selectable-area">
+						<div class="site-sample-image"></div>
+						<br>
+						<div class="site-sample-footer-columns">
+							<div class="site-sample-footer-column">
+								<span class="site-sample-text"></span>
+								<span class="site-sample-link" style="max-width: 64px"></span>
+								<span class="site-sample-link" style="max-width: 42px"></span>
+								<span class="site-sample-link" style="max-width: 56px"></span>
+								<span class="site-sample-link"></span>
+							</div>
+							<div class="site-sample-footer-column">
+								<span class="site-sample-text"></span>
+								<span class="site-sample-link" style="max-width: 54px"></span>
+								<span class="site-sample-link"></span>
+								<span class="site-sample-link" style="max-width: 62px"></span>
+								<span class="site-sample-link"></span>
+							</div>
+							<div class="site-sample-footer-column">
+								<span class="site-sample-text"></span>
+								<span class="site-sample-link" style="max-width: 56px"></span>
+								<span class="site-sample-link"></span>
+								<span class="site-sample-link" style="max-width: 42px"></span>
+								<span class="site-sample-link"></span>
+							</div>
+							<div class="site-sample-footer-column">
+								<span class="site-sample-text"></span>
+								<span class="site-sample-link" style="max-width: 54px"></span>
+								<span class="site-sample-link"></span>
+								<span class="site-sample-link" style="max-width: 56px"></span>
+								<span class="site-sample-link"></span>
+							</div>
+						</div>
+						<hr>
+						<div class="site-sample-text" style="margin: 8px auto;"></div>
+					</div>
 				</div>
 			</div>
+			<script>
+				const areas = document.querySelectorAll('.selectable-area');
+				const cards = document.querySelectorAll('.card');
+				cards.forEach((aCard) => {
+					aCard.addEventListener('mouseleave', () => {
+						areas.forEach((anArea) => {
+							if ( anArea.id === aCard.dataset.relatedArea )
+								anArea.classList.remove('hovered');
+						});
+					});
+					aCard.addEventListener('mouseover', () => {
+						areas.forEach((anArea) => {
+							if ( anArea.id === aCard.dataset.relatedArea )
+								anArea.classList.add('hovered');
+						});
+					});
+				});
+				areas.forEach((anArea) => {
+					anArea.addEventListener('mouseleave', () => {
+						cards.forEach((aCard) => {
+							if ( anArea.id === aCard.dataset.relatedArea )
+								aCard.classList.remove('hovered');
+						});
+					});
+					anArea.addEventListener('mouseover', () => {
+						cards.forEach((aCard) => {
+							if ( anArea.id === aCard.dataset.relatedArea )
+								aCard.classList.add('hovered');
+						});
+					});
+				});
+			</script> 
 			<?php
 		}
 
@@ -309,7 +420,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 			<div class="govbr-theme-settings-section">
 				<h2><?php _e( 'Funcionalidades do tema', 'govbr' ); ?></h2>
 				<p><?php _e( 'O Tema Gov BR vem com algumas funcionalidades que são comuns a diversos sites do Governo Federal.', 'govbr'); ?></p>
-				<p><?php _e( 'Os recursos aqui listados também podem ser ativados ou desativados em uma visualização ao vivo, ', 'govbr'); ?><a href="<?php echo get_admin_url() . '/customize.php?autofocus[section]=theme_features'; ?>"><?php _e( 'acessando o menu Personalizar', 'govbr'); ?></a></p>
+				<p><?php _e( 'Os recursos aqui listados também podem ser ativados ou desativados em uma visualização ao vivo, ', 'govbr'); ?><a href="<?php echo get_admin_url() . 'customize.php?autofocus[section]=theme_features'; ?>"><?php _e( 'acessando o menu Personalizar', 'govbr'); ?></a></p>
 			
 				<div class="govbr-theme-settings-cards-container">
 					<div class="card">

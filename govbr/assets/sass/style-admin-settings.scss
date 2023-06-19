@@ -81,8 +81,9 @@
     }
 
     .govbr-theme-settings-site-sample-grid {
+        margin: 1rem 0;
         display: grid; 
-        grid-template-rows: 32px 38px 300px 160px;
+        grid-template-rows: 32px 38px 400px 165px;
         grid-template-columns: 12rem auto auto;
         grid-template-areas: 
             'sidebar header-top header-top'
@@ -176,11 +177,46 @@
             background-color: #f0f0f1;
             grid-area: content;
             box-shadow: inset 2px 2px 5px -4px #666;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            place-content: center;
+            gap: 1rem;
+            padding: 1rem;
+
+            .card {
+                margin: 0px;
+                padding: 12px;
+                min-width: unset;
+                width: 100%;
+
+                h3 {
+                    font-size: 0.875rem;
+                    margin-top: 0;
+                    margin-bottom: -6px;
+                }
+            }
         }
         #site-sample-footer {
             background-color: #071d41; 
             grid-area: footer;
             box-shadow: inset 2px 0px 5px -4px #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 0.25rem 0.5rem;
+
+            .site-sample-link {
+                margin-bottom: 0;
+                background-color: #374b8a;
+            }
+            .site-sample-text {
+                margin-left: 0;
+                background-color: #dcdcde70;
+            }
+            .site-sample-image {
+                background-color: #dcdcde70;
+            }
         }
 
         .site-sample-input {
@@ -258,13 +294,28 @@
             width: 100%;
         }
 
-        .selectable-area {
+        .site-sample-footer-columns {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0.5rem;
+            
+            .site-sample-footer-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                flex-basis: 25%;
+            }
+        }
+
+        .selectable-area,
+        .card {
             box-shadow: inset 0 0 0 0 #3582c4;
             transition: box-shadow .3s ease;
 
             &:hover,
-            &:focus {
-                box-shadow: inset 0 0 0 3px #3582c4;
+            &:focus,
+            &.hovered {
+                box-shadow: inset 0 0 0 3px #3582c4 !important;
             }
         }
     }

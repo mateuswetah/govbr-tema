@@ -3,7 +3,7 @@
  * SVG Icons class
  *
  * @package Gov_BR
- * @since Gov BR 0.1.0
+ * @since GovBR 0.1.0
  */
 
 /**
@@ -16,14 +16,14 @@
  * All icons are assumed to have equal width and height, hence the option
  * to only specify a `$size` parameter in the svg methods.
  *
- * @since Gov BR 0.1.0
+ * @since GovBR 0.1.0
  */
 class Gov_BR_SVG_Icons {
 
 	/**
 	 * User Interface icons – svg sources.
 	 *
-	 * @since Gov BR 0.1.0
+	 * @since GovBR 0.1.0
 	 *
 	 * @var array
 	 */
@@ -39,7 +39,7 @@ class Gov_BR_SVG_Icons {
 	/**
 	 * Social Icons – svg sources.
 	 *
-	 * @since Gov BR 0.1.0
+	 * @since GovBR 0.1.0
 	 *
 	 * @var array
 	 */
@@ -90,7 +90,7 @@ class Gov_BR_SVG_Icons {
 	 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 	 * specify all the domains it covers (including the .com TLD too, if applicable).
 	 *
-	 * @since Gov BR 0.1.0
+	 * @since GovBR 0.1.0
 	 *
 	 * @var array
 	 */
@@ -155,7 +155,7 @@ class Gov_BR_SVG_Icons {
 	 *
 	 * @static
 	 *
-	 * @since Gov BR 0.1.0
+	 * @since GovBR 0.1.0
 	 *
 	 * @param string $group The icon group.
 	 * @param string $icon  The icon.
@@ -178,7 +178,7 @@ class Gov_BR_SVG_Icons {
 		 * The dynamic portion of the hook name, `$group`, refers to
 		 * the name of the group of icons, either "ui" or "social".
 		 *
-		 * @since Gov BR 0.1.0
+		 * @since GovBR 0.1.0
 		 *
 		 * @param array $arr Array of icons.
 		 */
@@ -200,7 +200,7 @@ class Gov_BR_SVG_Icons {
 	 *
 	 * @static
 	 *
-	 * @since Gov BR 0.1.0
+	 * @since GovBR 0.1.0
 	 *
 	 * @param string $uri  Social link.
 	 * @param int    $size The icon-size in pixels.
@@ -218,7 +218,7 @@ class Gov_BR_SVG_Icons {
 			 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 			 * specify all the domains it covers (including the .com TLD too, if applicable).
 			 *
-			 * @since Gov BR 0.1.0
+			 * @since GovBR 0.1.0
 			 *
 			 * @param array $social_icons_map Array of default social icons.
 			 */
@@ -227,7 +227,7 @@ class Gov_BR_SVG_Icons {
 			/**
 			 * Filters Gov BR's array of social icons.
 			 *
-			 * @since Gov BR 0.1.0
+			 * @since GovBR 0.1.0
 			 *
 			 * @param array $social_icons Array of default social icons.
 			 */

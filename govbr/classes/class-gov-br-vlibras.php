@@ -3,7 +3,7 @@
  * VLibras functionality
  *
  * @package Gov_BR
- * @since Gov BR 0.1.0
+ * @since GovBR 0.1.0
  */
 
 /**
@@ -14,7 +14,7 @@ class Gov_BR_VLibras {
 	/**
 	 * Instantiate the object.
 	 *
-	 * @since Gov BR 0.1.0
+	 * @since GovBR 0.1.0
 	 */
 	public function __construct() {
 
@@ -27,7 +27,7 @@ class Gov_BR_VLibras {
 	/**
 	 * Enqueue scripts and styles.
 	 *
-	 * @since Gov BR 0.1.0
+	 * @since GovBR 0.1.0
 	 *
 	 * @return void
 	 */
@@ -45,7 +45,7 @@ class Gov_BR_VLibras {
 	/**
 	 * Adds VLibras html to the end of the body.
 	 *
-	 * @since Gov BR 0.1.0
+	 * @since GovBR 0.1.0
 	 *
 	 * @return void
 	 */

@@ -4,7 +4,7 @@
  * Breadcrumbs function, adapted from: https://techpulsetoday.com/wordpress-breadcrumbs-without-plugin/
  * 
  * @package Gov_BR
- * @since Gov BR 0.1.0
+ * @since GovBR 0.1.0
  */
 function the_breadcrumb() {
     global $post;

@@ -3,7 +3,7 @@
  * Displays header site top header
  *
  * @package Gov_BR
- * @since Gov BR 0.1.0
+ * @since GovBR 0.1.0
  */
 
  require_once get_template_directory() . '/classes/class-gov-br-walker-institutional-menu.php';

@@ -3,7 +3,7 @@
  * The template for displaying image attachments
  *
  * @package Gov_BR
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  */
 
 get_header();
@@ -23,7 +23,7 @@ while ( have_posts() ) {
 				/**
 				 * Filter the default image attachment size.
 				 *
-				 * @since GovBR 0.1.0
+				 * @since 0.1.0 0.1.0
 				 *
 				 * @param string $image_size Image size. Default 'full'.
 				 */

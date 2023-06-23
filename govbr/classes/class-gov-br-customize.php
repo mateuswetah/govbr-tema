@@ -3,21 +3,21 @@
  * Customizer settings for this theme.
  *
  * @package Gov_BR
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  */
 
 if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 	/**
 	 * Customizer Settings.
 	 *
-	 * @since GovBR 0.1.0
+	 * @since 0.1.0 0.1.0
 	 */
 	class Gov_BR_Customize {
 
 		/**
 		 * Constructor. Instantiate the object.
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 */
 		public function __construct() {
 			add_action( 'customize_register', array( $this, 'register' ) );
@@ -26,7 +26,7 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 		/**
 		 * Register customizer options.
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 * @return void
@@ -232,7 +232,7 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 		/**
 		 * Sanitize boolean for checkbox.
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 *
 		 * @param bool $checked Whether or not a box is checked.
 		 * @return bool
@@ -244,7 +244,7 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 		/**
 		 * Render the site title for the selective refresh partial.
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 *
 		 * @return void
 		 */
@@ -255,7 +255,7 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 		/**
 		 * Render the site tagline for the selective refresh partial.
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 *
 		 * @return void
 		 */
@@ -266,7 +266,7 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 		/**
 		 * Render the site signature for the selective refresh partial.
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 *
 		 * @return void
 		 */

@@ -3,13 +3,13 @@
  * Functions which enhance the theme by hooking into WordPress
  *
  * @package Gov_BR
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  */
 
 /**
  * Adds custom classes to the array of body classes.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @param array $classes Classes for the body element.
  * @return array
@@ -34,7 +34,7 @@ add_filter( 'body_class', 'gov_br_body_classes' );
 /**
  * Adds custom class to the array of posts classes.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @param array $classes An array of CSS classes.
  * @return array
@@ -49,7 +49,7 @@ add_filter( 'post_class', 'gov_br_post_classes', 10, 3 );
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @return void
  */
@@ -63,7 +63,7 @@ add_action( 'wp_head', 'gov_br_pingback_header' );
 /**
  * Remove the `no-js` class from body if JS is supported.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @return void
  */
@@ -75,7 +75,7 @@ add_action( 'wp_footer', 'gov_br_supports_js' );
 /**
  * Changes comment form default fields.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @param array $defaults The form defaults.
  * @return array
@@ -92,7 +92,7 @@ add_filter( 'comment_form_defaults', 'gov_br_comment_form_defaults' );
 /**
  * Determines if post thumbnail can be displayed.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @return bool
  */
@@ -100,7 +100,7 @@ function gov_br_can_show_post_thumbnail() {
 	/**
 	 * Filters whether post thumbnail can be displayed.
 	 *
-	 * @since GovBR 0.1.0
+	 * @since 0.1.0 0.1.0
 	 *
 	 * @param bool $show_post_thumbnail Whether to show post thumbnail.
 	 */
@@ -113,7 +113,7 @@ function gov_br_can_show_post_thumbnail() {
 /**
  * Returns the size for avatars used in the theme.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @return int
  */
@@ -124,7 +124,7 @@ function gov_br_get_avatar_size() {
 /**
  * Creates continue reading text.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  */
 function gov_br_continue_reading_text() {
 	$continue_reading = sprintf(
@@ -139,7 +139,7 @@ function gov_br_continue_reading_text() {
 /**
  * Creates the continue reading link for excerpt.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  */
 function gov_br_continue_reading_link_excerpt() {
 	if ( ! is_admin() ) {
@@ -153,7 +153,7 @@ add_filter( 'excerpt_more', 'gov_br_continue_reading_link_excerpt' );
 /**
  * Creates the continue reading link.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  */
 function gov_br_continue_reading_link() {
 	if ( ! is_admin() ) {
@@ -168,7 +168,7 @@ if ( ! function_exists( 'gov_br_post_title' ) ) {
 	/**
 	 * Adds a title to posts and pages that are missing titles.
 	 *
-	 * @since GovBR 0.1.0
+	 * @since 0.1.0 0.1.0
 	 *
 	 * @param string $title The title.
 	 * @return string
@@ -182,7 +182,7 @@ add_filter( 'the_title', 'gov_br_post_title' );
 /**
  * Gets the SVG code for a given icon.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @param string $group The icon group.
  * @param string $icon  The icon.
@@ -196,7 +196,7 @@ function gov_br_get_icon_svg( $group, $icon, $size = 24 ) {
 /**
  * Changes the default navigation arrows to svg icons
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @param string $calendar_output The generated HTML of the calendar.
  * @return string
@@ -211,7 +211,7 @@ add_filter( 'get_calendar', 'gov_br_change_calendar_nav_arrows' );
 /**
  * Print the first instance of a block in the content, and then break away.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @param string      $block_name The full block type name, or a partial match.
  *                                Example: `core/image`, `core-embed/*`.
@@ -274,8 +274,8 @@ function gov_br_print_first_instance_of_block( $block_name, $content = null, $in
 /**
  * Retrieve protected post password form content.
  *
- * @since GovBR 0.1.0
- * @since GovBR 1.4 Corrected parameter name for `$output`,
+ * @since 0.1.0 0.1.0
+ * @since 0.1.0 1.4 Corrected parameter name for `$output`,
  *                              added the `$post` parameter.
  *
  * @param string      $output The password form HTML output.
@@ -296,7 +296,7 @@ add_filter( 'the_password_form', 'gov_br_password_form', 10, 2 );
 /**
  * Filters the list of attachment image attributes.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @param string[]     $attr       Array of attribute values for the image markup, keyed by attribute name.
  *                                 See wp_get_attachment_image().

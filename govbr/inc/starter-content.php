@@ -5,7 +5,7 @@
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
  * @package Gov_BR
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  */
 
 /**
@@ -13,7 +13,7 @@
  *
  * Passes it through the `gov_br_starter_content` filter before returning.
  *
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  *
  * @return array A filtered array of args for the starter_content.
  */
@@ -148,7 +148,7 @@ function gov_br_get_starter_content() {
 	/**
 	 * Filters the array of starter content.
 	 *
-	 * @since GovBR 0.1.0
+	 * @since 0.1.0 0.1.0
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */

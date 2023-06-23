@@ -5,14 +5,14 @@
  * @link https://developer.wordpress.org/reference/functions/register_block_style/
  *
  * @package Gov_BR
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  */
 
 if ( function_exists( 'register_block_style' ) ) {
 	/**
 	 * Register block styles.
 	 *
-	 * @since GovBR 0.1.0
+	 * @since 0.1.0 0.1.0
 	 *
 	 * @return void
 	 */

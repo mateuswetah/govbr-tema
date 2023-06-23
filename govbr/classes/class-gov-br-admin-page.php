@@ -3,14 +3,14 @@
  * Admin Theme Page with settings.
  *
  * @package Gov_BR
- * @since GovBR 0.1.0
+ * @since 0.1.0 0.1.0
  */
 
 if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 	/**
 	 * Admin Page Settings.
 	 *
-	 * @since GovBR 0.1.0
+	 * @since 0.1.0 0.1.0
 	 */
 	class Gov_BR_Admin_Page {
 
@@ -19,7 +19,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		/**
 		 * Constructor. Instantiate the object.
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 */
 		public function __construct() {
 			add_action( 'admin_menu', array( $this, 'add_page_to_menu' ) );
@@ -30,7 +30,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		 * Returns the page slug
 		 * @var string
 		 * 
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 */
 		public function get_page_slug() {
 			return $this->page_slug;
@@ -39,7 +39,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		/**
 		 * Adds the submenu with the page
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 *
 		 * @return void
 		 */
@@ -56,7 +56,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		/**
 		 * Enqueues necessary scripts and styles
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 *
 		 * @return void
 		 */
@@ -72,7 +72,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		/**
 		 * The theme settings page
 		 *
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 *
 		 * @return void
 		 */
@@ -103,7 +103,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 			/**
 			 * Filter for adding extra tabs to be displayed on the theme settings page
 			 * 
-			 * @since GovBR 0.1.0
+			 * @since 0.1.0 0.1.0
 			 *
 			 * @param array $extra_tabs Associative array with the tabs to be added, where the key is the tab slug and the value is an array with the label and the content callback 
 			 */
@@ -147,7 +147,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		/**
 		 * Render the settings home tab content
 		 * 
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 * 
 		 * @return string HTML content
 		 */
@@ -379,7 +379,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		/**
 		 * Render the settings plugin tab content
 		 * 
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 * 
 		 * @return string HTML content
 		 */
@@ -399,7 +399,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 			/**
 			 * Filter for adding extra plugins to be recommended on the theme settings page
 			 * 
-			 * @since GovBR 0.1.0
+			 * @since 0.1.0 0.1.0
 			 * 
 			 * @return array Associative array with the plugin slug as key and an array with the plugin name and description as value
 			 */
@@ -435,7 +435,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		/**
 		 * Render the settings features tab content
 		 * 
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 * 
 		 * @return string HTML content
 		 */
@@ -476,7 +476,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		/**
 		 * Render the settings about tab content
 		 * 
-		 * @since GovBR 0.1.0
+		 * @since 0.1.0 0.1.0
 		 * 
 		 * @return string HTML content
 		 */

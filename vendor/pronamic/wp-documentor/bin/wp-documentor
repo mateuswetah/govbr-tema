@@ -1,0 +1,210 @@
+#!/usr/bin/env php
+<?php
+
+namespace Pronamic\WordPress\Documentor;
+
+/**
+ * Autoload.
+ *
+ * @link https://stackoverflow.com/questions/12241903/script-in-dependency-needs-path-to-composer-autoloader
+ * @link https://gist.github.com/tburry/90ae5ba5bfa9140cfb53
+ */
+$paths = array(
+    __DIR__ . '/../vendor/autoload.php', // locally
+    __DIR__ . '/../../../autoload.php' // dependency
+);
+
+foreach ( $paths as $path ) {
+	if ( \is_readable( $path ) ) {
+		require_once $path;
+
+		break;
+	}
+}
+
+/**
+ * Use statements.
+ */
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Helper\ProgressBar;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Output\StreamOutput;
+use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Finder\Finder;
+
+$application = new Application( 'Pronamic WordPress Documentor', '1.1.1' );
+
+$application->register( 'parse' )
+	->addArgument( 'source', InputArgument::REQUIRED, 'Directory to scan for hooks extraction.' )
+	->addOption( 'format', null, InputOption::VALUE_REQUIRED, 'Render output in a particular format.', 'default' )
+	->addOption( 'template', null, InputOption::VALUE_REQUIRED, 'Render output in a template format.', null )
+	->addOption(
+		'type',
+		null,
+		InputOption::VALUE_REQUIRED,
+		'Hook type.',
+		null
+	)
+	->addOption( 'relative', null, InputOption::VALUE_REQUIRED, 'Relative to directory.', null )
+	->addOption(
+		'prefix',
+		null,
+		InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
+		'Comma-separated list of prefixes hooks must match.',
+		null
+	)
+	->addOption( 'output', 'o', InputOption::VALUE_REQUIRED, 'Write output to file instead of stdout.', null )
+	->addOption( 'memory-limit', null, InputOption::VALUE_REQUIRED, 'Memory limit for the run.', null )
+	->addOption(
+		'exclude',
+		null,
+		InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
+		'Exclude.',
+		null
+	)
+	->addOption(
+		'ignore-vcs-ignored',
+		null,
+		InputOption::VALUE_NONE,
+		'If the search directory contains a .gitignore file, you can reuse those rules to exclude files and directories from the results with this option.'
+	)
+	->setCode( function( InputInterface $input, OutputInterface $output ) {
+		$io = new SymfonyStyle( $input, $output );
+
+		$source = $input->getArgument( 'source' );
+
+		/**
+		 * Memory Limit.
+		 */
+		$memory_limit = $input->getOption( 'memory-limit' );
+
+		if ( null !== $memory_limit ) {
+			\ini_set( 'memory_limit', $memory_limit );
+		}
+
+		/**
+		 * Finder.
+		 */
+		$finder = new Finder();
+
+		$finder->files()->in( $source )->name( '*.php' );
+
+		/**
+		 * Exclude.
+		 */
+		$exclude = $input->getOption( 'exclude' );
+
+		if ( null !== $exclude ) {
+			$finder->notPath( $exclude );
+		}
+
+		/**
+		 * Ignore VCS Ignored.
+		 */
+		$ignore_vcs_ignored = $input->getOption( 'ignore-vcs-ignored' );
+
+		if ( true === $ignore_vcs_ignored ) {
+			$finder->ignoreVCSIgnored( true );
+		}
+
+		/**
+		 * Progress Bar.
+		 * 
+		 * @link https://symfony.com/doc/current/components/console/helpers/progressbar.html
+		 */
+		$progress_bar = new ProgressBar( $output, \iterator_count( $finder ) );
+
+		ProgressBar::setFormatDefinition('custom', ' %current%/%max% -- %message% (%filename%)');
+
+		$progress_bar->setFormat( 'custom' );
+
+		/**
+		 * Documentor.
+		 */
+		$documentor = new Documentor();
+
+		$documentor->type = $input->getOption( 'type' );
+
+		$relative = $input->getOption( 'relative' );
+
+		$documentor->relative = ( null === $relative ) ? $source : $relative;
+
+		/**
+		 * Prefixes.
+		 * 
+		 * @link https://github.com/pronamic/wp-documentor/pull/10
+		 */
+		$documentor->prefixes = (array) $input->getOption( 'prefix' );
+
+		/**
+		 * Output.
+		 *
+		 * @link https://github.com/symfony/symfony/blob/5.x/src/Symfony/Component/Console/Output/StreamOutput.php
+		 */
+		$output_file = $input->getOption( 'output' );
+
+		if ( null !== $output_file ) {
+			$output = new StreamOutput( \fopen( $output_file, 'w' ) );
+		}
+
+		/**
+		 * Parse.
+		 */
+		$progress_bar->setMessage( 'Start' );
+		$progress_bar->start();
+
+		foreach ( $finder as $file ) {
+			$progress_bar->setMessage( 'Processing file…' );
+			$progress_bar->setMessage( $file->getPathname(), 'filename' );
+
+			$documentor->parse( $file );
+
+			$progress_bar->advance();
+		}
+
+		$progress_bar->setMessage( 'Done' );
+		$progress_bar->finish();
+
+		/**
+		 * Printer.
+		 */
+		$printer = null;
+
+		$format = $input->getOption( 'format' ); 
+
+		switch ( $format ) {
+			case 'default':
+				$printer = new DefaultPrinter( $documentor, $output );
+
+				break;
+			case 'hookster':
+				$printer = new HooksterPrinter( $documentor, $output, $documentor->type );
+
+				break;
+			case 'markdown':
+				$printer = new TemplatePrinter( $documentor, $output, __DIR__ . '/../templates/markdown.php' );
+
+				break;
+			case 'phpdocumentor-rst':
+				$printer = new TemplatePrinter( $documentor, $output, __DIR__ . '/../templates/phpdocumentor-rst.php' );
+
+				break;
+		}
+
+		$template = $input->getOption( 'template' );
+
+		if ( null !== $template && \is_readable( $template ) ) {
+			$printer = new TemplatePrinter( $documentor, $output, $template );
+		}
+
+		if ( null === $printer ) {
+			$io->warning( 'No printer defined.' );
+		}
+
+		$printer->render();
+	} );
+
+$application->run();

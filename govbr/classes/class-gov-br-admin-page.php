@@ -3,6 +3,7 @@
  * Admin Theme Page with settings.
  *
  * @since 0.1.0
+ * 
  */
 
 if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
@@ -19,6 +20,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		 * Constructor. Instantiate the object.
 		 *
 		 * @since 0.1.0
+		 * @source tag 1
 		 */
 		public function __construct() {
 			add_action( 'admin_menu', array( $this, 'add_page_to_menu' ) );

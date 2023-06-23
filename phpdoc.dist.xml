@@ -12,5 +12,5 @@
     
     <setting name="guides.enabled" value="true"/>
     
-    <!-- <template name="./tools/phpDocumentor-markdown/themes/markdown"/> -->
+    <template name="./vendor/saggre/phpdocumentor-markdown/themes/markdown"/>
 </phpdocumentor>

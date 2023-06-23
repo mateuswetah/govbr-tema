@@ -10,5 +10,7 @@
         <output>docs/.build</output>
     </paths>
     <setting name="template.color" value="blue"/>
+    <setting name="guides.enabled" value="true"/>
+    
     <!-- <template name="./tools/phpDocumentor-markdown/themes/markdown"/> -->
 </phpdocumentor>

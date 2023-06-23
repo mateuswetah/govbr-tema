@@ -8,5 +8,5 @@
     <paths>
         <output>docs/.build</output>
     </paths>
-    <template name="./tools/phpDocumentor-markdown/themes/markdown"/>
+    <!-- <template name="./tools/phpDocumentor-markdown/themes/markdown"/> -->
 </phpdocumentor>

@@ -2,15 +2,14 @@
 /**
  * Custom template tags for this theme
  *
- * @package Gov_BR
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  */
 
 if ( ! function_exists( 'gov_br_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */
@@ -36,7 +35,7 @@ if ( ! function_exists( 'gov_br_posted_by' ) ) {
 	/**
 	 * Prints HTML with meta information about theme author.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */
@@ -58,7 +57,7 @@ if ( ! function_exists( 'gov_br_entry_meta_header' ) ) {
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 * Header entry meta is displayed differently in archives and single posts.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */
@@ -105,7 +104,7 @@ if ( ! function_exists( 'gov_br_entry_meta_footer' ) ) {
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 * Footer entry meta is displayed differently in archives and single posts.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */
@@ -179,7 +178,7 @@ if ( ! function_exists( 'gov_br_post_thumbnail' ) ) {
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */
@@ -221,7 +220,7 @@ if ( ! function_exists( 'gov_br_the_posts_navigation' ) ) {
 	/**
 	 * Print the next and previous posts navigation.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */

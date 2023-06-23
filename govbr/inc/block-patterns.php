@@ -5,15 +5,14 @@
  * @link https://developer.wordpress.org/reference/functions/register_block_pattern/
  * @link https://developer.wordpress.org/reference/functions/register_block_pattern_category/
  *
- * @package Gov_BR
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  */
 
 if ( function_exists( 'register_block_pattern_category' ) ) {
 	/**
 	 * Register Block Pattern Category.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */

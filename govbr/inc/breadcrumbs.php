@@ -3,8 +3,8 @@
 /**
  * Breadcrumbs function, adapted from: https://techpulsetoday.com/wordpress-breadcrumbs-without-plugin/
  * 
- * @package Gov_BR
- * @since 0.1.0 0.1.0
+ 
+ * @since 0.1.0
  */
 function the_breadcrumb() {
     global $post;

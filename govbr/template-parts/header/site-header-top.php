@@ -2,8 +2,7 @@
 /**
  * Displays header site top header
  *
- * @package Gov_BR
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  */
 
  require_once get_template_directory() . '/classes/class-gov-br-walker-institutional-menu.php';

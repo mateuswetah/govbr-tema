@@ -6,7 +6,6 @@
  *
  * @link https://developer.wordpress.org/reference/classes/walker_nav_menu/
  *
- * @package Gov_BR
  * @since 0.1.0
  */
 

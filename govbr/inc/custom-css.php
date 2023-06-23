@@ -2,14 +2,13 @@
 /**
  * Custom CSS
  *
- * @package Gov_BR
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  */
 
 /**
  * Generate CSS.
  *
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  *
  * @param string $selector The CSS selector.
  * @param string $style    The CSS style.

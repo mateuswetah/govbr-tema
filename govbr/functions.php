@@ -4,8 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Gov_BR
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  */
 
 // This theme requires WordPress 6.2 or later.
@@ -21,7 +20,7 @@ if ( ! function_exists( 'gov_br_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */
@@ -138,7 +137,7 @@ add_action( 'after_setup_theme', 'gov_br_setup' );
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  *
  * @global int $content_width Content width.
  *
@@ -155,7 +154,7 @@ add_action( 'after_setup_theme', 'gov_br_content_width', 0 );
 /**
  * Enqueue scripts and styles.
  *
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  *
  * @return void
  */
@@ -233,7 +232,7 @@ add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 /**
  * Enqueue block editor script.
  *
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  *
  * @return void
  */
@@ -309,7 +308,7 @@ if ( is_plugin_active( 'icon-block/icon-block.php' ) ) {
 /**
  * Calculate classes for the main <html> element.
  *
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  *
  * @return void
  */
@@ -317,7 +316,7 @@ function govbr_the_html_classes() {
 	/**
 	 * Filters the classes for the main <html> element.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @param string The list of classes. Default empty string.
 	 */

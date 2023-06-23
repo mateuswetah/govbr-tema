@@ -4,7 +4,6 @@
  *
  * @link https://developer.wordpress.org/reference/functions/add_settings_field/
  *
- * @package Gov_BR
  * @since 0.1.0
  */
 

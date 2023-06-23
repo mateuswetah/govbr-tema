@@ -2,8 +2,7 @@
 /**
  * Contrast Mode Class
  *
- * @package Gov_BR
- * @since 0.1.0 0.1.0
+ * @since 0.1.0
  */
 
 /**
@@ -14,7 +13,7 @@ class Gov_BR_Contrast_Mode {
 	/**
 	 * Instantiate the object.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 */
 	public function __construct() {
 
@@ -28,7 +27,7 @@ class Gov_BR_Contrast_Mode {
 	/**
 	 * Enqueue scripts and styles.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */
@@ -45,7 +44,7 @@ class Gov_BR_Contrast_Mode {
 	/**
 	 * Adds information to the privacy policy.
 	 *
-	 * @since 0.1.0 0.1.0
+	 * @since 0.1.0
 	 *
 	 * @return void
 	 */

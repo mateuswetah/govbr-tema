@@ -5,35 +5,35 @@ Se você chegou a esta página, provavelmente está pensando em contribuir com a
 Para colaborar, entretanto, é preciso se familiarizar um pouco com nossas ferramentas de documentação. Não se preocupe - aqui te daremos o auxílio necessário para que você possa fazer contribuições de qualidade sem dificuldades! Nesta página você vai ver:
 
 - [Como editar arquivos online via GitHub](#editando-arquivos-diretamente-no-github)
-- [Como funciona a sintaxe dos artigos da Wiki](#familiarizando-se-com-a-formatação-markdown)
-- [Como testar e fazer contribuições avançadas na Wiki](#contribuição-avançada-com-a-docsify)
-- [Como funciona a estrutura de arquivos da Wiki](#entendendo-a-estrutura-da-wiki)
+- [Como funciona a sintaxe dos artigos da Documentação](#familiarizando-se-com-a-formatação-markdown)
+- [Como testar e fazer contribuições avançadas na Documentação](#contribuição-avançada-com-a-docsify)
+- [Como funciona a estrutura de arquivos da Documentação](#entendendo-a-estrutura-da-Documentação)
 
 ## Editando arquivos diretamente no GitHub
 
-Nossa Wiki está hospedada inteiramente no GitHub no seguinte repositório: https://github.com/tainacan/tainacan-wiki. Não é necessário ter muita experiência com Git para realizar contribuições pontuais, a própria plataforma já simplifica grande parte do processo. Por exemplo, se você viu algum erro de ortografia em um artigo, clique no botão **Edit on github** que aparece no canto superior direito da página. Você será redirecionado para o "código fonte" desta página:
+Nossa Documentação está hospedada inteiramente no GitHub no seguinte repositório: https://github.com/mateuswetah/govbr-tema/docs. Não é necessário ter muita experiência com Git para realizar contribuições pontuais, a própria plataforma já simplifica grande parte do processo. Por exemplo, se você viu algum erro de ortografia em um artigo, clique no botão **Edit on github** que aparece no canto superior direito da página. Você será redirecionado para o "código fonte" desta página:
 
 ![Captura de Tela da página de edição de conteúdo no Github, onde está em destaque o botão editar, formado por uma caneta.](/_assets/images/contributing.png)
 
 Clicando no botão de editar, em formato de pincel, você poderá fazer as alterações desejadas, e ao final do formulário, explicar quais mudanças estão sendo propostas. Ao submeter uma proposta de mudança, o GitHub está, por trás dos panos, criando uma _Fork_ para você e aplicando uma _Pull-Request_.
 
-Para contribuições mais complexas, que envolvam criar páginas, inserção de imagens, abas, vídeos, ou mesmo alterações na estrutura de navegação da Wiki, sugerimos seguir nossas [instruções para rodar a Docsify](#contribuição-avançada-com-a-docsify).
+Para contribuições mais complexas, que envolvam criar páginas, inserção de imagens, abas, vídeos, ou mesmo alterações na estrutura de navegação da Documentação, sugerimos seguir nossas [instruções para rodar a Docsify](#contribuição-avançada-com-a-docsify).
 
 ## Familiarizando-se com a formatação markdown
 
-Vários sistemas colaborativos adotam determinadas convenções de formatação para tornar o trabalho dos editores mais fácil. Em nossa wiki, utilizamos a linguagem **`markdown`** para tal, mas também utlizamos alguns recursos extras. Esse sistema consiste em sintaxes e palavras-chave específicas para comunicar ao software como determinado texto deve ser exibido.
+Vários sistemas colaborativos adotam determinadas convenções de formatação para tornar o trabalho dos editores mais fácil. Em nossa Documentação, utilizamos a linguagem **`markdown`** para tal, mas também utlizamos alguns recursos extras. Esse sistema consiste em sintaxes e palavras-chave específicas para comunicar ao software como determinado texto deve ser exibido.
 
 ### Funcionam em qualquer lugar do texto:
 
-| O que é                                     | O que você escreve                                                               | O que você vê                                                                  |
-| ------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Texto em itálico, negrito ou ambos          | `*itálico*, **negrito** ou ***ambos***`                                          | _itálico_, **negrito** ou **_ambos_**                                          |
-| Texto pré-formatado                         | `Aqui vai o nome de uma função`                                                  | `Aqui vai o nome de uma função`                                                |
-| Links para páginas da wiki                  | `[Página principal](/pt-br/README.md)`                                           | [Página principal](/pt-br/README.md)                                           |
-| Links para uma seção                        | `[Editando Coleções](/pt-br/collections#criar-coleções)`                         | [Editando Coleções](/pt-br/collections#criar-coleções)                         |
-| Referência a um endereço de um website      | `https://tainacan.org`                                                           | https://tainacan.org                                                           |
-| Referência a um link com nome personalizado | `[Site Oficial do Tainacan](https://www.wikipedia.org/)`                         | [Site Oficial do Tainacan](https://www.wikipedia.org/)                         |
-| Comentários em texto                        | `<!--Este comentário não será exibido na página, somente em seu código-fonte-->` | <!--Este comentário não será exibido na página, somente em seu código-fonte--> |
+| O que é                                     | O que você escreve                                                                        | O que você vê                                                                           |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Texto em itálico, negrito ou ambos          | `*itálico*, **negrito** ou ***ambos***`                                                   | _itálico_, **negrito** ou **_ambos_**                                                   |
+| Texto pré-formatado                         | `Aqui vai o nome de uma função`                                                           | `Aqui vai o nome de uma função`                                                         |
+| Links para páginas da Documentação          | `[Página principal](README.md)`                                                           | [Página principal](README.md)                                                           |
+| Links para uma seção                        | `[Página de uma Classe](/classes/Gov_BR_Admin_Page#govbr_theme_admin_settings_page_tabs)` | [Página de uma Classe](/classes/Gov_BR_Admin_Page#govbr_theme_admin_settings_page_tabs) |
+| Referência a um endereço de um website      | `https://www.gov.br/ds`                                                                   | https://www.gov.br/ds                                                                   |
+| Referência a um link com nome personalizado | `[Site Oficial do Design System do Governo](https://www.gov.br/ds)`                       | [Site Oficial do Design System do Governo](https://www.gov.br/ds)                       |
+| Comentários em texto                        | `<!--Este comentário não será exibido na página, somente em seu código-fonte-->`          | <!--Este comentário não será exibido na página, somente em seu código-fonte-->          |
 
 ### Funcionam apenas no início das linhas:
 

@@ -111,12 +111,12 @@ public enqueue_admin_scripts(): void
 
 ***
 
-### govbr_settings_page
+### gov_br_settings_page
 
 The theme settings page
 
 ```php
-public govbr_settings_page(): void
+public gov_br_settings_page(): void
 ```
 
 
@@ -229,4 +229,4 @@ HTML content
 
 
 ***
-> Automatically generated from source code comments on 2023-06-23 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-06-27 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

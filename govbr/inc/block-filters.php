@@ -12,7 +12,7 @@
  * @param array  $block         The full block, including name and attributes.
  * @return string Modified block content.
  */
-function govbr_custom_lists( $block_content, $block ) {
+function gov_br_custom_lists( $block_content, $block ) {
 	
 	if ( empty($block_content) )
 		return $block_content;
@@ -48,4 +48,4 @@ function govbr_custom_lists( $block_content, $block ) {
 
 	return $block_content;
 }
-add_filter( 'render_block', 'govbr_custom_lists', 10, 4 );
+add_filter( 'render_block', 'gov_br_custom_lists', 10, 4 );

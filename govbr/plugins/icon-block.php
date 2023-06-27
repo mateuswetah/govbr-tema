@@ -4,7 +4,7 @@
  * Tools for intergrating The Icon Block plugin to our theme.
  * 
  */
-function govbr_register_custom_icons() {
+function gov_br_register_custom_icons() {
 	wp_enqueue_script(
 		'govbr-register-icons',
 		get_theme_file_uri( '/assets/js/icons-plugin.js' ),
@@ -13,4 +13,4 @@ function govbr_register_custom_icons() {
 		true // Very important, otherwise the filter is called too early.
 	);
 }
-add_action( 'enqueue_block_editor_assets', 'govbr_register_custom_icons' );
+add_action( 'enqueue_block_editor_assets', 'gov_br_register_custom_icons' );

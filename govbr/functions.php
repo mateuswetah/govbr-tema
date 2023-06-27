@@ -152,6 +152,24 @@ function gov_br_content_width() {
 add_action( 'after_setup_theme', 'gov_br_content_width', 0 );
 
 /**
+ * Adds label and description to menu footer template area
+ * 
+ * @since 0.1.0
+ *
+ */
+function gov_br_template_part_areas( array $areas ) {
+	$areas[] = array(
+		'area'        => 'menu-footer',
+		'area_tag'    => 'div',
+		'label'       => __( 'Menu lateral', 'govbr' ),
+		'description' => __( 'Área do menu lateral abaixo do menu de navegação.', 'govbr' ),
+		'icon'        => 'sidebar'
+	);
+	return $areas;
+}
+add_filter( 'default_wp_template_part_areas', 'gov_br_template_part_areas' );
+
+/**
  * Enqueue scripts and styles.
  *
  * @since 0.1.0
@@ -236,11 +254,11 @@ add_filter( 'should_load_separate_core_block_assets', '__return_true' );
  *
  * @return void
  */
-function govbr_block_editor_script() {
+function gov_br_block_editor_script() {
 
 	wp_enqueue_script( 'govbr-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
-add_action( 'enqueue_block_editor_assets', 'govbr_block_editor_script' );
+add_action( 'enqueue_block_editor_assets', 'gov_br_block_editor_script' );
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -312,7 +330,7 @@ if ( is_plugin_active( 'icon-block/icon-block.php' ) ) {
  *
  * @return void
  */
-function govbr_the_html_classes() {
+function gov_br_the_html_classes() {
 	/**
 	 * Filters the classes for the main <html> element.
 	 *
@@ -320,7 +338,7 @@ function govbr_the_html_classes() {
 	 *
 	 * @param string The list of classes. Default empty string.
 	 */
-	$classes = apply_filters( 'govbr_html_classes', '' );
+	$classes = apply_filters( 'gov_br_html_classes', '' );
 	if ( ! $classes ) {
 		return;
 	}

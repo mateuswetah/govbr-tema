@@ -50,7 +50,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 				'Gov BR',
 				'manage_options',
 				$this->get_page_slug() . '.php',
-				array( $this, 'govbr_settings_page' )
+				array( $this, 'gov_br_settings_page' )
 			); 
 		}
 
@@ -77,7 +77,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		 *
 		 * @return void
 		 */
-		function govbr_settings_page() {
+		function gov_br_settings_page() {
 
 			$default_tabs = array(
 				'home' => array(
@@ -111,7 +111,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 			$tabs = array_merge(
 				$default_tabs,
 				apply_filters(
-					'govbr_theme_admin_settings_page_tabs',
+					'gov_br_theme_admin_settings_page_tabs',
 					$extra_tabs
 				)
 			);
@@ -264,7 +264,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 						<div class="card" data-related-area="site-sample-sidebar-bottom">
 							<h3><?php _e( 'Informações do Painel Lateral', 'govbr' ); ?></h3>
 							<p><?php _e( 'Outras informações que podem ter diferentes formas no painel lateral.', 'govbr'); ?></p>
-							<a class="button" href="<?php echo get_admin_url() . 'site-editor.php?postId=govbr//menu-footer&postType=wp_template_part&canvas=edit'; ?>">
+							<a class="button" href="<?php echo get_admin_url() . 'site-editor.php?postId=govbr//menu-footer&postType=wp_template_part'; ?>">
 								<?php _e( 'Editar com blocos', 'govbr' ); ?>&nbsp;
 								<span aria-hidden="true" class="dashicons dashicons-external"></span>
 							</a>
@@ -272,7 +272,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 						<div class="card" data-related-area="site-sample-footer">
 							<h3><?php _e( 'Informações do Rodapé', 'govbr' ); ?></h3>
 							<p><?php _e( 'Rodapé do site, com diferentes formas de se apresentar dados.', 'govbr'); ?></p>
-							<a class="button" href="<?php echo get_admin_url() . 'site-editor.php?postId=govbr//footer&postType=wp_template_part&canvas=edi'; ?>">
+							<a class="button" href="<?php echo get_admin_url() . 'site-editor.php?postId=govbr//footer&postType=wp_template_part'; ?>">
 								<?php _e( 'Editar com blocos', 'govbr' ); ?>&nbsp;
 								<span aria-hidden="true" class="dashicons dashicons-external"></span>
 							</a>
@@ -406,7 +406,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 			 */
 			$plugins = 
 				apply_filters(
-					'govbr_theme_admin_settings_page_plugins',
+					'gov_br_theme_admin_settings_page_plugins',
 					$plugins
 				);
 

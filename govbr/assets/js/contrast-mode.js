@@ -27,6 +27,10 @@ function govbrIsContrastMode() {
 
 function contrastModeInitialLoad() {
 	var toggler = document.getElementById( 'contrast-mode-toggler' );
+
+	if ( ! toggler ) 
+		return;
+
 	toggler.onclick = toggleContrastMode;
 
 	var isContrastMode = govbrIsContrastMode();
@@ -39,9 +43,8 @@ function contrastModeInitialLoad() {
 		document.body.classList.remove( 'is-contrast-mode' );
 	}
 
-	if ( toggler && isContrastMode ) {
+	if ( toggler && isContrastMode )
 		toggler.setAttribute( 'aria-pressed', 'true' );
-	}
 }
 
 

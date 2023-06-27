@@ -24,6 +24,11 @@
 		</a>
 	</nav>
 
+	<!-- Gestão de Cookies -->
+	<?php if ( get_theme_mod('enable_feature_cookies_manager', true) ) : ?>
+		<div class="br-cookiebar default d-none" tabindex="-1"></div>
+	<?php endif; ?>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

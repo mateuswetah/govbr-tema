@@ -9,9 +9,10 @@
 
  $is_feature_contrast_mode_enabled = get_theme_mod('enable_feature_contrast_mode', true);
  $is_feature_vlibras_enabled = get_theme_mod('enable_feature_vlibras', true);
+ $is_feature_cookies_manager_enabled = get_theme_mod('enable_feature_cookies_manager', true);
  $is_wordpress_login_enabled = get_theme_mod('enable_wordpress_login', true);
 
- $has_some_feature_enabled = $is_feature_vlibras_enabled || $is_feature_contrast_mode_enabled;
+ $has_some_feature_enabled = $is_feature_vlibras_enabled || $is_feature_contrast_mode_enabled || $is_feature_cookies_manager_enabled;
 ?>
 
 <div class="header-top">
@@ -93,6 +94,19 @@
                                     aria-pressed="false">
                                 <i class="fas fa-adjust" aria-hidden="true"></i>
                                 <span class="text"><?php _e('Alto contraste', 'govbr' ); ?></span>
+                            </button>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ( $is_feature_cookies_manager_enabled ) : ?>
+                        <div class="br-item">
+                            <button
+                                    id="cookies-manager-toggler"
+                                    class="br-button circle small"
+                                    type="button"
+                                    aria-label="<?php _e('Gerenciar cookies', 'govbr' ); ?>"
+                                    aria-pressed="false">
+                                <i class="fas fa-cookie-bite" aria-hidden="true"></i>
+                                <span class="text"><?php _e('Gerenciar cookies', 'govbr' ); ?></span>
                             </button>
                         </div>
                     <?php endif; ?>

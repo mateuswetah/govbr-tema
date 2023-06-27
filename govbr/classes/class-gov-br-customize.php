@@ -194,6 +194,26 @@ if ( ! class_exists( 'Gov_BR_Customize' ) ) {
 				array(
 					'type'    => 'checkbox',
 					'section' => 'theme_features',
+					'label'   => esc_html__( 'Mostrar botão de Gerenciar Cookies', 'govbr' ),
+				)
+			);
+
+			// Add "enable_feature_cookies_manager" setting for displaying the Cookies panel button.
+			$wp_customize->add_setting(
+				'enable_feature_cookies_manager',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
+				)
+			);
+
+			// Add control for the "enable_feature_cookies_manager" setting.
+			$wp_customize->add_control(
+				'enable_feature_cookies_manager',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'theme_features',
 					'label'   => esc_html__( 'Mostrar botão de Alto Contraste', 'govbr' ),
 				)
 			);

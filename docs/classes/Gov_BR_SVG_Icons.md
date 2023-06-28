@@ -124,4 +124,4 @@ public static get_social_link_svg(string $uri, int $size): string|null
 
 
 ***
-> Automatically generated from source code comments on 2023-06-27 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-06-28 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

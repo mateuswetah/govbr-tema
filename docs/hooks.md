@@ -5,7 +5,75 @@
 
 ## Actions
 
-*This project does not contain any WordPress actions.*
+### `gov_br_single_before_post_navigation`
+
+
+Source: [govbr/single.php](single.php), [line 18](single.php#L18-L18)
+
+### `gov_br_single_after_post_navigation`
+
+
+Source: [govbr/single.php](single.php), [line 48](single.php#L48-L48)
+
+### `gov_br_image_template_before_page_header`
+
+
+Source: [govbr/image.php](image.php), [line 16](image.php#L16-L16)
+
+### `gov_br_image_template_before_page_header`
+
+
+Source: [govbr/image.php](image.php), [line 22](image.php#L22-L22)
+
+### `gov_br_search_before_page_header`
+
+
+Source: [govbr/search.php](search.php), [line 17](search.php#L17-L17)
+
+### `gov_br_search_after_page_header`
+
+
+Source: [govbr/search.php](search.php), [line 31](search.php#L31-L31)
+
+### `gov_br_before_site_header`
+
+
+Source: [govbr/header.php](header.php), [line 32](header.php#L32-L32)
+
+### `gov_br_after_site_header`
+
+
+Source: [govbr/header.php](header.php), [line 36](header.php#L36-L36)
+
+### `gov_br_index_before_page_header`
+
+
+Source: [govbr/index.php](index.php), [line 23](index.php#L23-L23)
+
+### `gov_br_index_after_page_header`
+
+
+Source: [govbr/index.php](index.php), [line 29](index.php#L29-L29)
+
+### `gov_br_archive_before_page_header`
+
+
+Source: [govbr/archive.php](archive.php), [line 17](archive.php#L17-L17)
+
+### `gov_br_archive_after_page_header`
+
+
+Source: [govbr/archive.php](archive.php), [line 26](archive.php#L26-L26)
+
+### `gov_br_before_site_footer`
+
+
+Source: [govbr/footer.php](footer.php), [line 17](footer.php#L17-L17)
+
+### `gov_br_after_site_footer`
+
+
+Source: [govbr/footer.php](footer.php), [line 21](footer.php#L21-L21)
 
 ## Filters
 
@@ -113,7 +181,7 @@ Version | Description
 ------- | -----------
 `0.1.0` | 
 
-Source: [govbr/image.php](image.php), [line 22](image.php#L22-L29)
+Source: [govbr/image.php](image.php), [line 27](image.php#L27-L34)
 
 ### `gov_br_starter_content`
 

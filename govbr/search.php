@@ -13,6 +13,9 @@ the_breadcrumb();
 
 if ( have_posts() ) {
 	?>
+
+	<?php do_action( 'gov_br_search_before_page_header' ); ?>
+
 	<header class="page-header container-lg">
 		<h1 class="page-title">
 			<?php
@@ -24,6 +27,8 @@ if ( have_posts() ) {
 			?>
 		</h1>
 	</header><!-- .page-header -->
+
+	<?php do_action( 'gov_br_search_after_page_header' ); ?>
 
 	<div class="search-result-count container-lg">
 		<?php

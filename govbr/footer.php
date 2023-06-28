@@ -14,7 +14,11 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 
+	<?php do_action( 'gov_br_before_site_footer' ); ?>
+
 	<?php block_template_part( 'footer' ); ?>
+	
+	<?php do_action( 'gov_br_after_site_footer' ); ?>
 
 	<!-- Função de voltar ao topo -->
 	<nav class="back-to-top active" aria-label="<?php _e( 'Voltar ao topo da página', 'govbr'); ?>">

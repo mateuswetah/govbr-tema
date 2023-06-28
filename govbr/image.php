@@ -12,9 +12,14 @@ while ( have_posts() ) {
 	the_post();
 	?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+		<?php do_action( 'gov_br_image_template_before_page_header' ); ?>
+
 		<header class="entry-header container-lg">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
+
+		<?php do_action( 'gov_br_image_template_before_page_header' ); ?>
 
 		<div class="entry-content">
 			<figure class="wp-block-image">

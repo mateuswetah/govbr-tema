@@ -1,4 +1,4 @@
-# Documentação do Tema Gov BR
+# Documentação do Tema Gov BR <!-- {docsify-ignore-all} -->
 
 ## Introdução
 

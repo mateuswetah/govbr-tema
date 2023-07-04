@@ -1,5 +1,11 @@
 - [Início](README.md)
 
-- [Classes](Home.md)
-- [Hooks](hooks.md)
-- [Contribuindo](CONTRIBUTING.md)
+- Usuários
+  - [Perguntas Frequentes](faq.md)
+  - [Instalação](instalacao.md)
+  - [Configuração](configuracao.md)
+- Desenvolvedores
+  - [Compilando](compilando.md)
+  - [Classes](Home.md)
+  - [Hooks](hooks.md)
+  - [Contribuindo](CONTRIBUTING.md)

@@ -23,8 +23,12 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 		 * @source tag 1
 		 */
 		public function __construct() {
+			// Adiciona página e subpáginas ao menu
 			add_action( 'admin_menu', array( $this, 'add_page_to_menu' ) );
+			// Carrega scripts e css necessários
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts') );
+			// Preparar ajax para página de configuração das funcionadades
+			add_action( 'wp_ajax_theme_toggle_feature', array( $this, 'theme_toggle_feature_callback') );
 		}
 
 		/**
@@ -68,6 +72,7 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 				return;
 			
 			wp_enqueue_style( 'gov-br-admin-settings', get_template_directory_uri() . '/assets/css/style-admin-settings.css', array(), wp_get_theme()->get( 'Version' ) );
+			wp_enqueue_script( 'gov-br-admin-settings', get_template_directory_uri() . '/assets/js/admin-settings-features.js', array('jquery'), wp_get_theme()->get( 'Version' ) );
 		}
 
 		/**
@@ -472,6 +477,30 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 				</div>
 			</div>
 			<?php
+		}
+
+		/**
+		 * Callback for the ajax request to toggle a theme feature
+		 * 
+		 * @since 0.1.0
+		 */
+		function theme_toggle_feature_callback() {
+
+			// Verificando se a requisição AJAX foi enviada corretamente
+			if (isset($_POST['feature']) && isset($_POST['value'])) {
+				// Obtendo o nome do recurso e o valor do checkbox enviado via POST
+				$feature = sanitize_text_field($_POST['feature']);
+				$value = $_POST['value'] === 'true' ? true : false;
+		
+				// Atualizando o valor do recurso usando a função set_theme_mod()
+				set_theme_mod($feature, $value);
+		
+				// Enviando uma resposta de sucesso
+				wp_send_json_success();
+			} else {
+				// Envie uma resposta de erro
+				wp_send_json_error();
+			}
 		}
 
 		/**

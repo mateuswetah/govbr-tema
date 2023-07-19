@@ -14,12 +14,16 @@ $description = get_the_archive_description();
 the_breadcrumb();
 ?>
 
+<?php do_action( 'gov_br_archive_before_page_header' ); ?>
+
 <header class="page-header container-lg">
 	<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 	<?php if ( $description ) : ?>
 		<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
 	<?php endif; ?>
 </header><!-- .page-header -->
+
+<?php do_action( 'gov_br_archive_after_page_header' ); ?>
 
 <?php
 if ( have_posts() ) {

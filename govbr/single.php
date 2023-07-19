@@ -15,6 +15,13 @@ while ( have_posts() ) :
 
 	get_template_part( 'template-parts/content/content-single' );
 
+	/**
+	 * Action for rendering content before the post navigation in the single template.
+	 * 
+	 * @since 0.1.0
+	 */
+	do_action( 'gov_br_single_before_post_navigation' );
+
 	if ( is_attachment() ) {
 		// Parent post navigation.
 		the_post_navigation(
@@ -42,6 +49,13 @@ while ( have_posts() ) :
 			'prev_text' => '<p class="meta-nav">' . $govbr_prev_button . $govbr_previous_label . '</p><p class="post-title">%title</p>',
 		)
 	);
+
+	/**
+	 * Action for rendering content after the post navigation in the single template.
+	 * 
+	 * @since 0.1.0
+	 */
+	do_action( 'gov_br_single_after_post_navigation' );
 
 	// If comments are open or there is at least one comment, load up the comment template.
 	if ( comments_open() || get_comments_number() ) {

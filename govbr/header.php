@@ -29,7 +29,11 @@
 		<a class="br-item" href="#footer" accesskey="4"><?php _e( 'Ir para o rodapé (4/4)', 'govbr'); ?><span class="br-tag text ml-1">4</span></a>
 	</nav>
 
+	<?php do_action( 'gov_br_before_site_header' ); ?>
+
 	<?php get_template_part( 'template-parts/header/site-header' ); ?>
+
+	<?php do_action( 'gov_br_after_site_header' ); ?>
 
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">

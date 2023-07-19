@@ -11,8 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php get_template_part( 'template-parts/header/excerpt-header', get_post_format() ); ?>
-
+	<header class="entry-header container-lg">
+		<?php
+		gov_br_post_thumbnail();
+		the_title( sprintf( '<h2 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
+		?>
+	</header>
+	
 	<div class="entry-content">
 		<?php get_template_part( 'template-parts/excerpt/excerpt', get_post_format() ); ?>
 	</div><!-- .entry-content -->

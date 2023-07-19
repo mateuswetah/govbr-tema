@@ -12,9 +12,28 @@ while ( have_posts() ) {
 	the_post();
 	?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+		<?php
+			/**
+			 * Action for rendering content before the page header in the image template.
+			 * 
+			 * @since 0.1.0
+			 */		
+			do_action( 'gov_br_image_template_before_page_header' );
+		?>
+
 		<header class="entry-header container-lg">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
+
+		<?php
+			/**
+			 * Action for rendering content after the page header in the image template.
+			 * 
+			 * @since 0.1.0
+			 */		
+			do_action( 'gov_br_image_template_after_page_header' );
+		?>
 
 		<div class="entry-content">
 			<figure class="wp-block-image">

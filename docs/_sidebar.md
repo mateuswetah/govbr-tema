@@ -1,5 +1,11 @@
 - [Início](README.md)
 
-- [Classes](Home.md)
-- [Hooks](hooks.md)
-- [Contribuindo](CONTRIBUTING.md)
+- Usuários
+  - [Instalação](instalacao.md "Como instalar o Tema Gov BR")
+  - [Configuração](configuracao.md "Opções de Configuração do Tema Gov BR")
+  - [Perguntas Frequentes](faq.md "Perguntas Frequentes sobre o Tema Gov BR")
+- Desenvolvedores
+  - [Compilando](compilando.md "Como compilar o Tema Gov BR")
+  - [Classes](Home.md "Documentação das Classes PHP do Tema Gov BR")
+  - [Hooks](hooks.md "Documentação das Actions e Filters do Tema Gov BR")
+  - [Contribuindo](CONTRIBUTING.md "Como contribuir com a documentação do Tema Gov BR")

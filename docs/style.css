@@ -3,3 +3,31 @@
     --link-color: #155bcb;
     --content-max-width: 68em;
 }
+
+.markdown-section code:not([class*="lang-"]):not([class*="language-"]) {
+    white-space: normal;
+}
+
+
+/* Two columns lists */
+.two-columns-list>ul,
+.two-columns-list>ol {
+    list-style-position: inside;
+    column-width: 380px;
+    column-gap: 3em;
+    padding-left: 0px;
+}
+.three-columns-list>ul,
+.three-columns-list>ol {
+    list-style-position: inside;
+    column-width: 220px;
+    column-gap: 3em;
+    padding-left: 0px;
+}
+.two-columns-list>ul>li,
+.two-columns-list>ol>li, 
+.three-columns-list>ul>li,
+.three-columns-list>ol>li {
+    break-inside: avoid;
+    margin-bottom: 0.5em;
+}

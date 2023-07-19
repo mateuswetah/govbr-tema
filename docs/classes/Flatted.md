@@ -296,4 +296,4 @@ private static wrap(mixed $value): mixed
 
 
 ***
-> Automatically generated from source code comments on 2023-06-27 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-07-19 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

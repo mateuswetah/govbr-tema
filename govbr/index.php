@@ -19,9 +19,29 @@ the_breadcrumb();
 ?>
 
 <?php if ( is_home() && ! is_front_page() && ! empty( single_post_title( '', false ) ) ) : ?>
+
+	<?php 
+		/**
+		 * Action for rendering content before the page header in the index template.
+		 *
+		 * @since 0.1.0
+		 */
+		do_action( 'gov_br_index_before_page_header' );
+	?>
+
 	<header class="page-header container-lg">
 		<h1 class="page-title"><?php single_post_title(); ?></h1>
 	</header><!-- .page-header -->
+
+	<?php 
+		/**
+		 * Action for rendering content after the page header in the index template.
+		 *
+		 * @since 0.1.0
+		 */
+		do_action( 'gov_br_index_after_page_header' );
+	?>
+
 <?php endif; ?>
 
 <?php

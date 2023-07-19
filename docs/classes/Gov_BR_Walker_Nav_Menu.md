@@ -108,4 +108,4 @@ The $args parameter holds additional values that may be used with the child clas
 
 
 ***
-> Automatically generated from source code comments on 2023-06-27 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)
+> Automatically generated from source code comments on 2023-07-19 using [phpDocumentor](http://www.phpdoc.org/) and [saggre/phpdocumentor-markdown](https://github.com/Saggre/phpDocumentor-markdown)

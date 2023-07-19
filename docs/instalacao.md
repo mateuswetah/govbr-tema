@@ -6,7 +6,7 @@ O Gov BR é um tema para WordPress. Portanto, para instalá-lo, a primeira coisa
 
 Se você não tiver uma ou não souber como faz para criá-la, você pode começar instalando um servidor web como o XAMPP na sua máquina. Em seguida, você pode instalar e configurar o Wordpress.
 
-Uma vez que você tenha seu WordPress configurado, faça o download a partir do link <INSERIR LINK>. Você também pode baixar o código fonte na [página do projeto no Github](https://github.com/mateuswetah/govbr-tema/).
+Uma vez que você tenha seu WordPress configurado, faça o download a partir do link <INSERIR LINK>. Você também pode baixar o código fonte na [página do projeto no Github](https://github.com/IBICT/wp-govbr-tema/).
 
 ## Instalando o tema
 

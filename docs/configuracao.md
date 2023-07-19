@@ -82,6 +82,25 @@ Atualmente, estão implementadas as seguintes funcionalidades no tema:
 - **Botão de Login do WordPress**. A autenticação para Administradores, Editores e Autores no WordPress é feita acessando-se o painel Administrativo, geralmente pelo endereço `/wp-admin`. Se for de desejo do adminsitrador oferecer um botão que leve para a página de login, esta funcionalidade resolve o problema. Além disso, uma vez logado o botão servirá para mostrar qual usuário está logado e oferecer um link para a página do mesmo no painel administrativo ou para deslogar-se do sistema.
   > **Nota**: Esta funcionalidade não implementa a autentação via SSO do governo. Esta funcionalidade está sendo planejada para funções futuras do tema.
 
+### Configurações do Menu Lateral
+
+O Menu Lateral é um painel escondido que pode ser acessado pelo "ícone hamburguer", logo ao lado do Título do Site. Há duas áreas no cabeçalho do tema que podem ser configuradas pelo administrador:
+
+<div class="three-columns-list">
+
+- [Menu de Navegação](#menu-de-navegação)
+- [Informações do Painel Lateral](#informações-do-painel-lateral)
+
+</div>
+
+#### Menu de Navegação
+
+Esta área usa a ferramenta de menus do WordPress para criar um menu que represente a listagem das páginas e tópicos do site, mesmo que estas tenha uma estrutura hierárquica mais complexa.
+
+#### Informações do Painel Lateral
+
+Nesta área podem ser colocadas quaisquer outras informações que se queira no Painel Lateral, porém com maior flexibilidade de layouts e de elementos, usando por exemplo imagens e ícones de redes sociais.
+
 ## Funcionalidades
 
 Na aba de funcionalidades, estão listados alguns recursos que o próprio tema Gov BR oferece e que podem ou não ser desejados para o seu site. Em geral, estes recursos também podem ser habilitados ou configurados via menu Personalizar, na área de "Funcionalidades do Site". Uma vez ativados, na parte pública do seu site estes recursos estão disponíveis no canto superior direito do cabeçalho.

@@ -28,4 +28,4 @@ Se você quer contribuir com o desenvolvimento do tema, temos um material dedica
 
 ## Roadmap
 
-Acompanhe as features planejadas e o ritmo do desenvolvimento [aqui](https://github.com/mateuswetah/govbr-tema/issues/1).
+Acompanhe as features planejadas e o ritmo do desenvolvimento [aqui](https://github.com/IBICT/wp-govbr-tema/issues/1).

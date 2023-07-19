@@ -7,23 +7,55 @@
 
 ### `gov_br_single_before_post_navigation`
 
+*Action for rendering content before the post navigation in the single template.*
 
-Source: [govbr/single.php](single.php), [line 18](single.php#L18-L18)
+
+**Changelog**
+
+Version | Description
+------- | -----------
+`0.1.0` | 
+
+Source: [govbr/single.php](single.php), [line 18](single.php#L18-L23)
 
 ### `gov_br_single_after_post_navigation`
 
+*Action for rendering content after the post navigation in the single template.*
 
-Source: [govbr/single.php](single.php), [line 48](single.php#L48-L48)
+
+**Changelog**
+
+Version | Description
+------- | -----------
+`0.1.0` | 
+
+Source: [govbr/single.php](single.php), [line 53](single.php#L53-L58)
 
 ### `gov_br_image_template_before_page_header`
 
-
-Source: [govbr/image.php](image.php), [line 16](image.php#L16-L16)
-
-### `gov_br_image_template_before_page_header`
+*Action for rendering content before the page header in the image template.*
 
 
-Source: [govbr/image.php](image.php), [line 22](image.php#L22-L22)
+**Changelog**
+
+Version | Description
+------- | -----------
+`0.1.0` | 
+
+Source: [govbr/image.php](image.php), [line 17](image.php#L17-L22)
+
+### `gov_br_image_template_after_page_header`
+
+*Action for rendering content after the page header in the image template.*
+
+
+**Changelog**
+
+Version | Description
+------- | -----------
+`0.1.0` | 
+
+Source: [govbr/image.php](image.php), [line 30](image.php#L30-L35)
 
 ### `gov_br_search_before_page_header`
 
@@ -47,13 +79,29 @@ Source: [govbr/header.php](header.php), [line 36](header.php#L36-L36)
 
 ### `gov_br_index_before_page_header`
 
+*Action for rendering content before the page header in the index template.*
 
-Source: [govbr/index.php](index.php), [line 23](index.php#L23-L23)
+
+**Changelog**
+
+Version | Description
+------- | -----------
+`0.1.0` | 
+
+Source: [govbr/index.php](index.php), [line 24](index.php#L24-L29)
 
 ### `gov_br_index_after_page_header`
 
+*Action for rendering content after the page header in the index template.*
 
-Source: [govbr/index.php](index.php), [line 29](index.php#L29-L29)
+
+**Changelog**
+
+Version | Description
+------- | -----------
+`0.1.0` | 
+
+Source: [govbr/index.php](index.php), [line 37](index.php#L37-L42)
 
 ### `gov_br_archive_before_page_header`
 
@@ -181,7 +229,7 @@ Version | Description
 ------- | -----------
 `0.1.0` | 
 
-Source: [govbr/image.php](image.php), [line 27](image.php#L27-L34)
+Source: [govbr/image.php](image.php), [line 41](image.php#L41-L48)
 
 ### `gov_br_starter_content`
 

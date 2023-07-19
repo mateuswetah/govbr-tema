@@ -18,14 +18,14 @@ O Tema Gov BR para WordPress é mantido primariamente por uma comunidade de usu�
 
 ### Quero uma nova funcionalidade. Como proceder?
 
-[Abra uma issue!](https://github.com/mateuswetah/govbr-tema/issues/new/choose) Iremos analisar se temos condições de implementar ou recomendar diferentes caminhos para tê-la. Em geral, fazemos algumas considerações antes de se implementar algo no tema:
+[Abra uma issue!](https://github.com/IBICT/wp-govbr-tema/issues/new/choose) Iremos analisar se temos condições de implementar ou recomendar diferentes caminhos para tê-la. Em geral, fazemos algumas considerações antes de se implementar algo no tema:
 
 1. **É mesmo algo de responsabilidade do tema?** O WordPress tem uma filosofia bem definida sobre o que é "território de tema" vs. "terriório de plugins". Isto significa que algumas coisas que envolvem funcionalidades para o site geralmente deveriam ser obtidas com uso de plugins. Mesmo assim, pode acontecer de que no tema, seja feito algum ajuste para que permita uma melhor integração daquilo que o plugin gera com o layout e a aparência dos componentes visuais que o tema oferece.
 2. **É algo que respeita o [Padrão de Design do Governo (DS-GOV)?](https://www.gov.br/ds)** As vezes, alguns ajustes mais drásticos, como a inserção de elementos visuais no cabeçalho ou a troca de cores pode ser algo que não está disponível no tema justamente por ferirem algum requisito do _DS-GOV_. Geralmente averiguamos estas questões discutindo com [a comunidade do próprio DS-GOV](https://www.gov.br/ds/introducao/comunidade) se é algo que poderia ser feito e se não, qual seria o caminho sugerido.
 
 ### Acho que encontrei um erro. Como devo proceder?
 
-Estamos sempre a disposição para ajudar no [repositório GitHub do tema](https://github.com/mateuswetah/govbr-tema), onde podem ser iniciadas conversas via issues. Caso você abra uma issue, recomendamos dar sempre o máximo de detalhes para que possa ajudar a identificar o que está ocorrendo. Algumas sugestões, são:
+Estamos sempre a disposição para ajudar no [repositório GitHub do tema](https://github.com/IBICT/wp-govbr-tema), onde podem ser iniciadas conversas via issues. Caso você abra uma issue, recomendamos dar sempre o máximo de detalhes para que possa ajudar a identificar o que está ocorrendo. Algumas sugestões, são:
 
 - Descrever passo a passo o que está sendo feito, o que ocorre e o que era esperado;
 - Listar quaisquer plugins que estejam ativados para que possa ser verificado se eles tem relação com o erro;

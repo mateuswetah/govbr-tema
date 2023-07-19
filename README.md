@@ -34,7 +34,7 @@ Embora hajam scripts que podem ajudar a aumentar a compatibilidade do CSS gerado
 
 ## Roadmap
 
-Acompanhe as features planejadas e o ritmo do desenvolvimento [aqui](https://github.com/mateuswetah/govbr-tema/issues/1).
+Acompanhe as features planejadas e o ritmo do desenvolvimento [aqui](https://github.com/IBICT/wp-govbr-tema/issues/1).
 
 ## Compilando o projeto
 

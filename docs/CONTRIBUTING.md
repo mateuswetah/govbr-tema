@@ -11,7 +11,7 @@ Para colaborar, entretanto, é preciso se familiarizar um pouco com nossas ferra
 
 ## Editando arquivos diretamente no GitHub
 
-Nossa Documentação está hospedada inteiramente no GitHub no seguinte repositório: https://github.com/mateuswetah/govbr-tema/docs. Não é necessário ter muita experiência com Git para realizar contribuições pontuais, a própria plataforma já simplifica grande parte do processo. Por exemplo, se você viu algum erro de ortografia em um artigo, clique no botão **Edit on github** que aparece no canto superior direito da página. Você será redirecionado para o "código fonte" desta página:
+Nossa Documentação está hospedada inteiramente no GitHub no seguinte repositório: https://github.com/IBICT/wp-govbr-tema/docs. Não é necessário ter muita experiência com Git para realizar contribuições pontuais, a própria plataforma já simplifica grande parte do processo. Por exemplo, se você viu algum erro de ortografia em um artigo, clique no botão **Edit on github** que aparece no canto superior direito da página. Você será redirecionado para o "código fonte" desta página:
 
 ![Captura de Tela da página de edição de conteúdo no Github, onde está em destaque o botão editar, formado por uma caneta.](/_assets/images/contributing.png)
 

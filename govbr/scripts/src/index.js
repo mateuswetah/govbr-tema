@@ -78,83 +78,94 @@ function setupBreadcrumbs() {
 		});
 }
 
+
 /**
  * Looks for cookiebar components to initialize them
  */
-function setupCookieBar() {
+export function setupCookiesBar() {
+	let cookiesManagerSettings = [];
+	cookiesManagerSettings[0] = {
+		'lang': 'pt-br',
+		'cookieGroups': [],
+		'noteList': [],
+		'links': [],
+		...tema_govbr_cookies_manager,
+	}
+	console.log(cookiesManagerSettings)
 	document.querySelectorAll('.br-cookiebar')
 		.forEach((cookiebarElement) => {
 			const params = {
 				name: 'br-cookiebar',
 				component: cookiebarElement,
-				json: `[
-					{
-					  "lang": "pt-br",
-					  "allOptOut": true,
-					  "acceptButton": "",
-					  "optInButton": "Sim, eu aceito os cookies",
-					  "optOutButton": "",
-					  "infoText": "",
-					  "mainTitle": "",
-					  "lastUpdate": "",
-					  "entryText": "",
-					  "selectAll": false,
-					  "allAlertMessage": "",
-					  "closeLabel": "",
-					  "lastUpdateLabel": "",
-					  "cookieGroupsLabel": "",
-					  "selectAllLabel": "",
-					  "unselectAllLabel": "",
-					  "selectAllGroupLabel": "",
-					  "unselectAllGroupLabel": "",
-					  "onLabel": "",
-					  "offLabel": "",
-					  "alwaysActiveLabel": "",
-					  "cookieNameLabel": "",
-					  "expiresLabel": "",
-					  "domainLabel": "",
-					  "enterpriseLabel": "",
-					  "purposeLabel": "",
-					  "descriptionLabel": "",
-					  "cookieGroups": [
-						{
-						  "groupId": "",
-						  "groupName": "",
-						  "groupOptOut": false,
-						  "groupSelected": false,
-						  "groupAlertMessage": "",
-						  "groupText": "",
-						  "cookieList": [
-							{
-							  "cookieId": "",
-							  "cookieOptOut": false,
-							  "cookieSelected": false,
-							  "alertMessage": "",
-							  "cookieName": "",
-							  "expires": "",
-							  "domain": "s",
-							  "entreprise": "",
-							  "purpose": "",
-							  "description": ""
-							}
-						  ]
-						}
-					  ],
-					  "noteTitle": "",
-					  "noteList": [
-						{
-						  "question": "",
-						  "answer": ""
-						}
-					  ],
-					  "links": [
-						{
-						  "name": "",
-						  "url": ""
-						}
-					  ]
-					}
-				  ]`,
+				json: JSON.stringify(cookiesManagerSettings),
+				// json: `[
+				// 	{
+				// 	  "lang": "pt-br",
+				// 	  "allOptOut": true,
+				// 	  "acceptButton": "",
+				// 	  "optInButton": "Sim, eu aceito os cookies",
+				// 	  "optOutButton": "",
+				// 	  "infoText": "",
+				// 	  "mainTitle": "",
+				// 	  "lastUpdate": "",
+				// 	  "entryText": "",
+				// 	  "selectAll": false,
+				// 	  "allAlertMessage": "",
+				// 	  "closeLabel": "",
+				// 	  "lastUpdateLabel": "",
+				// 	  "cookieGroupsLabel": "",
+				// 	  "selectAllLabel": "",
+				// 	  "unselectAllLabel": "",
+				// 	  "selectAllGroupLabel": "",
+				// 	  "unselectAllGroupLabel": "",
+				// 	  "onLabel": "",
+				// 	  "offLabel": "",
+				// 	  "alwaysActiveLabel": "",
+				// 	  "cookieNameLabel": "",
+				// 	  "expiresLabel": "",
+				// 	  "domainLabel": "",
+				// 	  "enterpriseLabel": "",
+				// 	  "purposeLabel": "",
+				// 	  "descriptionLabel": "",
+				// 	  "cookieGroups": [
+				// 		{
+				// 		  "groupId": "",
+				// 		  "groupName": "",
+				// 		  "groupOptOut": false,
+				// 		  "groupSelected": false,
+				// 		  "groupAlertMessage": "",
+				// 		  "groupText": "",
+				// 		  "cookieList": [
+				// 			{
+				// 			  "cookieId": "",
+				// 			  "cookieOptOut": false,
+				// 			  "cookieSelected": false,
+				// 			  "alertMessage": "",
+				// 			  "cookieName": "",
+				// 			  "expires": "",
+				// 			  "domain": "s",
+				// 			  "entreprise": "",
+				// 			  "purpose": "",
+				// 			  "description": ""
+				// 			}
+				// 		  ]
+				// 		}
+				// 	  ],
+				// 	  "noteTitle": "",
+				// 	  "noteList": [
+				// 		{
+				// 		  "question": "",
+				// 		  "answer": ""
+				// 		}
+				// 	  ],
+				// 	  "links": [
+				// 		{
+				// 		  "name": "",
+				// 		  "url": ""
+				// 		}
+				// 	  ]
+				// 	}
+				//   ]`,
 				lang: 'pt-br',
 				mode: 'default',
 				callback: (jsonSaída) => {
@@ -174,5 +185,5 @@ performWhenDocumentIsLoaded( () => {
 	setupMenu();
 	setupCollapses();
 	setupBreadcrumbs();
-	setupCookieBar();
+	setupCookiesBar();
 } );

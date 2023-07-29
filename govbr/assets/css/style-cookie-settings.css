@@ -1,0 +1,20 @@
+/* Styles for the Admin Cookie Settings page */
+.settings_page_cookies-settings .form-table th {
+  width: 300px;
+}
+.settings_page_cookies-settings [class^=cookie_groups_] > th,
+.settings_page_cookies-settings [class^=note_list_] > th,
+.settings_page_cookies-settings [class^=links_] > th {
+  padding-left: 2rem;
+  border-left: 1px solid #dcdcde;
+}
+.settings_page_cookies-settings [class^=cookie_groups_0] > th,
+.settings_page_cookies-settings [class^=cookie_groups_1] > th,
+.settings_page_cookies-settings [class^=cookie_groups_2] > th,
+.settings_page_cookies-settings [class^=cookie_groups_3] > th,
+.settings_page_cookies-settings [class^=cookie_groups_4] > th,
+.settings_page_cookies-settings [class^=cookie_groups_5] > th {
+  padding-left: 4rem;
+}
+
+/*# sourceMappingURL=style-cookie-settings.css.map */

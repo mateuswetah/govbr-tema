@@ -318,6 +318,10 @@ new Gov_BR_Contrast_Mode();
 require_once get_template_directory() . '/classes/class-gov-br-vlibras.php';
 new Gov_BR_VLibras();
 
+// VLibras.
+require_once get_template_directory() . '/classes/class-gov-br-cookies-manager.php';
+new Gov_BR_Cookies_Manager();
+
 // Plugins: Icon Block
 if ( is_plugin_active( 'icon-block/icon-block.php' ) ) {
 	require get_template_directory() . '/plugins/icon-block.php';

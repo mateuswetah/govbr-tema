@@ -1,0 +1,24 @@
+.br-cookiebar {
+
+    /**
+     * No DS, esta classe possui um font-size desnecessário, 
+     * visto que o tamanho configurado já é definido no H1, 
+     * usado no título do modal. Porém como usamos `em`, o
+     * valor é multiplicado pelo font-size do elemento pai.
+     */
+    .br-modal-header .br-modal-title {
+        font-size: unset;
+    }
+    /**
+     * Nosso entry-content aplica um max-width nos elementos filhos,
+     * o que faz com que o modal fique com um tamanho menor do que o
+     * desejado aqui.
+     */
+    .br-modal-header.entry-content>* {
+        max-width: unset !important;
+    }
+
+    .br-modal-body .br-checkbox {
+        white-space: nowrap;
+    }
+}

@@ -90,7 +90,7 @@ textarea {
 	padding: var(--spacing-scale-baseh);
 }
 
-label {
+:not(.br-checkbox):not(.br-radio) >	label {
 	font-size: var(--wp--preset--font-size--scale-up-02, 1.44em);
 	font-weight: var(--font-weight-semi-bold, 600);
 	margin-bottom: calc(var(--wp--style--block-gap, 20px) / 3);
@@ -194,8 +194,8 @@ License: MIT.
 	}
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+:not(.br-switch):not(.br-checkbox) > input[type="checkbox"] + label,
+:not(.br-radio) > input[type="radio"] + label {
 	display: inline-block;
 	padding-left: 10px;
 	font-size: var(--wp--preset--font-size--scale-up-01, 1.2em);

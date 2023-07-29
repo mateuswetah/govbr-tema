@@ -19,6 +19,7 @@
 		"build:style-contrast-mode": "sass assets/sass/style-contrast-mode.scss:assets/css/style-contrast-mode.css --style=expanded --source-map",
 		"build:style-vlibras": "sass assets/sass/style-vlibras.scss:assets/css/style-vlibras.css --style=expanded --source-map",
 		"build:style-admin-settings": "sass assets/sass/style-admin-settings.scss:assets/css/style-admin-settings.css --style=expanded --source-map",
+		"build:style-cookie-settings": "sass assets/sass/style-cookie-settings.scss:assets/css/style-cookie-settings.css --style=expanded --source-map",
 		"build:rtl": "rtlcss style.css style-rtl.css",
 		"build:contrast-rtl": "rtlcss assets/css/style-contrast-mode.css assets/css/style-contrast-mode-rtl.css",
 		"build:govbr-scripts": "wp-scripts build --webpack-src-dir=scripts/src --output-path=scripts/build",

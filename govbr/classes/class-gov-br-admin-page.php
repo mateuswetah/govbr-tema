@@ -468,6 +468,13 @@ if ( ! class_exists( 'Gov_BR_Admin_Page' ) ) {
 						<p><?php _e('Com o botão de VLibras, é possível ativar um assistente virtual que vai ler o site na Linguagem Brasileira de Sinais para dar apoio à pessoas surdas.', 'govbr'); ?></p>
 					</div>
 					<div class="card">
+						<label for="enable_feature_cookies_manager">
+							<input name="enable_feature_cookies_manager" type="checkbox" id="enable_feature_cookies_manager" value="<?php echo get_theme_mod('enable_feature_cookies_manager', true); ?>" <?php echo get_theme_mod('enable_feature_cookies_manager', true) ? 'checked="checked"' : ''; ?>>
+							<h3><?php _e( 'Painel de Configuração de Cookies', 'govbr'); ?></h3>
+						</label>
+						<p><?php _e('Exiba um painel para o usuário informando detalhes sobre sua política de Cookies.', 'govbr'); ?></p>
+					</div>
+					<div class="card">
 						<label for="enable_wordpress_login">
 							<input name="enable_wordpress_login" type="checkbox" id="enable_wordpress_login" value="<?php echo get_theme_mod('enable_wordpress_login', true); ?>" <?php echo get_theme_mod('enable_wordpress_login', true) ? 'checked="checked"' : ''; ?>>
 							<h3><?php _e( 'Login do WordPress', 'govbr'); ?></h3>
